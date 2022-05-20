@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
-import videoIcon from "../../images/video-icon.png";
+import videoIcon from "../../../images/video-icon.png";
 import "./Video.css";
 import { useState } from "react";
 

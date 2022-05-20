@@ -40,6 +40,11 @@
   background-color: var(--clr-primary-grey);
 }
 
+.expert-img:hover + div > .slide {
+  transform: translateY(-70px);
+  overflow: visible;
+}
+
 .slide:hover {
   transform: translateY(-70px);
   overflow: visible;

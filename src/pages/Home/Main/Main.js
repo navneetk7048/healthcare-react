@@ -1,48 +1,28 @@
 // Packages
-import { useState } from "react";
 import { Link } from "react-router-dom";
+
 // Components
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import AppointmentForm from "../components/AppointmentForm";
-import Experts from "../components/Home/Experts";
-import Introduction from "../components/Home/Introduction";
-import Services from "../components/Home/Services";
-import Video from "../components/Home/Video";
-import Footer from "../components/Footer";
+import Hero from "../Hero/Hero";
+import AppointmentForm from "../../../components/AppointmentForm/AppointmentForm";
+import Experts from "../../../components/Experts/Experts";
+import Introduction from "../Introduction/Introduction";
+import Services from "../Services/Services";
+import Video from "../Video/Video";
+
 // Images
-import blog1 from "../images/blog-1.jpg";
-import blog2 from "../images/blog-2.jpg";
-import blog3 from "../images/blog-3.jpg";
+import blog1 from "../../../images/blog-1.jpg";
+import blog2 from "../../../images/blog-2.jpg";
+import blog3 from "../../../images/blog-3.jpg";
+
 // CSS
-import "./Home.css";
+import "./Main.css";
 
-const Home = () => {
-  const [img, setImg] = useState("hero1");
-
+const Main = () => {
   // setInterval(() => setImg(img === "hero1" ? "hero2" : "hero1"), 5000);
 
   return (
     <>
-      <div className={`flex home ${img}`}>
-        <div className="switch center">
-          <FaAngleLeft
-            onClick={() => setImg(img === "hero1" ? "hero2" : "hero1")}
-          />
-        </div>
-        <div className="center">
-          <div className="home-text">
-            <h1>Getting You Back To Better.</h1>
-            <p>
-              Have saw replenish saw made bring creature whales darkness evening
-            </p>
-          </div>
-        </div>
-        <div className="switch center">
-          <FaAngleRight
-            onClick={() => setImg(img === "hero1" ? "hero2" : "hero1")}
-          />
-        </div>
-      </div>
+      <Hero />
       <AppointmentForm />
       <Introduction />
       <Services />
@@ -96,9 +76,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
 
-export default Home;
+export default Main;
