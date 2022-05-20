@@ -18,13 +18,17 @@
 }
 
 .intro-icons {
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
   margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding-inline: 10px;
 }
 
 .icon {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
 }
 
@@ -73,4 +77,14 @@
   color: #184f68;
   font-family: "Open Sans", sans-serif;
   font-size: 1.1rem;
+}
+
+@media (max-width: 1000px) {
+  .intro {
+    flex-direction: column;
+  }
+
+  .intro-icons {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -2,7 +2,7 @@
   background-size: cover;
   /* background-position: center; */
   width: 100vw;
-  height: 42vw;
+  height: 100vh;
   display: grid;
   color: var(--clr-primary-white);
   grid-template-columns: 1fr 5fr 1fr;
@@ -32,9 +32,14 @@
 
 .home-text p {
   background-color: var(--clr-primary-blue);
-  width: max-content;
+  width: fit-content;
   margin-inline: auto;
   padding: 5px 10px;
+}
+
+.switch svg {
+  font-size: 4rem;
+  cursor: pointer;
 }
 
 /* Location Background */
@@ -94,4 +99,10 @@
 
 .blog a:hover {
   color: var(--clr-primary-pink);
+}
+
+@media (max-width: 1000px) {
+  .blogs {
+    grid-template-columns: auto;
+  }
 }

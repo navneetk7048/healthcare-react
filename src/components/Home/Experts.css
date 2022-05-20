@@ -52,3 +52,9 @@
 .style a {
   color: inherit;
 }
+
+@media (max-width: 1000px) {
+  .experts {
+    grid-template-columns: auto;
+  }
+}

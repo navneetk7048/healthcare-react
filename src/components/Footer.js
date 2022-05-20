@@ -26,7 +26,7 @@ const Footer = () => {
               She'd man you female stars life darkness
             </p>
           </div>
-          <div>
+          <div className="footer-up-mid">
             <p>
               <FaMapMarkerAlt /> 27th Avenue, New York, W2 3XE, US
             </p>

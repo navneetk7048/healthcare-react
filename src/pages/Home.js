@@ -24,12 +24,10 @@ const Home = () => {
   return (
     <>
       <div className={`flex home ${img}`}>
-        <div className="center">
-          <div
-            className="switch"
-            onClick={() => setImg(img === "hero1" ? "hero2" : "hero1")}>
-            <FaAngleLeft />
-          </div>
+        <div className="switch center">
+          <FaAngleLeft
+            onClick={() => setImg(img === "hero1" ? "hero2" : "hero1")}
+          />
         </div>
         <div className="center">
           <div className="home-text">
@@ -39,12 +37,10 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="center">
-          <div
-            className="switch"
-            onClick={() => setImg(img === "hero1" ? "hero2" : "hero1")}>
-            <FaAngleRight />
-          </div>
+        <div className="switch center">
+          <FaAngleRight
+            onClick={() => setImg(img === "hero1" ? "hero2" : "hero1")}
+          />
         </div>
       </div>
       <AppointmentForm />

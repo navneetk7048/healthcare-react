@@ -22,7 +22,6 @@ const AppointmentForm = () => {
           <option value="other">Other</option>
         </select>
         <input type="date" name="date" id="date" />
-        <div></div>
         <input type="submit" value="Book Appointment" className="btn" />
       </form>
     </div>

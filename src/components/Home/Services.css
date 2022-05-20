@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 30px;
-  padding: 40px;
+  padding: 20px;
   align-items: flex-start;
 }
 
@@ -56,4 +56,14 @@
 
 .services-icon :nth-child(2) {
   font-family: var(--ff-heading);
+}
+
+@media (max-width: 1000px) {
+  .services {
+    grid-template-columns: auto;
+  }
+
+  .services-icons {
+    grid-template-columns: 1fr 1fr;
+  }
 }
