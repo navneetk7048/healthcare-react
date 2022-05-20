@@ -1,0 +1,97 @@
+.home {
+  background-size: cover;
+  /* background-position: center; */
+  width: 100vw;
+  height: 42vw;
+  display: grid;
+  color: var(--clr-primary-white);
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.home.hero1 {
+  background: url("../images/hero-img1.jpg") no-repeat;
+}
+
+.home.hero2 {
+  background: url("../images/hero-img2.jpg") no-repeat;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text {
+  text-align: center;
+}
+
+.home-text h1 {
+  font-size: 3.5rem;
+}
+
+.home-text p {
+  background-color: var(--clr-primary-blue);
+  width: max-content;
+  margin-inline: auto;
+  padding: 5px 10px;
+}
+
+/* Location Background */
+
+.location-bg {
+  background: url("../images/location-bg.jpg") no-repeat;
+  text-align: center;
+  color: var(--clr-secondary-blue);
+  padding: 20px;
+}
+
+.location-bg > * {
+  padding: 10px;
+}
+
+/* *************** */
+/* Healthcare Blog */
+/* *************** */
+
+.home-blog {
+  width: 80%;
+  margin-inline: auto;
+  color: var(--clr-secondary-blue);
+}
+
+.home-blog > h1,
+.home-blog > p {
+  text-align: center;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.blog {
+  padding: 10px;
+  margin-block: 40px;
+}
+
+.blog img {
+  width: 100%;
+}
+
+.blog p {
+  margin: 1rem;
+  cursor: default;
+  color: var(--clr-primary-pink);
+}
+
+.blog a {
+  color: var(--clr-secondary-blue);
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+
+.blog a:hover {
+  color: var(--clr-primary-pink);
+}

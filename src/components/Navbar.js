@@ -44,8 +44,8 @@ const Navbar = () => {
           </ul>
         </nav>
         <nav className="right-navlist">
-          <ul className="flex">
-            <li>
+          <ul className="right-up flex">
+            <li className="separator">
               <Link to="/">
                 <FaHome />
               </Link>
@@ -61,8 +61,8 @@ const Navbar = () => {
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
-          <ul>
-            <li>
+          <ul className="right-down">
+            <li className="separator">
               <a href="tel:5612231234">
                 <FaPhoneAlt /> (561) 223-1234
               </a>

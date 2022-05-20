@@ -1,0 +1,82 @@
+.appointment {
+  align-items: center;
+  background-color: #f84d4f;
+  border-radius: 5px;
+  display: flex;
+  margin-top: -100px;
+  padding: 35px 50px;
+}
+
+.appointment-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.appointment-form > input,
+.appointment-form > select {
+  background-color: #f96869;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  padding: 15px;
+}
+
+.appointment-form > input[type="submit"] {
+  background-color: white;
+  color: #f96869;
+  font-family: Oswald, sans-serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-left: auto;
+  text-transform: uppercase;
+
+  /* background: linear-gradient(to right, #00bcbd 50.5%, white 49.5%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 1s ease-out; */
+}
+
+.appointment-form > input[type="submit"]:hover {
+  background-color: #00bcbd;
+  color: white;
+
+  /* background-position: left bottom; */
+}
+
+.appointment-label {
+  color: white;
+  padding-right: 50px;
+}
+
+.appointment-label h2 {
+  font-family: Oswald, sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  width: min-content;
+}
+
+.appointment-label hr {
+  border: 2px solid white;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.appointment-label p {
+  font-family: Oswald, sans-serif;
+  font-size: 1.2rem;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .appointment {
+    margin-block: 50px;
+    display: grid;
+  }
+}

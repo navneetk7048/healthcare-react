@@ -1,0 +1,94 @@
+.video {
+  background-color: var(--clr-primary-blue);
+  color: var(--clr-primary-white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.video-img {
+  background: url("../../images/video-img.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.video-text {
+  padding: 2rem;
+}
+
+.video legend {
+  margin-left: 2rem;
+  font-size: 2rem;
+  padding-inline: 1rem;
+}
+
+.video fieldset {
+  border: 3px solid var(--clr-primary-white);
+  margin: 15px;
+}
+
+.video p {
+  padding: 2rem;
+}
+
+.video .patient-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.testimonial {
+  text-align: right;
+}
+
+.video-text a {
+  color: var(--clr-primary-white);
+  transition: color 0.3s ease-in-out;
+}
+
+.video-text a:hover {
+  color: var(--clr-secondary-blue);
+}
+
+.video-img-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.video-img-text p {
+  padding: 0;
+}
+
+.iframe-div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  grid-column: 1/3;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.iframe-div {
+  font-size: 40px;
+  cursor: pointer;
+  /* padding: 5px; */
+  margin-top: -30px;
+}
+
+.iframe-div.true {
+  display: flex;
+}
+
+.iframe-container {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 50px;
+}

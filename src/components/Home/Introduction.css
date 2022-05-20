@@ -1,0 +1,76 @@
+.intro {
+  display: flex;
+}
+
+.intro-left > h2 {
+  color: #184f68;
+  font-family: Oswald, sans-serif;
+  font-size: 3rem;
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.intro-left > p {
+  color: #184f68;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.intro-icons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.icon {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon-item {
+  color: #00bcbd;
+  font-size: 3rem;
+}
+
+.icon :nth-child(2) {
+  color: #f84d4f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+}
+
+.icon :nth-child(3) {
+  color: #184f68;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+}
+
+.intro-right {
+  background-color: #f1f8fc;
+  /* margin: 20px;
+  padding: 40px; */
+}
+
+.intro-right > * {
+  padding: 20px;
+}
+
+.intro-right > h3 {
+  color: #184f68;
+  font-family: Oswald, sans-serif;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.intro-right > hr {
+  margin: 10px;
+  padding: 0;
+  border: 1px solid black;
+}
+
+.intro-right > p {
+  color: #184f68;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+}

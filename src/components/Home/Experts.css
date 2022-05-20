@@ -1,0 +1,54 @@
+.experts-section {
+  color: var(--clr-secondary-blue);
+  text-align: center;
+  margin-block: 50px;
+}
+
+.experts-section > * {
+  padding: 15px;
+}
+
+.experts-section .btn {
+  background-color: var(--clr-primary-blue);
+  color: var(--clr-primary-white);
+  transition: background-color 0.4s;
+}
+
+.experts-section .btn:hover {
+  background-color: var(--clr-primary-pink);
+}
+
+.experts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding-bottom: 40px;
+}
+
+.experts img {
+  width: 100%;
+}
+
+.expert {
+  transition: all 0.4s;
+}
+
+.slide {
+  height: 70px;
+  overflow: hidden;
+  transition: all 0.6s;
+  background-color: var(--clr-primary-grey);
+}
+
+.slide:hover {
+  transform: translateY(-70px);
+  overflow: visible;
+}
+
+.slide p {
+  color: var(--clr-primary-pink);
+}
+
+.style a {
+  color: inherit;
+}
