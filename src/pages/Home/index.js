@@ -18,8 +18,6 @@ import blog3 from "../../assets/images/blog-3.jpg";
 import "./style.css";
 
 const Home = () => {
-  // setInterval(() => setImg(img === "hero1" ? "hero2" : "hero1"), 5000);
-
   return (
     <>
       <Hero />

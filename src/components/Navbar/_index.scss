@@ -19,6 +19,7 @@
       font-size: 1.5rem;
       cursor: pointer;
       margin: 1rem;
+      display: none;
 
       &.true {
         color: member.$clr-accent-darkblue;
@@ -64,6 +65,10 @@
       width: 100%;
       @include member.flex(row, space-between, center);
 
+      .toggle {
+        display: block;
+      }
+
       a {
         background-color: member.$clr-primary-white;
       }
@@ -86,11 +91,5 @@
         @include member.flex(column, center, center);
       }
     }
-  }
-}
-
-@media (min-width: 1000px) {
-  .toggle {
-    display: none;
   }
 }
