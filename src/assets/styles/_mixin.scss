@@ -20,9 +20,9 @@
   }
 }
 
-@mixin flex($direction: row, $main-axis: flex-start, $cross-axis: stretch) {
+@mixin flex($direction: row, $main: flex-start, $cross: stretch) {
   display: flex;
   flex-direction: $direction;
-  justify-content: $main-axis;
-  align-items: $cross-axis;
+  justify-content: $main;
+  align-items: $cross;
 }

@@ -8,14 +8,13 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import footerLogo from "../../assets/images/footer-logo.png";
-import "./style.css";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer-up">
+      <div className="footer-top">
         <div className="container">
-          <div>
+          <div className="footer-top-first">
             <h2>
               <Link to="/">
                 <img src={footerLogo} alt="" />
@@ -26,7 +25,7 @@ const Footer = () => {
               She'd man you female stars life darkness
             </p>
           </div>
-          <div className="footer-up-mid">
+          <div className="footer-top-second">
             <p>
               <FaMapMarkerAlt /> 27th Avenue, New York, W2 3XE, US
             </p>
@@ -60,18 +59,34 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-down">
+      <div className="footer-bottom">
         <div className="container">
-          <div className="footer-links">
-            <Link to="/services">Services</Link>
-            <Link to="/our-doctors">Our Doctors</Link>
-            <Link to="/find-a-doctor">Find A Doctor</Link>
-            <Link to="/about">About</Link>
-            <Link to="/locations">Locations</Link>
-            <Link to="/online-bill-pay">Online Bill Pay</Link>
-            <Link to="/testimonials">Testimonials</Link>
-            <Link to="/blog">Blog</Link>
-          </div>
+          <ul className="footer-links">
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/our-doctors">Our Doctors</Link>
+            </li>
+            <li>
+              <Link to="/find-a-doctor">Find A Doctor</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/locations">Locations</Link>
+            </li>
+            <li>
+              <Link to="/online-bill-pay">Online Bill Pay</Link>
+            </li>
+            <li>
+              <Link to="/testimonials">Testimonials</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+          </ul>
           <p>&copy; All Rights Reserved | Privacy Policy</p>
         </div>
       </div>
