@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  FaHeartbeat,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
@@ -8,6 +7,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import footerLogo from "../../assets/images/footer-logo.png";
 import "./style.css";
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
           <div>
             <h2>
               <Link to="/">
-                <FaHeartbeat /> healthcare
+                <img src={footerLogo} alt="" />
               </Link>
             </h2>
             <p>

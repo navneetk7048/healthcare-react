@@ -1,3 +1,5 @@
+@use "./member";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,4 +13,17 @@ a {
 
 li {
   list-style: none;
+}
+
+body {
+  font-family: member.$font-stack-content;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: member.$font-stack-heading;
 }

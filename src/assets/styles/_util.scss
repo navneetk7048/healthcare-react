@@ -1,7 +1,7 @@
-@use "./mixin";
+@use "./member";
 
 .btn {
-  @include mixin.btn-slide;
+  @include member.btn-slide;
 }
 
 .container {
@@ -10,5 +10,5 @@
 }
 
 .flex {
-  @include mixin.flex;
+  @include member.flex;
 }

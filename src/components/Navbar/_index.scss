@@ -1,0 +1,96 @@
+@use "../../assets/styles/member";
+
+.navbar {
+  @include member.flex;
+  background-color: member.$clr-primary-blue;
+  color: member.$clr-primary-white;
+  transition: all 1s ease;
+
+  .logo {
+    @include member.flex(row, center, center);
+    background-color: member.$clr-primary-white;
+
+    img {
+      width: 100%;
+      padding: 0.5rem;
+    }
+
+    .toggle {
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin: 1rem;
+
+      &.true {
+        color: member.$clr-accent-darkblue;
+      }
+    }
+  }
+
+  .navlist {
+    @include member.flex(row, space-between, center);
+    width: 100%;
+
+    ul {
+      @include member.flex;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    li {
+      transition: all 0.4s ease;
+      font-family: member.$font-stack-heading;
+
+      &:hover {
+        color: member.$clr-accent-darkblue;
+      }
+    }
+
+    .active {
+      color: member.$clr-accent-darkblue;
+    }
+
+    .phone {
+      justify-content: end;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    @include member.flex($direction: column);
+
+    .logo {
+      background-color: transparent;
+      width: 100%;
+      @include member.flex(row, space-between, center);
+
+      a {
+        background-color: member.$clr-primary-white;
+      }
+    }
+  }
+
+  .navlist {
+    &.false {
+      display: none;
+    }
+
+    &.true {
+      @include member.flex(column, center, center);
+
+      .big-screen-only {
+        display: none;
+      }
+
+      ul {
+        @include member.flex(column, center, center);
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .toggle {
+    display: none;
+  }
+}
