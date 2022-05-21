@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import "./Hero.css";
+import "./style.css";
 
 const Hero = () => {
   const [img, setImg] = useState("hero1");

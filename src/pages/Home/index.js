@@ -2,22 +2,22 @@
 import { Link } from "react-router-dom";
 
 // Components
-import Hero from "../Hero/Hero";
-import AppointmentForm from "../../../components/AppointmentForm/AppointmentForm";
-import Experts from "../../../components/Experts/Experts";
-import Introduction from "../Introduction/Introduction";
-import Services from "../Services/Services";
-import Video from "../Video/Video";
+import Hero from "./Hero";
+import AppointmentForm from "./AppointmentForm";
+import Experts from "../../components/Experts/";
+import Introduction from "./Introduction/";
+import HomeServices from "./HomeServices/";
+import Video from "./Video/";
 
 // Images
-import blog1 from "../../../images/blog-1.jpg";
-import blog2 from "../../../images/blog-2.jpg";
-import blog3 from "../../../images/blog-3.jpg";
+import blog1 from "../../assets/images/blog-1.jpg";
+import blog2 from "../../assets/images/blog-2.jpg";
+import blog3 from "../../assets/images/blog-3.jpg";
 
 // CSS
-import "./Main.css";
+import "./style.css";
 
-const Main = () => {
+const Home = () => {
   // setInterval(() => setImg(img === "hero1" ? "hero2" : "hero1"), 5000);
 
   return (
@@ -25,7 +25,7 @@ const Main = () => {
       <Hero />
       <AppointmentForm />
       <Introduction />
-      <Services />
+      <HomeServices />
       <Experts />
       <Video />
       <div className="location-bg container">
@@ -80,4 +80,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;

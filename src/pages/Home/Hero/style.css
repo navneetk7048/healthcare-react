@@ -1,6 +1,4 @@
 .home {
-  background-size: cover;
-  /* background-position: center; */
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -9,11 +7,15 @@
 }
 
 .home.hero1 {
-  background: url("../../../images/hero-img1.jpg") no-repeat;
+  background: url("../../../assets/images/hero-img1.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .home.hero2 {
-  background: url("../../../images/hero-img2.jpg") no-repeat;
+  background: url("../../../assets/images/hero-img2.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .center {

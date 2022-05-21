@@ -1,0 +1,82 @@
+.appointment {
+  background: url("../../../assets/images/heart-img.png") no-repeat;
+  background-position: right center;
+  background-color: var(--clr-primary-pink);
+}
+
+.appointment .container {
+  margin-block: 0;
+  border-radius: 5px;
+  padding: 35px 50px;
+}
+
+.appointment-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.appointment-form > input,
+.appointment-form > select {
+  background-color: #f96869;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  padding: 1rem;
+}
+
+.appointment-form > input[type="submit"] {
+  background-color: white;
+  color: #f96869;
+  font-family: Oswald, sans-serif;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  grid-column: 1/3;
+
+  background: linear-gradient(to right, #00bcbd 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.4s ease-out;
+}
+
+.appointment-form > input[type="submit"]:hover {
+  background-color: #00bcbd;
+  color: white;
+
+  background-position: left bottom;
+}
+
+.appointment-label {
+  color: white;
+  padding-right: 50px;
+  font-family: Oswald, sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  /* width: min-content; */
+  text-align: center;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .appointment {
+    margin-block: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .appointment-form {
+    grid-template-columns: auto;
+  }
+
+  .appointment-form > input[type="submit"] {
+    grid-column: 1/2;
+  }
+}

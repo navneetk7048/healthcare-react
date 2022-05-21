@@ -7,7 +7,7 @@
 }
 
 .video-img {
-  background: url("../../../images/video-img.jpg") no-repeat;
+  background: url("../../../assets/images/video-img.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }

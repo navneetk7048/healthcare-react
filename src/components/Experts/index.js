@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import member1 from "../../images/member-1.jpg";
-import member2 from "../../images/member-2.jpg";
-import member3 from "../../images/member-3.jpg";
-import "./Experts.css";
+import member1 from "../../assets/images/member-1.jpg";
+import member2 from "../../assets/images/member-2.jpg";
+import member3 from "../../assets/images/member-3.jpg";
+import "./style.css";
 
 const Experts = () => {
   return (

@@ -1,0 +1,29 @@
+@use "./variables";
+
+@mixin btn-slide(
+  $clr1: variables.$clr-primary-blue,
+  $clr2: variables.$clr-primary-pink
+) {
+  background: linear-gradient(to right, $clr2 50%, $clr1 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+
+  &:hover {
+    background-position: left bottom;
+  }
+}
+
+@mixin flex($direction: "row", $main-axis: "center", $cross-axis: "center") {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $main-axis;
+  align-items: $cross-axis;
+}

@@ -1,7 +1,7 @@
 /* Location Background */
 
 .location-bg {
-  background: url("../../../images/location-bg.jpg") no-repeat;
+  background: url("../../assets/images/location-bg.jpg") no-repeat;
   text-align: center;
   color: var(--clr-secondary-blue);
   padding: 20px;

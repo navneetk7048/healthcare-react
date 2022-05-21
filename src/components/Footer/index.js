@@ -8,7 +8,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import "./Footer.css";
+import "./style.css";
 
 const Footer = () => {
   return (

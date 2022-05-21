@@ -1,0 +1,17 @@
+@use "./variables";
+@use "./reset";
+@use "./utils";
+@use "./mixin";
+
+body {
+  font-family: variables.$font-stack-content;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$font-stack-heading;
+}

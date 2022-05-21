@@ -1,0 +1,14 @@
+@use "./mixin";
+
+.btn {
+  @include mixin.btn-slide;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin: 50px auto;
+}
+
+.flex {
+  @include mixin.flex;
+}

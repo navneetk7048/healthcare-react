@@ -1,0 +1,51 @@
+.testimonials-section {
+  background-color: var(--clr-primary-blue);
+  color: var(--clr-primary-white);
+}
+
+.testimonials-section .container {
+  margin-block: 0;
+}
+
+.testimonials-text {
+  padding: 2rem;
+}
+
+.testimonials-section legend {
+  margin-left: 2rem;
+  font-size: 2rem;
+  padding-inline: 1rem;
+}
+
+.testimonials-section fieldset {
+  border: 3px solid var(--clr-primary-white);
+  margin: 15px;
+}
+
+.testimonials-section p {
+  padding: 2rem;
+}
+
+.testimonials-section .patient-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.testimonials {
+  display: flex;
+}
+
+.testimonials-text a {
+  color: var(--clr-primary-white);
+  transition: color 0.3s ease-in-out;
+}
+
+.testimonials-text a:hover {
+  color: var(--clr-secondary-blue);
+}
+
+@media (max-width: 1000px) {
+  .testimonials-section {
+    grid-template-columns: auto;
+  }
+}

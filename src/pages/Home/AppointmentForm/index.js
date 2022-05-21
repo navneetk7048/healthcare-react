@@ -1,14 +1,14 @@
-import "./AppointmentForm.css";
+import "./style.css";
 
 const AppointmentForm = () => {
   return (
-    <div className="appointment container">
-      <div className="appointment-label">
+    <div className="home-appointment container">
+      <div className="home-appointment-label">
         <h2>Make an appointment</h2>
         <hr />
         <p>A specialist will contact you shortly</p>
       </div>
-      <form action="#" className="appointment-form">
+      <form action="#" className="home-appointment-form">
         <input type="text" name="name" id="name" placeholder="Your Name*" />
         <input type="email" name="email" id="email" placeholder="Your Email*" />
         <select name="service" id="service">

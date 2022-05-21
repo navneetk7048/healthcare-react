@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaBed, FaIdCard, FaUserMd, FaHandPaper } from "react-icons/fa";
-import "./Introduction.css";
+import "./style.css";
 
 const Introduction = () => {
   return (
