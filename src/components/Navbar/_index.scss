@@ -1,3 +1,5 @@
+@use "../../assets/scss/abstracts" as *;
+
 .navbar {
   @include flex;
   background-color: $primary-color;

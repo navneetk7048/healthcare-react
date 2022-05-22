@@ -1,21 +1,15 @@
 // Packages
 import { Link } from "react-router-dom";
-
-// Components
 import Hero from "./Hero";
 import AppointmentForm from "./AppointmentForm";
-import Experts from "../../components/Experts/";
+import Experts from "../../components/Experts";
 import Introduction from "./Introduction/";
 import HomeServices from "./HomeServices/";
 import Video from "./Video/";
 
-// Images
 import blog1 from "../../assets/images/blog-1.jpg";
 import blog2 from "../../assets/images/blog-2.jpg";
 import blog3 from "../../assets/images/blog-3.jpg";
-
-// CSS
-import "./style.css";
 
 const Home = () => {
   return (

@@ -1,31 +1,31 @@
-.experts-section {
-  color: var(--clr-secondary-blue);
+.experts {
+  color: red;
   text-align: center;
   margin-block: 50px;
 }
 
-.experts-section > * {
+.experts > * {
   padding: 15px;
 }
 
-.experts-section .btn {
+.experts .btn {
   background-color: var(--primary-color);
   color: var(--#fff);
   transition: background-color 0.4s;
 }
 
-.experts-section .btn:hover {
+.experts .btn:hover {
   background-color: var(--secondary-color);
 }
 
-.experts {
+.expert-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   padding-bottom: 40px;
 }
 
-.experts img {
+.expert-listimg {
   width: 100%;
 }
 
@@ -59,7 +59,7 @@
 }
 
 @media (max-width: 1000px) {
-  .experts {
+  .expert-list {
     grid-template-columns: auto;
   }
 }

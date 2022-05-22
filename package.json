@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass -w --style=compressed --no-source-map ./src/assets/styles/index.scss ./src/assets/styles/index.css ",
+    "sass": "sass -w --style=compressed --no-source-map ./src/assets/scss/index.scss ./src/assets/css/index.css ",
     "dev": "concurrently \"yarn start\" \"yarn sass\""
   },
   "eslintConfig": {
