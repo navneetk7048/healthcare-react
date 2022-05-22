@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaBed, FaIdCard, FaUserMd, FaHandPaper } from "react-icons/fa";
-import "./style.css";
 
 const Introduction = () => {
   return (
-    <div className="intro container">
-      <div className="intro-left">
+    <div className="introduction container">
+      <div className="introduction-left">
         <h2>The Right Care. Right Now.</h2>
         <p>
           Multiply very years also midst fill fruitful you're moving day. Were
@@ -20,38 +19,30 @@ const Introduction = () => {
           without fowl third. Moveth bring years. Night seed whales you. Midst
           gathering given.
         </p>
-        <div className="intro-icons">
+        <div className="introduction-icons">
           <div className="icon">
-            <p className="icon-item">
-              <FaBed />
-            </p>
+            <FaBed className="icon-item" />
             <p>800+</p>
             <p>Beds</p>
           </div>
           <div className="icon">
-            <p className="icon-item">
-              <FaIdCard />
-            </p>
+            <FaIdCard className="icon-item" />
             <p>1200+</p>
             <p>Team Members</p>
           </div>
           <div className="icon">
-            <p className="icon-item">
-              <FaUserMd />
-            </p>
+            <FaUserMd className="icon-item" />
             <p>550+</p>
             <p>Doctors</p>
           </div>
           <div className="icon">
-            <p className="icon-item">
-              <FaHandPaper />
-            </p>
+            <FaHandPaper className="icon-item" />
             <p>600+</p>
             <p>Volunteers</p>
           </div>
         </div>
       </div>
-      <div className="intro-right">
+      <div className="introduction-right">
         <h3>Need an Emergency Help? Call Us!</h3>
         <div>
           <a href="tel:#">+61 (0) 383 766 284</a>
@@ -62,8 +53,8 @@ const Introduction = () => {
           seasons greater, land sea, the created gathered bring spirit whose
           upon years fruitful third dominion cattle midst night morning bring.
         </p>
-        <div style={{ textAlign: "center" }}>
-          <Link to="/contact" className="btn btn-blue">
+        <div>
+          <Link to="/contact" className="btn">
             Contact Us
           </Link>
         </div>

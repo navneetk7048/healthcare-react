@@ -1,5 +1,4 @@
 import { FaQuoteLeft } from "react-icons/fa";
-import "./style.css";
 
 const Video = () => {
   return (

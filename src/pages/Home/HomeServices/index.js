@@ -7,7 +7,6 @@ import {
   FaBone,
   FaBrain,
 } from "react-icons/fa";
-import "./style.css";
 
 const Services = () => {
   return (

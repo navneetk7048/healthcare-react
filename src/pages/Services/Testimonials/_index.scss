@@ -1,6 +1,8 @@
+@use "../../../assets/scss/abstracts" as *;
+
 .testimonials-section {
-  background-color: var(--primary-color);
-  color: var(--#fff);
+  background-color: $primary-color;
+  color: #fff;
 }
 
 .testimonials-section .container {
@@ -18,7 +20,7 @@
 }
 
 .testimonials-section fieldset {
-  border: 3px solid var(--#fff);
+  border: 3px solid #fff;
   margin: 15px;
 }
 
@@ -36,12 +38,12 @@
 }
 
 .testimonials-text a {
-  color: var(--#fff);
+  color: #fff;
   transition: color 0.3s ease-in-out;
 }
 
 .testimonials-text a:hover {
-  color: var(--clr-secondary-blue);
+  color: $clr-accent-darkblue;
 }
 
 @media (max-width: 1000px) {

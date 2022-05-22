@@ -1,6 +1,8 @@
+@use "../../../assets/scss/abstracts" as *;
+
 .video {
-  background-color: var(--primary-color);
-  color: var(--#fff);
+  background-color: $primary-color;
+  color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
@@ -23,7 +25,7 @@
 }
 
 .video fieldset {
-  border: 3px solid var(--#fff);
+  border: 3px solid #fff;
   margin: 15px;
 }
 
@@ -41,12 +43,12 @@
 }
 
 .video-text a {
-  color: var(--#fff);
+  color: #fff;
   transition: color 0.3s ease-in-out;
 }
 
 .video-text a:hover {
-  color: var(--clr-secondary-blue);
+  color: $clr-accent-darkblue;
 }
 
 .video-img-text {

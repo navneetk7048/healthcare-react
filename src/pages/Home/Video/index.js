@@ -1,8 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
 import videoIcon from "../../../assets/images/video-icon.png";
-import "./style.css";
-import { useState } from "react";
 
 const Video = () => {
   const [click, setClick] = useState(false);

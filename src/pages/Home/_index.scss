@@ -1,12 +1,17 @@
+@use "../../assets/scss/abstracts/" as *;
+
 @forward "./Hero";
 @forward "./AppointmentForm";
+@forward "./Introduction";
+@forward "./HomeServices";
+@forward "./Video";
 
 /* Location Background */
 
 .location-bg {
   background: url("../../assets/images/location-bg.jpg") no-repeat;
   text-align: center;
-  color: var(--clr-secondary-blue);
+  color: $clr-accent-darkblue;
   padding: 20px;
 }
 
@@ -21,7 +26,7 @@
 .home-blog {
   width: 80%;
   margin-inline: auto;
-  color: var(--clr-secondary-blue);
+  color: $clr-accent-darkblue;
 }
 
 .home-blog > h1,
@@ -47,17 +52,17 @@
 .blog p {
   margin: 1rem;
   cursor: default;
-  color: var(--secondary-color);
+  color: $secondary-color;
 }
 
 .blog a {
-  color: var(--clr-secondary-blue);
+  color: $clr-accent-darkblue;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
 }
 
 .blog a:hover {
-  color: var(--secondary-color);
+  color: $secondary-color;
 }
 
 @media (max-width: 1000px) {

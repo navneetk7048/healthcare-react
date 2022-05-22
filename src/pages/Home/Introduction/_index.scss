@@ -1,6 +1,32 @@
-.intro {
-  display: flex;
-}
+@use "../../../assets/scss/abstracts" as *;
+
+// .introduction {
+//   @include flex(space-evenly);
+//   color: $clr-accent-darkblue;
+
+//   .introduction-left {
+//     h2 {
+//       text-transform: uppercase;
+//     }
+
+//     .introduction-icons {
+//       @include flex(space-evenly);
+//       gap: 1rem;
+
+//       .icon {
+//         text-align: center;
+
+//         .icon-item {
+//           color: $primary-color;
+//         }
+
+//         :nth-child(2) {
+//           color: $clr-accent-pink;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .intro-left > h2 {
   color: #184f68;

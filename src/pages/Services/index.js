@@ -3,10 +3,12 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import Experts from "../../components/Experts";
 import AppointmentForm from "./AppointmentForm";
 import Testimonials from "./Testimonials";
+import BreadCrumbs from "../../components/BreadCrumbs";
 
 const Services = () => {
   return (
     <>
+      <BreadCrumbs />
       <div className="services-banner">
         <div className="services-text">
           <p>

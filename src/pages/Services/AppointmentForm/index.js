@@ -1,5 +1,3 @@
-import "./style.css";
-
 const AppointmentForm = () => {
   return (
     <div className="appointment">

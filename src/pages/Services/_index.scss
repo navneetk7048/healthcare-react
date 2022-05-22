@@ -1,7 +1,4 @@
-$primary-color: #00bcd4;
-$clr-secondary-blue: #214e66;
-$clr-grey: #f1f8fc;
-$clr-white: #fff;
+@use "../../assets/scss/abstracts" as *;
 
 .services-banner {
   background: url("../../assets/images/service-banner.jpg") no-repeat;
@@ -23,10 +20,10 @@ $clr-white: #fff;
 
 .services-content {
   padding-block: 50px;
-  background-color: $clr-grey;
+  background-color: $clr-accent-grey;
 
   .services-content-heading {
-    color: $clr-secondary-blue;
+    color: $clr-accent-darkblue;
     text-align: center;
   }
 
@@ -39,7 +36,7 @@ $clr-white: #fff;
     gap: 1rem;
 
     .services-card {
-      background-color: $clr-white;
+      background-color: #fff;
       transition: transform 0.4s ease-in-out;
       border-radius: 5px;
 
@@ -61,7 +58,7 @@ $clr-white: #fff;
 
   .services-note {
     background-color: $primary-color;
-    color: $clr-white;
+    color: #fff;
     display: flex;
     padding: 1rem;
 
@@ -72,7 +69,7 @@ $clr-white: #fff;
     }
 
     a {
-      color: $clr-secondary-blue;
+      color: $clr-accent-darkblue;
     }
   }
 }

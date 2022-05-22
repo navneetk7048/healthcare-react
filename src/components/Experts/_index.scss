@@ -1,3 +1,5 @@
+@use "../../assets/scss/abstracts" as *;
+
 .experts {
   color: red;
   text-align: center;
@@ -9,13 +11,13 @@
 }
 
 .experts .btn {
-  background-color: var(--primary-color);
-  color: var(--#fff);
+  background-color: $primary-color;
+  color: #fff;
   transition: background-color 0.4s;
 }
 
 .experts .btn:hover {
-  background-color: var(--secondary-color);
+  background-color: $secondary-color;
 }
 
 .expert-list {
@@ -37,7 +39,7 @@
   height: 70px;
   overflow: hidden;
   transition: all 0.6s;
-  background-color: var(--clr-primary-grey);
+  background-color: $clr-accent-grey;
 }
 
 .expert-img:hover + div > .slide {
@@ -51,7 +53,7 @@
 }
 
 .slide p {
-  color: var(--secondary-color);
+  color: $secondary-color;
 }
 
 .style a {
