@@ -56,7 +56,6 @@
       padding-block: 1rem;
       text-align: center;
       text-transform: uppercase;
-      font-family: member.$font-stack-heading;
 
       .footer-links {
         @include member.flex($main: center);

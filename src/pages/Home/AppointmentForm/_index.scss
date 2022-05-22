@@ -32,6 +32,7 @@
       border-radius: 0.3125rem;
       padding: 1rem;
       cursor: pointer;
+      outline: none;
     }
 
     button {
@@ -55,6 +56,8 @@
 
 @media (max-width: 700px) {
   .home-appointment {
+    position: static;
+
     .home-appointment-form {
       grid-template-columns: auto;
 
