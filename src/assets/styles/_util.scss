@@ -1,7 +1,15 @@
 @use "./member";
 
 .btn {
-  @include member.btn-slide;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.3125rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: member.$clr-primary-white;
+  color: member.$clr-primary-blue;
+  font-family: member.$font-stack-heading;
+  letter-spacing: 0.3rem;
 }
 
 .container {
@@ -11,4 +19,8 @@
 
 .flex {
   @include member.flex;
+}
+
+.grid {
+  @include member.grid;
 }

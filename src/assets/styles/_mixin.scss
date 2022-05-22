@@ -1,28 +1,31 @@
 @use "./variable";
 
 @mixin btn-slide(
-  $clr1: variable.$clr-primary-blue,
-  $clr2: variable.$clr-primary-pink
+  $bg1: variable.$clr-primary-blue,
+  $bg2: variable.$clr-primary-pink,
+  $txt1: variable.$clr-primary-white,
+  $txt2: variable.$clr-primary-white
 ) {
-  background: linear-gradient(to right, $clr2 50%, $clr1 50%);
+  background: linear-gradient(to right, $bg2 50%, $bg1 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  transition: all 0.4s ease;
-  border-radius: 5px;
+  color: $txt1;
+  transition: all 0.3s ease-out;
 
   &:hover {
     background-position: left bottom;
+    color: $txt2;
   }
 }
 
-@mixin flex($direction: row, $main: flex-start, $cross: stretch) {
+@mixin flex($main: flex-start, $cross: stretch) {
   display: flex;
-  flex-direction: $direction;
   justify-content: $main;
   align-items: $cross;
+}
+
+@mixin grid($columns: auto, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
 }

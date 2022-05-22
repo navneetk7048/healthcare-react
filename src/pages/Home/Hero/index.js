@@ -19,7 +19,7 @@ const Hero = () => {
     else setImg(img - 1);
   };
 
-  setInterval(nextImg, 5000);
+  // setInterval(nextImg, 5000);
 
   return (
     <div className={`hero`}>

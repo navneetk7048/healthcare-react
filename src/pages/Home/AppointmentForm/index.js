@@ -1,5 +1,3 @@
-import "./style.css";
-
 const AppointmentForm = () => {
   return (
     <div className="home-appointment container">
@@ -8,7 +6,7 @@ const AppointmentForm = () => {
         <hr />
         <p>A specialist will contact you shortly</p>
       </div>
-      <form action="#" className="home-appointment-form">
+      <form action="/" className="home-appointment-form" autoComplete="off">
         <input type="text" name="name" id="name" placeholder="Your Name*" />
         <input type="email" name="email" id="email" placeholder="Your Email*" />
         <select name="service" id="service">
@@ -22,7 +20,9 @@ const AppointmentForm = () => {
           <option value="other">Other</option>
         </select>
         <input type="date" name="date" id="date" />
-        <input type="submit" value="Book Appointment" className="btn" />
+        <button type="submit" className="btn">
+          Book Appointment
+        </button>
       </form>
     </div>
   );

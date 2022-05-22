@@ -7,7 +7,7 @@
   transition: all 1s ease;
 
   .logo {
-    @include member.flex(row, center, center);
+    @include member.flex(center, center);
     background-color: member.$clr-primary-white;
 
     img {
@@ -28,7 +28,7 @@
   }
 
   .navlist {
-    @include member.flex(row, space-between, center);
+    @include member.flex(space-between, center);
     width: 100%;
 
     ul {
@@ -58,12 +58,12 @@
 
 @media (max-width: 1000px) {
   .navbar {
-    @include member.flex($direction: column);
+    flex-direction: column;
 
     .logo {
       background-color: transparent;
       width: 100%;
-      @include member.flex(row, space-between, center);
+      @include member.flex(space-between, center);
 
       .toggle {
         display: block;
@@ -81,14 +81,15 @@
     }
 
     &.true {
-      @include member.flex(column, center, center);
+      flex-direction: column;
 
       .big-screen-only {
         display: none;
       }
 
       ul {
-        @include member.flex(column, center, center);
+        flex-direction: column;
+        align-items: center;
       }
     }
   }

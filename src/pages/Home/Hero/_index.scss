@@ -16,11 +16,10 @@
     width: 100%;
     height: 100%;
     color: member.$clr-primary-white;
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    @include member.grid(1fr 5fr 1fr);
 
     .switch {
-      @include member.flex(row, center, center);
+      @include member.flex(center, center);
       cursor: pointer;
       font-size: 5rem;
       opacity: 0.5;
@@ -32,7 +31,7 @@
     }
 
     .hero-text {
-      @include member.flex(row, center, center);
+      @include member.flex(center, center);
       text-align: center;
 
       p {

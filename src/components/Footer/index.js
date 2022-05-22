@@ -27,7 +27,9 @@ const Footer = () => {
           </div>
           <div className="footer-top-second">
             <p>
-              <FaMapMarkerAlt /> 27th Avenue, New York, W2 3XE, US
+              <a href="https://goo.gl/maps/MV615MttEfEqYJsNA">
+                <FaMapMarkerAlt /> 27th Avenue, New York, W2 3XE, US
+              </a>
             </p>
             <p>
               <a href="tel: 5612231234">
