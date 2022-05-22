@@ -15,16 +15,17 @@ const Footer = () => {
       <div className="footer-top">
         <div className="container">
           <div className="footer-top-first">
-            <h2>
+            <p>
               <Link to="/">
                 <img src={footerLogo} alt="" />
               </Link>
-            </h2>
+            </p>
             <p>
               Evening over without above be won't yielding days man, there.
               She'd man you female stars life darkness
             </p>
           </div>
+          <div className="separator" />
           <div className="footer-top-second">
             <p>
               <a href="https://goo.gl/maps/MV615MttEfEqYJsNA">
@@ -42,7 +43,8 @@ const Footer = () => {
               </a>
             </p>
           </div>
-          <div>
+          <div className="separator" />
+          <div className="footer-top-third">
             <p>
               <Link to="/">
                 <FaFacebookF /> facebook
@@ -89,7 +91,9 @@ const Footer = () => {
               <Link to="/blog">Blog</Link>
             </li>
           </ul>
-          <p>&copy; All Rights Reserved | Privacy Policy</p>
+          <p className="copyright">
+            &copy; All Rights Reserved | Privacy Policy
+          </p>
         </div>
       </div>
     </div>
