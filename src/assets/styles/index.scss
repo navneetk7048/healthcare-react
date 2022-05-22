@@ -1,12 +1,13 @@
-@use "./reset";
-@use "./util";
+@import "./config";
+@import "./reset";
+@import "./utilities";
 
 //Navbar
-@use "../../components/Navbar";
+@import "../../components/Navbar";
 
 // Footer
-@use "../../components/Footer";
+@import "../../components/Footer";
 
 // Home Page
-@use "../../pages/Home/Hero";
-@use "../../pages/Home/AppointmentForm";
+@import "../../pages/Home/Hero";
+@import "../../pages/Home/AppointmentForm";

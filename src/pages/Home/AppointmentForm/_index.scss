@@ -1,9 +1,7 @@
-@use "../../../assets/styles/member";
-
 .home-appointment {
-  @include member.grid(3fr 6fr);
-  background-color: member.$clr-primary-pink;
-  color: member.$clr-primary-white;
+  @include grid(3fr 6fr);
+  background-color: $secondary-color;
+  color: #fff;
   position: relative;
   top: -8rem;
   border-radius: 0.3125rem;
@@ -22,12 +20,12 @@
   }
 
   .home-appointment-form {
-    @include member.grid(repeat(2, 1fr));
+    @include grid(repeat(2, 1fr));
 
     input,
     select {
-      background-color: member.$clr-accent-pink;
-      color: member.$clr-primary-white;
+      background-color: $clr-accent-pink;
+      color: #fff;
       border: none;
       border-radius: 0.3125rem;
       padding: 1rem;
@@ -36,11 +34,11 @@
     }
 
     button {
-      @include member.btn-slide(
-        $bg1: member.$clr-primary-white,
-        $bg2: member.$clr-primary-blue,
-        $txt1: member.$clr-primary-pink,
-        $txt2: member.$clr-primary-white
+      @include btn-slide(
+        $bg1: #fff,
+        $bg2: $primary-color,
+        $txt1: $secondary-color,
+        $txt2: #fff
       );
       grid-column: 1/3;
       justify-self: end;

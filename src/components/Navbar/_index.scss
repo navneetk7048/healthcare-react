@@ -1,14 +1,12 @@
-@use "../../assets/styles/member";
-
 .navbar {
-  @include member.flex;
-  background-color: member.$clr-primary-blue;
-  color: member.$clr-primary-white;
+  @include flex;
+  background-color: $primary-color;
+  color: #fff;
   transition: all 1s ease;
 
   .logo {
-    @include member.flex(center, center);
-    background-color: member.$clr-primary-white;
+    @include flex(center, center);
+    background-color: #fff;
 
     img {
       width: 100%;
@@ -22,17 +20,17 @@
       display: none;
 
       &.true {
-        color: member.$clr-accent-darkblue;
+        color: $clr-accent-darkblue;
       }
     }
   }
 
   .navlist {
-    @include member.flex(space-between, center);
+    @include flex(space-between, center);
     width: 100%;
 
     ul {
-      @include member.flex;
+      @include flex;
       gap: 1rem;
       padding: 0.5rem 1rem;
     }
@@ -41,12 +39,12 @@
       transition: all 0.4s ease;
 
       &:hover {
-        color: member.$clr-accent-darkblue;
+        color: $clr-accent-darkblue;
       }
     }
 
     .active {
-      color: member.$clr-accent-darkblue;
+      color: $clr-accent-darkblue;
     }
 
     .phone {
@@ -62,14 +60,14 @@
     .logo {
       background-color: transparent;
       width: 100%;
-      @include member.flex(space-between, center);
+      @include flex(space-between, center);
 
       .toggle {
         display: block;
       }
 
       a {
-        background-color: member.$clr-primary-white;
+        background-color: #fff;
       }
     }
   }

@@ -1,7 +1,7 @@
 .appointment {
   background: url("../../../assets/images/heart-img.png") no-repeat;
   background-position: right center;
-  background-color: var(--clr-primary-pink);
+  background-color: var(--secondary-color);
 }
 
 .appointment .container {

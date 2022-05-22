@@ -9,13 +9,13 @@
 }
 
 .experts-section .btn {
-  background-color: var(--clr-primary-blue);
-  color: var(--clr-primary-white);
+  background-color: var(--primary-color);
+  color: var(--#fff);
   transition: background-color 0.4s;
 }
 
 .experts-section .btn:hover {
-  background-color: var(--clr-primary-pink);
+  background-color: var(--secondary-color);
 }
 
 .experts {
@@ -51,7 +51,7 @@
 }
 
 .slide p {
-  color: var(--clr-primary-pink);
+  color: var(--secondary-color);
 }
 
 .style a {

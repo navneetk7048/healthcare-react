@@ -1,5 +1,3 @@
-@use "../../../assets/styles/member";
-
 .hero {
   position: relative;
 
@@ -15,11 +13,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    color: member.$clr-primary-white;
-    @include member.grid(1fr 5fr 1fr);
+    color: #fff;
+    @include grid(1fr 5fr 1fr);
 
     .switch {
-      @include member.flex(center, center);
+      @include flex(center, center);
       cursor: pointer;
       font-size: 5rem;
       opacity: 0.5;
@@ -31,7 +29,7 @@
     }
 
     .hero-text {
-      @include member.flex(center, center);
+      @include flex(center, center);
       text-align: center;
 
       p {

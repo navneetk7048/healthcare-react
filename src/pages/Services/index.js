@@ -3,7 +3,6 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import Experts from "../../components/Experts";
 import AppointmentForm from "./AppointmentForm";
 import Testimonials from "./Testimonials";
-import "./style.scss";
 
 const Services = () => {
   return (

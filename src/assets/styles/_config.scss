@@ -1,10 +1,24 @@
-@use "./variable";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap");
 
+// Variables
+$primary-color: #00bcbd;
+$secondary-color: #f84d4f;
+
+$clr-primary-black: #000;
+
+$clr-accent-darkblue: #214e66;
+$clr-accent-grey: #f1f8fc;
+$clr-accent-pink: #f96869;
+
+$font-stack-primary: "Oswald", sans-serif;
+$font-stack-secondary: "Open Sans", sans-serif;
+
+// Mixins
 @mixin btn-slide(
-  $bg1: variable.$clr-primary-blue,
-  $bg2: variable.$clr-primary-pink,
-  $txt1: variable.$clr-primary-white,
-  $txt2: variable.$clr-primary-white
+  $bg1: $primary-color,
+  $bg2: $secondary-color,
+  $txt1: #fff,
+  $txt2: #fff
 ) {
   background: linear-gradient(to right, $bg2 50%, $bg1 50%);
   background-size: 200% 100%;

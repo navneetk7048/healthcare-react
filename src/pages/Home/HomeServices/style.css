@@ -1,5 +1,5 @@
 .home-services {
-  color: var(--clr-primary-white);
+  color: var(--#fff);
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 30px;
@@ -16,8 +16,8 @@
 }
 
 .home-services-text a {
-  background-color: var(--clr-primary-pink);
-  color: var(--clr-primary-white);
+  background-color: var(--secondary-color);
+  color: var(--#fff);
   text-transform: uppercase;
   font-weight: bold;
   transition: background-color 0.4s ease-in-out;
@@ -35,9 +35,9 @@
 }
 
 .home-services-icon {
-  background-color: var(--clr-primary-white);
+  background-color: var(--#fff);
   border-radius: 5px;
-  color: var(--clr-primary-blue);
+  color: var(--primary-color);
   text-align: center;
   transition-property: color transform;
   transition-duration: 0.4s;
@@ -46,7 +46,7 @@
 }
 
 .home-services-icon:hover {
-  color: var(--clr-primary-pink);
+  color: var(--secondary-color);
   transform: translateY(-5px);
 }
 

@@ -1,10 +1,16 @@
-@use "./member";
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: member.$font-stack-primary;
+}
+
+body {
+  font-family: $font-stack-primary;
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
 a {
@@ -15,4 +21,8 @@ a {
 
 li {
   list-style: none;
+}
+
+img {
+  width: 100%;
 }

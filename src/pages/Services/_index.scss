@@ -1,4 +1,4 @@
-$clr-primary-blue: #00bcd4;
+$primary-color: #00bcd4;
 $clr-secondary-blue: #214e66;
 $clr-grey: #f1f8fc;
 $clr-white: #fff;
@@ -15,7 +15,7 @@ $clr-white: #fff;
     color: #fff;
 
     .active {
-      color: $clr-primary-blue;
+      color: $primary-color;
       font-weight: bold;
     }
   }
@@ -33,7 +33,7 @@ $clr-white: #fff;
   .services-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    color: $clr-primary-blue;
+    color: $primary-color;
     font-weight: bold;
     padding: 1rem;
     gap: 1rem;
@@ -60,7 +60,7 @@ $clr-white: #fff;
   }
 
   .services-note {
-    background-color: $clr-primary-blue;
+    background-color: $primary-color;
     color: $clr-white;
     display: flex;
     padding: 1rem;

@@ -1,23 +1,21 @@
-@use "../../assets/styles/member";
-
 .footer {
-  color: member.$clr-primary-white;
+  color: #fff;
 
   a {
     transition: all 0.3s ease;
 
     &:hover {
-      color: member.$clr-accent-darkblue;
+      color: $clr-accent-darkblue;
     }
   }
 
   .footer-top {
-    background-color: member.$clr-primary-blue;
+    background-color: $primary-color;
 
     .container {
       margin-bottom: 0;
       padding: 1rem;
-      @include member.flex(space-between);
+      @include flex(space-between);
       gap: 1rem;
 
       > * > * {
@@ -43,13 +41,13 @@
       .separator {
         width: 1px;
         padding: 0;
-        background-color: member.$clr-primary-white;
+        background-color: #fff;
       }
     }
   }
 
   .footer-bottom {
-    background-color: member.$clr-accent-blue2;
+    background-color: #00b1b2;
 
     .container {
       margin-block: 0;
@@ -58,7 +56,7 @@
       text-transform: uppercase;
 
       .footer-links {
-        @include member.flex($main: center);
+        @include flex($main: center);
         flex-wrap: wrap;
         padding-block: 1rem;
         gap: 0.5rem;

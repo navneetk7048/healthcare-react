@@ -1,6 +1,6 @@
 .video {
-  background-color: var(--clr-primary-blue);
-  color: var(--clr-primary-white);
+  background-color: var(--primary-color);
+  color: var(--#fff);
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
@@ -23,7 +23,7 @@
 }
 
 .video fieldset {
-  border: 3px solid var(--clr-primary-white);
+  border: 3px solid var(--#fff);
   margin: 15px;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .video-text a {
-  color: var(--clr-primary-white);
+  color: var(--#fff);
   transition: color 0.3s ease-in-out;
 }
 

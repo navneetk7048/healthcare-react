@@ -44,7 +44,7 @@
 .blog p {
   margin: 1rem;
   cursor: default;
-  color: var(--clr-primary-pink);
+  color: var(--secondary-color);
 }
 
 .blog a {
@@ -54,7 +54,7 @@
 }
 
 .blog a:hover {
-  color: var(--clr-primary-pink);
+  color: var(--secondary-color);
 }
 
 @media (max-width: 1000px) {
