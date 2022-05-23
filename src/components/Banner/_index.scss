@@ -1,0 +1,22 @@
+@use "../../assets/scss/abstracts" as *;
+
+.banner {
+  position: relative;
+  color: #fff;
+
+  .banner-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    @include flex(center, center);
+    flex-direction: column;
+    background-color: rgba($clr-accent-darkblue, 0.7);
+
+    span {
+      color: $primary-color;
+    }
+  }
+}

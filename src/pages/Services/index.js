@@ -3,21 +3,18 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 import Experts from "../../components/Experts";
 import AppointmentForm from "./AppointmentForm";
 import Testimonials from "./Testimonials";
-import BreadCrumbs from "../../components/BreadCrumbs";
+import Banner from "../../components/Banner";
+import serviceBanner from "../../assets/images/service-banner.jpg";
 
 const Services = () => {
   return (
     <>
-      <BreadCrumbs />
-      <div className="services-banner">
-        <div className="services-text">
-          <p>
-            <Link to="/">Home</Link> /{" "}
-            <span className="active">Our Services</span>
-          </p>
-          <h1>Our Services</h1>
-        </div>
-      </div>
+      <Banner
+        banner={serviceBanner}
+        previous="Home"
+        current="Our Services"
+        title="Our Services"
+      />
       <div className="services-content">
         <div className=" container">
           <div className="services-content-heading">
