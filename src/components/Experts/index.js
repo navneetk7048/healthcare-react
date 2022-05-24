@@ -13,9 +13,9 @@ const Experts = () => {
       </p>
       <div className="expert-list">
         <div className="expert">
-          <img className="expert-img" src={member1} alt="" />
-          <div style={{ backgroundColor: "#f1f8fc" }}>
-            <div className="slide">
+          <img src={member1} alt="" />
+          <div className="slide">
+            <div>
               <h2>Bernice Ray</h2>
               <p>Chief Surgeon</p>
               <Link to="/" className="btn">
@@ -25,9 +25,9 @@ const Experts = () => {
           </div>
         </div>
         <div className="expert">
-          <img className="expert-img" src={member2} alt="" />
-          <div style={{ backgroundColor: "#f1f8fc" }}>
-            <div className="slide">
+          <img src={member2} alt="" />
+          <div className="slide">
+            <div>
               <h2>Larissa Thomas</h2>
               <p>Otolaryngology</p>
               <Link to="/" className="btn">
@@ -37,9 +37,9 @@ const Experts = () => {
           </div>
         </div>
         <div className="expert">
-          <img className="expert-img" src={member3} alt="" />
-          <div style={{ backgroundColor: "#f1f8fc" }}>
-            <div className="slide">
+          <img src={member3} alt="" />
+          <div className="slide">
+            <div>
               <h2>Jason Bolton</h2>
               <p>Neurosurgery</p>
               <Link to="/" className="btn">

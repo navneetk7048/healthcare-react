@@ -1,19 +1,18 @@
-// Packages
 import { Link } from "react-router-dom";
+
 import Hero from "./Hero";
 import AppointmentForm from "./AppointmentForm";
 import Experts from "../../components/Experts";
 import Introduction from "./Introduction/";
 import HomeServices from "./HomeServices/";
 import Video from "./Video/";
-
 import blog1 from "../../assets/images/blog-1.jpg";
 import blog2 from "../../assets/images/blog-2.jpg";
 import blog3 from "../../assets/images/blog-3.jpg";
 
 const Home = () => {
   return (
-    <>
+    <div className="">
       <Hero />
       <AppointmentForm />
       <Introduction />
@@ -68,7 +67,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,67 +1,59 @@
 @use "../../assets/scss/abstracts" as *;
 
 .experts {
-  color: red;
   text-align: center;
-  margin-block: 50px;
-}
+  color: $clr-accent-darkblue;
 
-.experts > * {
-  padding: 15px;
-}
+  > * {
+    margin-block: 1rem;
+  }
 
-.experts .btn {
-  background-color: $primary-color;
-  color: #fff;
-  transition: background-color 0.4s;
-}
-
-.experts .btn:hover {
-  background-color: $secondary-color;
-}
-
-.expert-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding-bottom: 40px;
-}
-
-.expert-listimg {
-  width: 100%;
-}
-
-.expert {
-  transition: all 0.4s;
-}
-
-.slide {
-  height: 70px;
-  overflow: hidden;
-  transition: all 0.6s;
-  background-color: $clr-accent-grey;
-}
-
-.expert-img:hover + div > .slide {
-  transform: translateY(-70px);
-  overflow: visible;
-}
-
-.slide:hover {
-  transform: translateY(-70px);
-  overflow: visible;
-}
-
-.slide p {
-  color: $secondary-color;
-}
-
-.style a {
-  color: inherit;
-}
-
-@media (max-width: 1000px) {
   .expert-list {
-    grid-template-columns: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .expert {
+      img:hover + .slide > div {
+        transform: translateY(-70px);
+        overflow: visible;
+      }
+
+      .slide {
+        background-color: $clr-accent-grey;
+
+        div {
+          height: 3.75rem;
+          overflow: hidden;
+          transition: all 0.6s;
+          background-color: $clr-accent-grey;
+
+          &:hover {
+            transform: translateY(-70px);
+            overflow: visible;
+          }
+        }
+
+        p {
+          color: $secondary-color;
+        }
+
+        .btn {
+          @include btn-slide($clr-accent-darkblue, $primary-color);
+        }
+      }
+    }
+  }
+
+  .btn {
+    @include btn-slide($primary-color, $secondary-color);
+  }
+}
+
+@media (max-width: 576px) {
+  .experts {
+    .expert-list {
+      grid-template-columns: auto;
+    }
   }
 }

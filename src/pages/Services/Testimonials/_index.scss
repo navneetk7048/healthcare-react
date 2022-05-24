@@ -3,25 +3,30 @@
 .testimonials-section {
   background-color: $primary-color;
   color: #fff;
-}
 
-.testimonials-section .container {
-  margin-block: 0;
-}
+  .container {
+    margin-block: 0;
+    padding-block: 1rem;
+  }
 
-.testimonials-text {
-  padding: 2rem;
-}
+  p {
+    text-align: left;
+  }
 
-.testimonials-section legend {
-  margin-left: 2rem;
-  font-size: 2rem;
-  padding-inline: 1rem;
-}
+  h1 {
+    text-align: center;
+  }
 
-.testimonials-section fieldset {
-  border: 3px solid #fff;
-  margin: 15px;
+  fieldset {
+    border: 3px solid #fff;
+    margin: 15px;
+
+    legend {
+      margin-left: 2rem;
+      font-size: 2rem;
+      padding-inline: 1rem;
+    }
+  }
 }
 
 .testimonials-section p {
