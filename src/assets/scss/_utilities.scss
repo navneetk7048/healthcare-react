@@ -1,5 +1,15 @@
 @use "./abstracts" as *;
 
+.btn {
+  border: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3125rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+
 .container {
   width: min(90%, 1200px);
   margin: 3.125rem auto;

@@ -1,7 +1,7 @@
 import React from "react";
 
-const Button = ({ category, text }) => {
-  return <button className={"btn " + { category }}>{text}</button>;
+const Button = ({ type, text }) => {
+  return <button className={"btn " + type}>{text}</button>;
 };
 
 export default Button;

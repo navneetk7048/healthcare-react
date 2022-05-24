@@ -13,7 +13,7 @@ const OurDoctors = () => {
         current="Find Your Doctor"
         title="Physician Directory"
       />
-      <div className="doctor-search container">
+      <div className="container">
         <Note text="To find your doctor, please use the search options below:" />
         <SearchBox
           title="Search by Doctor Name"
@@ -25,7 +25,9 @@ const OurDoctors = () => {
           text="Type a keyword, specialty or condition to find the right specialist."
           placeholder="Keyword"
         />
-        <Button text="Meet Our All Experts" />
+        {/* <div style={{ textAlign: "center" }}> */}
+        <Button type="btn-blue-pink" text="Meet Our All Experts" />
+        {/* </div> */}
       </div>
     </div>
   );

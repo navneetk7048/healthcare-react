@@ -36,12 +36,6 @@
     }
 
     button {
-      @include btn-slide(
-        $bg1: #fff,
-        $bg2: $primary-color,
-        $txt1: $secondary-color,
-        $txt2: #fff
-      );
       grid-column: 1/3;
       justify-self: end;
     }

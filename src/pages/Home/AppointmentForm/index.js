@@ -1,3 +1,5 @@
+import Button from "../../../components/Button";
+
 const AppointmentForm = () => {
   return (
     <div className="home-appointment container">
@@ -20,9 +22,7 @@ const AppointmentForm = () => {
           <option value="other">Other</option>
         </select>
         <input type="date" name="date" id="date" />
-        <button type="submit" className="btn">
-          Book Appointment
-        </button>
+        <Button type="btn-white-blue" text="Book Appointment" />
       </form>
     </div>
   );

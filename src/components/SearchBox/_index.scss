@@ -18,6 +18,13 @@
       width: 100%;
       padding: 0.25rem 0.5rem;
       outline: none;
+      border: 1px solid black;
+      border-radius: 0.25rem;
+      transition: border 0.3s ease-out;
+
+      &:focus {
+        border-color: $primary-color;
+      }
     }
   }
 }

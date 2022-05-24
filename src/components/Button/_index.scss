@@ -1,12 +1,28 @@
 @use "../../assets/scss/abstracts" as *;
 
-.btn {
-  border: none;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3125rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  background-color: #fff;
-  color: $primary-color;
+.btn-blue-pink {
+  @include btn-slide(
+    $bg1: $primary-color,
+    $bg2: $secondary-color,
+    $txt1: #fff,
+    $txt2: #fff
+  );
+}
+
+.btn-pink-darkblue {
+  @include btn-slide(
+    $bg1: $secondary-color,
+    $bg2: $clr-accent-darkblue,
+    $txt1: #fff,
+    $txt2: #fff
+  );
+}
+
+.btn-white-blue {
+  @include btn-slide(
+    $bg1: #fff,
+    $bg2: $primary-color,
+    $txt1: $secondary-color,
+    $txt2: #fff
+  );
 }

@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin btn-slide(
   $bg1: $primary-color,
   $bg2: $secondary-color,

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button";
 
 const SearchBox = ({ title, text, placeholder }) => {
   return (
@@ -9,7 +10,7 @@ const SearchBox = ({ title, text, placeholder }) => {
       </div>
       <div className="input">
         <input type="text" placeholder={placeholder} />
-        <button className="btn">Search</button>
+        <Button type="btn-pink-darkblue" text="Search" />
       </div>
     </div>
   );
