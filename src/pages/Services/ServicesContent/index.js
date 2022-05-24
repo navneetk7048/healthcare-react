@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaRegQuestionCircle } from "react-icons/fa";
+import Note from "../../../components/Note";
 
 const ServicesContent = () => {
   return (
@@ -53,14 +53,12 @@ const ServicesContent = () => {
             <Link to="/service-detail">Wound Care & Hyperbaric Medicine</Link>
           </div>
         </div>
-        <div className="services-note">
-          <FaRegQuestionCircle />
-          <p>
-            Didn't find what you are looking for?{" "}
-            <Link to="/contact">Contact us</Link> today to learn more about the
-            healthcare services we provide.
-          </p>
-        </div>
+        <Note
+          text={`Didn't find what you are looking for? 
+          ${(<Link to="/contact">Contact us</Link>)} 
+          today to learn more about the
+        healthcare services we provide.`}
+        />
       </div>
     </div>
   );

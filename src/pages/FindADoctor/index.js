@@ -1,4 +1,5 @@
 import Banner from "../../components/Banner";
+import Note from "../../components/Note";
 import about from "../../assets/images/about-banner.jpg";
 
 const OurDoctors = () => {
@@ -10,6 +11,9 @@ const OurDoctors = () => {
         current="Find Your Doctor"
         title="Physician Directory"
       />
+      <div className="doctor-search container">
+        <Note text="To find your doctor, please use the search options below:" />
+      </div>
     </div>
   );
 };
