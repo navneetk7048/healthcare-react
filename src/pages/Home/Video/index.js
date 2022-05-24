@@ -10,7 +10,7 @@ const Video = () => {
     <div className="video container">
       <div className={`iframe-div ${click}`}>
         <div className="iframe-container">
-          <iframe
+          {/* <iframe
             width="600"
             height="300"
             src="https://www.youtube.com/embed/xcJtL7QggTI"
@@ -18,7 +18,7 @@ const Video = () => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          />
+          /> */}
           <FaRegTimesCircle
             onClick={() => setClick(false)}
             style={{ marginTop: "-25px" }}

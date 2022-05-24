@@ -2,22 +2,51 @@ import { Link } from "react-router-dom";
 
 import Hero from "./Hero";
 import AppointmentForm from "./AppointmentForm";
-import Experts from "../../components/Experts";
+import ExpertList from "../../components/ExpertList";
 import Introduction from "./Introduction/";
 import HomeServices from "./HomeServices/";
 import Video from "./Video/";
 import blog1 from "../../assets/images/blog-1.jpg";
 import blog2 from "../../assets/images/blog-2.jpg";
 import blog3 from "../../assets/images/blog-3.jpg";
+import member1 from "../../assets/images/member-1.jpg";
+import member2 from "../../assets/images/member-2.jpg";
+import member3 from "../../assets/images/member-3.jpg";
 
 const Home = () => {
+  const doctors = [
+    {
+      id: 1,
+      name: "Bernice Ray",
+      speciality: "Chief surgeon",
+      picture: member1,
+    },
+    {
+      id: 2,
+      name: "Larissa Thomas",
+      speciality: "Otolaryngology",
+      picture: member2,
+    },
+    {
+      id: 3,
+      name: "Jason Bolton",
+      speciality: "Neurosurgery",
+      picture: member3,
+    },
+  ];
+
   return (
     <div className="">
       <Hero />
       <AppointmentForm />
       <Introduction />
       <HomeServices />
-      <Experts />
+      <ExpertList
+        heading="Meet Our Experts"
+        text="Together own seas said fowl third herb saw also that had saying darkness
+        may After together"
+        doctors={doctors}
+      />
       <Video />
       <div className="location-bg container">
         <h2>Find a Healthcare Facilities</h2>

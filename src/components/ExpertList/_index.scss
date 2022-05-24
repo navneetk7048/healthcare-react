@@ -1,0 +1,29 @@
+@use "../../assets/scss/abstracts" as *;
+@forward "./Expert";
+
+.expert-list {
+  text-align: center;
+  color: $clr-accent-darkblue;
+
+  > * {
+    margin-block: 1rem;
+  }
+
+  .experts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .btn {
+    @include btn-slide($primary-color, $secondary-color);
+  }
+}
+
+@media (max-width: 576px) {
+  .expert-list {
+    .experts {
+      grid-template-columns: auto;
+    }
+  }
+}

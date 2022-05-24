@@ -1,4 +1,4 @@
-import Experts from "../../components/Experts";
+import ExpertList from "../../components/ExpertList";
 import AppointmentForm from "./AppointmentForm";
 import Testimonials from "./Testimonials";
 import Banner from "../../components/Banner";
@@ -17,7 +17,7 @@ const Services = () => {
       <ServicesContent />
       <AppointmentForm />
       <Testimonials />
-      <Experts />
+      <ExpertList />
     </div>
   );
 };

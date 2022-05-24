@@ -1,0 +1,28 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.expert {
+  .slide {
+    background-color: $clr-accent-grey;
+    width: 100%;
+
+    div {
+      height: 3.75rem;
+      overflow: hidden;
+      background-color: $clr-accent-grey;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    p {
+      color: $secondary-color;
+    }
+
+    .btn {
+      @include btn-slide($clr-accent-darkblue, $primary-color);
+    }
+  }
+
+  &:hover .slide div {
+    transform: translateY(-3rem);
+    overflow: visible;
+  }
+}
