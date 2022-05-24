@@ -10,6 +10,11 @@
     border-radius: 5px;
     padding: 35px 50px;
   }
+
+  ::placeholder {
+    color: white;
+    opacity: 1;
+  }
 }
 
 .appointment-form {
@@ -60,11 +65,6 @@
   text-transform: uppercase;
   /* width: min-content; */
   text-align: center;
-}
-
-::placeholder {
-  color: white;
-  opacity: 1;
 }
 
 @media (max-width: 1000px) {
