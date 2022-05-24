@@ -1,8 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Button from "../../Button";
 
 const Expert = ({ doctor }) => {
-  const { name, speciality, picture } = doctor;
+  const navigate = useNavigate();
+
+  const { name, speciality, picture, profile = "our-doctors" } = doctor;
 
   return (
     <div className="expert">
@@ -11,9 +14,11 @@ const Expert = ({ doctor }) => {
         <div>
           <h2>{name}</h2>
           <p>{speciality}</p>
-          <Link to="/" className="btn">
-            View Profile
-          </Link>
+          <Button
+            type="btn-darkblue-blue"
+            text="View Profile"
+            onClick={() => navigate(`/${profile}`)}
+          />
         </div>
       </div>
     </div>

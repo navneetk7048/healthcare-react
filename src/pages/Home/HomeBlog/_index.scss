@@ -1,0 +1,52 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.home-blog {
+  @include flex;
+  flex-direction: column;
+  color: $clr-accent-darkblue;
+  padding: 1rem;
+  gap: 1rem;
+
+  > :nth-child(1),
+  > :nth-child(2) {
+    padding-inline: 1rem;
+  }
+
+  .home-blog-list {
+    @include flex;
+    gap: 1rem;
+
+    .home-blog-item {
+      @include flex;
+      flex-direction: column;
+      gap: 1rem;
+      background-color: $clr-accent-grey;
+
+      a,
+      p {
+        margin-inline: 1rem;
+      }
+
+      a {
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+
+      p {
+        color: $secondary-color;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .home-blog {
+    .home-blog-list {
+      flex-direction: column;
+    }
+  }
+}

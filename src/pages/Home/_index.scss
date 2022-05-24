@@ -1,72 +1,7 @@
-@use "../../assets/scss/abstracts/" as *;
-
 @forward "./Hero";
 @forward "./AppointmentForm";
 @forward "./Info";
 @forward "./HomeServices";
-@forward "./Video";
-
-/* Location Background */
-
-.location-bg {
-  background: url("../../assets/images/location-bg.jpg") no-repeat;
-  text-align: center;
-  color: $clr-accent-darkblue;
-  padding: 20px;
-}
-
-.location-bg > * {
-  padding: 10px;
-}
-
-/* *************** */
-/* Healthcare Blog */
-/* *************** */
-
-.home-blog {
-  width: 80%;
-  margin-inline: auto;
-  color: $clr-accent-darkblue;
-}
-
-.home-blog > h1,
-.home-blog > p {
-  text-align: center;
-}
-
-.home .blogs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.home .blog {
-  padding: 10px;
-  margin-block: 40px;
-}
-
-.home .blog img {
-  width: 100%;
-}
-
-.home .blog p {
-  margin: 1rem;
-  cursor: default;
-  color: $secondary-color;
-}
-
-.home .blog a {
-  color: $clr-accent-darkblue;
-  font-weight: bold;
-  transition: all 0.4s ease-in-out;
-}
-
-.home .blog a:hover {
-  color: $secondary-color;
-}
-
-@media (max-width: 1000px) {
-  .home .blogs {
-    grid-template-columns: auto;
-  }
-}
+@forward "./HomeTestimonials";
+@forward "./HomeLocation/";
+@forward "./HomeBlog/";

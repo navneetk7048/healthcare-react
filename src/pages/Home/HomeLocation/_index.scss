@@ -1,0 +1,11 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.home-location {
+  background: url("../../../assets/images/location-bg.jpg") no-repeat;
+  background-position: center;
+  @include flex(center, center);
+  flex-direction: column;
+  color: $clr-accent-darkblue;
+  gap: 1rem;
+  min-height: 40vh;
+}
