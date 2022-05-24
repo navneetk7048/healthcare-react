@@ -9,7 +9,6 @@
 }
 
 body {
-  background-color: $clr-accent-grey;
   font-family: $font-stack-primary;
   min-height: 100vh;
   line-height: 1.5;
@@ -36,4 +35,13 @@ select,
 textarea {
   color: inherit;
   font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
 }

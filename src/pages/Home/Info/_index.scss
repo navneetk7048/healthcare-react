@@ -1,0 +1,64 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.info {
+  @include flex(space-between);
+  gap: 1rem;
+  color: $clr-accent-darkblue;
+
+  > * {
+    padding: 1rem;
+    flex: 1;
+  }
+
+  .info-left {
+    flex-basis: 70%;
+
+    .icons {
+      @include grid(repeat(4, 1fr), 1rem);
+      padding: 1rem;
+
+      .icon {
+        text-align: center;
+
+        :nth-child(1) {
+          color: $primary-color;
+          font-size: 3.5rem;
+        }
+
+        :nth-child(2) {
+          color: $secondary-color;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .info-right {
+    flex-basis: 20%;
+    gap: 1rem;
+    background-color: $clr-accent-grey;
+    border-radius: $rounded;
+    @include flex(space-between);
+    flex-direction: column;
+
+    a {
+      width: max-content;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .info {
+    .info-left {
+      .icons {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
