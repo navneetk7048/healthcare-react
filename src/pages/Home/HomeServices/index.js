@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   FaHandHoldingMedical,
   FaStethoscope,
@@ -8,10 +8,14 @@ import {
   FaBrain,
 } from "react-icons/fa";
 
-const Services = () => {
+import Button from "../../../components/Button";
+
+const HomeServices = () => {
+  const navigate = useNavigate();
+
   return (
-    <div style={{ backgroundColor: "#00bcbd" }}>
-      <div className="home-services container">
+    <div className="home-services">
+      <div className="container">
         <div className="home-services-text">
           <h1>Healthcare You Can Trust</h1>
           <p>
@@ -22,45 +26,35 @@ const Services = () => {
             days signs void creepeth Together in face for he can't us. Seas air
             beast behold creature itself herb place, days.
           </p>
-          <Link to="/services" className="btn">
-            See All Services
-          </Link>
+          <Button
+            type="btn-pink-darkblue"
+            text="See All Services"
+            onClick={() => navigate("/services")}
+          />
         </div>
-        <div className="home-services-icons">
-          <div className="home-services-icon">
-            <p>
-              <FaHandHoldingMedical />
-            </p>
+        <div className="icons">
+          <div className="icon">
+            <FaHandHoldingMedical />
             <p>Emergency Care</p>
           </div>
-          <div className="home-services-icon">
-            <p>
-              <FaBrain />
-            </p>
+          <div className="icon">
+            <FaBrain />
             <p>Neurology</p>
           </div>
-          <div className="home-services-icon">
-            <p>
-              <FaStethoscope />
-            </p>
+          <div className="icon">
+            <FaStethoscope />
             <p>Pediatry</p>
           </div>
-          <div className="home-services-icon">
-            <p>
-              <FaHeartbeat />
-            </p>
+          <div className="icon">
+            <FaHeartbeat />
             <p>Cardiology</p>
           </div>
-          <div className="home-services-icon">
-            <p>
-              <FaTooth />
-            </p>
+          <div className="icon">
+            <FaTooth />
             <p>Dentistry</p>
           </div>
-          <div className="home-services-icon">
-            <p>
-              <FaBone />
-            </p>
+          <div className="icon">
+            <FaBone />
             <p>Orthopedics</p>
           </div>
         </div>
@@ -69,4 +63,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default HomeServices;
