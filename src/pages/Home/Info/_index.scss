@@ -4,6 +4,7 @@
   @include flex(space-between);
   gap: 1rem;
   color: $clr-accent-darkblue;
+  margin-top: -8rem;
 
   > * {
     padding: 1rem;

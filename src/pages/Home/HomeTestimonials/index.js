@@ -7,23 +7,18 @@ const HomeTestimonials = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <div className="video container">
-      <div className={`iframe-div ${click}`}>
-        <div className="iframe-container">
-          <iframe
-            width="600"
-            height="300"
-            src="https://www.youtube.com/embed/xcJtL7QggTI"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-          <FaRegTimesCircle
-            onClick={() => setClick(false)}
-            style={{ marginTop: "-25px" }}
-          />
-        </div>
+    <div className="home-testimonials container">
+      <div className={`home-testimonials-video ${click}`}>
+        <iframe
+          width="600"
+          height="300"
+          src="https://www.youtube.com/embed/xcJtL7QggTI"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        <FaRegTimesCircle onClick={() => setClick(false)} />
       </div>
       <div className="video-img">
         <div className="video-img-text">

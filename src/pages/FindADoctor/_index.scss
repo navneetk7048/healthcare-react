@@ -1,6 +1,10 @@
+@use "../../assets/scss/abstracts" as *;
+
 .find-a-doctor {
-  .container > button {
-    margin-inline: auto;
-    display: block;
+  background-color: $clr-accent-grey;
+  padding-bottom: 3.125rem;
+
+  .container {
+    margin-bottom: 0;
   }
 }
