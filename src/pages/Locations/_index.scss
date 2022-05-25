@@ -1,0 +1,51 @@
+@use "../../assets/scss/abstracts" as *;
+
+.location-list {
+  color: $clr-accent-darkblue;
+
+  h1 {
+    margin-inline: 1rem;
+  }
+
+  .location-separator {
+    margin: 2rem 1rem;
+    border: 1px solid rgba($primary-color, 0.2);
+  }
+
+  .location {
+    @include flex;
+
+    > * {
+      flex-basis: 50%;
+      padding: 1rem;
+    }
+
+    :nth-child(1) {
+      @include flex(column);
+      gap: 3rem;
+
+      .location-address,
+      .location-contact {
+        @include flex($cross: center);
+        gap: 0.5rem;
+      }
+
+      button {
+        margin-inline: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .location-list {
+    .location {
+      flex-direction: column;
+      gap: 1rem;
+
+      iframe {
+        min-height: 60vh;
+      }
+    }
+  }
+}
