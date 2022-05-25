@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner";
 import blogBanner from "../../assets/images/blog-banner.jpg";
+import BlogList from "./BlogList";
 
 const Blog = () => {
   return (
@@ -10,6 +11,7 @@ const Blog = () => {
         current="Blog"
         title="From Our Blog"
       />
+      <BlogList />
     </div>
   );
 };
