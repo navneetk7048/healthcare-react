@@ -1,6 +1,6 @@
 import { FaBed, FaIdCard, FaUserMd, FaHandPaper } from "react-icons/fa";
 
-import aboutShowcase from "../../../assets/images/we-are-sec.jpg";
+import weAreSec from "../../../assets/images/we-are-sec.jpg";
 
 const AboutShowcase = () => {
   return (
@@ -42,7 +42,7 @@ const AboutShowcase = () => {
         </div>
       </div>
       <div className="about-showcase-image">
-        <img src={aboutShowcase} alt="" />
+        <img src={weAreSec} alt="" />
       </div>
     </div>
   );

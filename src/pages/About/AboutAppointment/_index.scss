@@ -1,0 +1,14 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.about-appointment {
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+
+  .container {
+    @include flex(column, center, center);
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 0;
+  }
+}
