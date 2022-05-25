@@ -1,7 +1,7 @@
 @use "../../../assets/scss/abstracts" as *;
 
 .info {
-  @include flex(space-between);
+  @include flex($main: space-between);
   gap: 1rem;
   color: $clr-accent-darkblue;
   margin-top: -8rem;
@@ -39,8 +39,7 @@
     gap: 1rem;
     background-color: $clr-accent-grey;
     border-radius: $rounded;
-    @include flex(space-between);
-    flex-direction: column;
+    @include flex(column, space-between);
 
     a {
       width: max-content;

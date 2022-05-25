@@ -17,8 +17,7 @@
     gap: 1rem;
 
     .home-blog-item {
-      @include flex;
-      flex-direction: column;
+      @include flex(column);
       gap: 1rem;
       background-color: $clr-accent-grey;
 

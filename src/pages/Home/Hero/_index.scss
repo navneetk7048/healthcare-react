@@ -19,7 +19,7 @@
     @include grid(1fr 5fr 1fr);
 
     .switch {
-      @include flex(center, center);
+      @include flex(row, center, center);
       cursor: pointer;
       font-size: 5rem;
       opacity: 0.5;
@@ -31,7 +31,7 @@
     }
 
     .hero-text {
-      @include flex(center, center);
+      @include flex(row, center, center);
       text-align: center;
 
       p {

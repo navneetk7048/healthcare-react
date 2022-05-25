@@ -1,0 +1,66 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.about-showcase {
+  position: relative;
+  @include flex;
+  color: $clr-accent-darkblue;
+  gap: 1rem;
+
+  .about-text {
+    @include flex(column);
+    padding: 1rem;
+    gap: 0.5rem;
+    flex-basis: 50%;
+    flex: 1;
+  }
+
+  .about-showcase-image {
+    flex-basis: 40%;
+  }
+
+  .icons {
+    @include grid(repeat(4, 1fr), 1rem);
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
+    border-radius: $rounded;
+
+    .icon {
+      text-align: center;
+
+      :nth-child(1) {
+        color: $primary-color;
+        font-size: 3.5rem;
+      }
+
+      :nth-child(2) {
+        color: $secondary-color;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .about-showcase {
+    .icons {
+      position: absolute;
+      left: 0;
+      right: 15%;
+      bottom: 5%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-showcase {
+    flex-direction: column;
+
+    &-image {
+      img {
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@
   transition: all 1s ease;
 
   .logo {
-    @include flex(center, center);
+    @include flex(row, center, center);
     background-color: #fff;
 
     img {
@@ -28,7 +28,7 @@
   }
 
   .navlist {
-    @include flex(space-between, center);
+    @include flex(row, space-between, center);
     width: 100%;
 
     ul {
@@ -62,7 +62,7 @@
     .logo {
       background-color: transparent;
       width: 100%;
-      @include flex(space-between, center);
+      @include flex(row, space-between, center);
 
       .toggle {
         display: block;

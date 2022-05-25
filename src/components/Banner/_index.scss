@@ -8,8 +8,7 @@
     position: absolute;
     inset: 0;
     text-align: center;
-    @include flex(center, center);
-    flex-direction: column;
+    @include flex(column, center, center);
     background-color: rgba($clr-accent-darkblue, 0.7);
 
     span {

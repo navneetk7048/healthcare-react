@@ -17,7 +17,7 @@
     .container {
       margin-block: 0;
       padding: 1rem;
-      @include flex(space-between);
+      @include flex($main: space-between);
       gap: 1rem;
 
       > * > * {
