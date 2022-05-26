@@ -1,3 +1,47 @@
+@use "../../../assets/scss/abstracts" as *;
+@forward "./PostList";
+
 .blog-suggestions {
-  
+  @include flex;
+  color: $clr-accent-darkblue;
+
+  > * {
+    padding: 1rem;
+  }
+
+  h2 {
+    padding-block: 1rem;
+  }
+
+  .post-categories {
+    @include flex(column);
+    gap: 1rem;
+    padding-block: 1rem;
+
+    a {
+      color: $clr-accent-darkblue;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .post-tags {
+    @include flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-block: 1rem;
+
+    button {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .blog-suggestions {
+    flex-direction: column;
+  }
 }

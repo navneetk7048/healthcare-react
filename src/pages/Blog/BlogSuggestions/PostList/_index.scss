@@ -1,0 +1,31 @@
+@use "../../../../assets/scss/abstracts" as *;
+
+.post-list {
+  @include grid(1fr 1fr);
+
+  .post {
+    @include flex($cross: flex-start);
+    gap: 1rem;
+
+    &-content {
+      p {
+        color: $secondary-color;
+      }
+
+      a {
+        color: $primary-color;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $clr-accent-darkblue;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .post-list {
+    @include grid(1fr);
+  }
+}
