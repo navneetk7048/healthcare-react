@@ -1,5 +1,24 @@
 @use "../../../assets/scss/abstracts" as *;
 
 .blog-list {
+  background-color: $clr-accent-grey;
   @include grid(repeat(4, 1fr));
+
+  [class^="blog-list-"] {
+    @include flex(column);
+    gap: 1rem;
+  }
+
+  [class^="blog-item"] {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(black, 0.7);
+  }
+
+  .blog-item-special-blue {
+    background-color: $primary-color;
+  }
+
+  .blog-item-special-pink {
+    background-color: $secondary-color;
+  }
 }

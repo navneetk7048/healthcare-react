@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
 import videoIcon from "../../../assets/images/video-icon.png";
+import videoImg from "../../../assets/images/video-img.jpg";
 
 const HomeTestimonials = () => {
   const [click, setClick] = useState(false);
@@ -10,8 +11,6 @@ const HomeTestimonials = () => {
     <div className="home-testimonials container">
       <div className={`home-testimonials-video ${click}`}>
         <iframe
-          width="600"
-          height="300"
           src="https://www.youtube.com/embed/xcJtL7QggTI"
           title="YouTube video player"
           frameBorder="0"
@@ -20,8 +19,9 @@ const HomeTestimonials = () => {
         />
         <FaRegTimesCircle onClick={() => setClick(false)} />
       </div>
-      <div className="video-img">
-        <div className="video-img-text">
+      <div className="home-testimonials-img">
+        <img src={videoImg} alt="" />
+        <div className="home-testimonials-img-text">
           <p>Watch Healthcare Video</p>
           <img
             onClick={() => setClick(true)}
@@ -31,7 +31,7 @@ const HomeTestimonials = () => {
           />
         </div>
       </div>
-      <div className="video-text">
+      <div className="home-testimonials-text">
         <h1>Why Our Patients choose healthcare</h1>
         <fieldset>
           <legend>
