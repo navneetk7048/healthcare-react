@@ -12,7 +12,7 @@ import innerBlog8 from "../../../assets/images/inner-blog-8.jpg";
 export const blogs = [
   {
     id: 1,
-    picture: { innerBlog1 },
+    picture: innerBlog1,
     date: "December 15, 2019",
     title: "Evening Shall Appear Fruitful Brought Forth Signs His Name",
     text: "Abundantly a for the beginning waters of spirit above, evening beginning herb...",
@@ -20,7 +20,7 @@ export const blogs = [
   },
   {
     id: 2,
-    picture: { innerBlog2 },
+    picture: innerBlog2,
     date: "November 09, 2019",
     title: "Daily Morning Exercise Routine",
     text: "Behold you'll days sea you're earth man created lights and for. Very them...",
@@ -43,7 +43,7 @@ export const blogs = [
   },
   {
     id: 5,
-    picture: { innerBlog3 },
+    picture: innerBlog3,
     date: "October 23, 2019",
     title: "Lights Image Great Two Day Have Said Make Fruit.",
     text: "Abundantly a for the beginning waters of spirit above, evening beginning herb...",
@@ -51,7 +51,7 @@ export const blogs = [
   },
   {
     id: 6,
-    picture: { innerBlog4 },
+    picture: innerBlog4,
     date: "September 03, 2019",
     title: "Moving Beast Lights Form Let Open Sea",
     text: "Abundantly a for the beginning waters of spirit above, evening beginning herb...",
@@ -59,7 +59,7 @@ export const blogs = [
   },
   {
     id: 7,
-    picture: { innerBlog5 },
+    picture: innerBlog5,
     date: "December 09, 2019",
     title: "Daily Morning Exercise Routine",
     text: "Behold you'll days sea you're earth man created lights and for. Very them...",
@@ -75,7 +75,7 @@ export const blogs = [
   },
   {
     id: 9,
-    picture: { innerBlog6 },
+    picture: innerBlog6,
     date: "September 12, 2019",
     title: "Bearing Winged Lights Fourth Seed Them Fruit To",
     text: "Behold you'll days sea you're earth man created lights and for. Very them...",
@@ -83,7 +83,7 @@ export const blogs = [
   },
   {
     id: 10,
-    picture: { innerBlog7 },
+    picture: innerBlog7,
     date: "December 04, 2019",
     title: "Also Creature Morning Likeness Moved Years God",
     text: "Place were in divide. There. Living creature said. Great fourth likeness lesser...",
@@ -91,7 +91,7 @@ export const blogs = [
   },
   {
     id: 11,
-    picture: { innerBlog8 },
+    picture: innerBlog8,
     date: "October 09, 2019",
     title: "Green Whales Fruitful One Together Fly Saw Life Saying Light",
     text: "Place were in divide. There. Living creature said. Great fourth likeness lesser...",

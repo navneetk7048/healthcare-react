@@ -1,0 +1,29 @@
+@use "../../../../assets/scss/abstracts" as *;
+
+.blog-item {
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.7);
+  background-color: #fff;
+
+  .blog-content {
+    padding: 1rem;
+
+    .blog-date {
+      color: $secondary-color;
+    }
+
+    .blog-title {
+      a {
+        color: $primary-color;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .blog-text {
+      color: $clr-accent-darkblue;
+    }
+  }
+}

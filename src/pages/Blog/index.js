@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner";
 import blogBanner from "../../assets/images/blog-banner.jpg";
 import BlogList from "./BlogList";
+import BlogSuggestions from "./BlogSuggestions";
 
 const Blog = () => {
   return (
@@ -12,6 +13,7 @@ const Blog = () => {
         title="From Our Blog"
       />
       <BlogList />
+      <BlogSuggestions />
     </div>
   );
 };

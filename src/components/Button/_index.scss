@@ -26,3 +26,16 @@
     $txt2: #fff
   );
 }
+
+.btn-simple-blue {
+  background-color: #fff;
+  color: $clr-accent-darkblue;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10s rgba(0, 0, 0, 0.7);
+
+  &.active,
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}

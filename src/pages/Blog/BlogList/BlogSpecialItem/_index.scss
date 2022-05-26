@@ -1,0 +1,25 @@
+@use "../../../../assets/scss/abstracts" as *;
+
+.blog-special-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem;
+  color: $clr-accent-darkblue;
+  @include flex(column, center, center);
+  gap: 1rem;
+
+  svg {
+    font-size: 3rem;
+  }
+}
+
+.special-blue {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.special-pink {
+  background-color: $secondary-color;
+  color: #fff;
+}
