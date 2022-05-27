@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner";
 import careerBanner from "../../assets/images/career-banner.jpg";
+import CareerVideo from "./CareerVideo";
 
 const Career = () => {
   return (
@@ -10,6 +11,7 @@ const Career = () => {
         current="Career"
         title="We're Hiring!"
       />
+      <CareerVideo />
     </div>
   );
 };

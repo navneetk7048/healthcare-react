@@ -1,0 +1,61 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.career-video {
+  background-color: $clr-accent-grey;
+
+  &-text {
+    background-color: $secondary-color;
+    color: #fff;
+    margin-top: -3rem;
+    margin-bottom: 3.125rem;
+    position: relative;
+    border-radius: $rounded;
+    padding: 3rem 12rem;
+    text-align: center;
+    @include flex(column, center, center);
+    gap: 1rem;
+  }
+
+  &-cards {
+    @include grid(repeat(3, 1fr));
+
+    .career-video-card {
+      text-align: center;
+
+      .career-video-img {
+        position: relative;
+
+        .career-video-play {
+          position: absolute;
+          inset: 0;
+          @include flex($main: center, $cross: center);
+          cursor: pointer;
+        }
+      }
+
+      h2 {
+        color: $primary-color;
+      }
+
+      p {
+        color: $clr-accent-darkblue;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .career-video {
+    &-text {
+      padding: 3rem 6rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .career-video {
+    &-cards {
+      grid-template-columns: auto;
+    }
+  }
+}

@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-stack-primary;
   min-height: 100vh;
@@ -26,7 +30,7 @@ li {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 input,

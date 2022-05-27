@@ -40,6 +40,11 @@
       }
     }
   }
+
+  button {
+    width: max-content;
+    margin-inline: auto;
+  }
 }
 
 @media (max-width: 576px) {

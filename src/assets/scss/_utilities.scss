@@ -2,8 +2,8 @@
 
 .btn {
   border: none;
-  display: block;
-  width: fit-content;
+  display: inline-block;
+  width: max-content;
   padding: 0.5rem 1rem;
   border-radius: 0.3125rem;
   text-transform: uppercase;
@@ -12,8 +12,9 @@
 }
 
 .container {
-  width: min(90%, 1200px);
+  width: min(90%, 960px);
   margin-inline: auto;
+  padding-block: 3.125rem;
 }
 
 .flex {
