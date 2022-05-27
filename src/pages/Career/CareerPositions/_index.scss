@@ -17,6 +17,19 @@
       padding: 1rem;
       @include flex($main: space-between);
       box-shadow: 0px 0px 30px 0px rgba(24, 79, 104, 0.09);
+
+      button {
+        height: max-content;
+        width: max-content;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .career-positions {
+    &-cards {
+      @include grid(1fr);
     }
   }
 }
