@@ -1,0 +1,64 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.career-testimonials {
+  background-color: $primary-color;
+  color: #fff;
+  margin-block: 1rem 3.125rem;
+
+  p {
+    text-align: left;
+    padding: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  fieldset {
+    border: 3px solid #fff;
+    margin: 15px;
+
+    legend {
+      margin-left: 2rem;
+      font-size: 2rem;
+      padding-inline: 1rem;
+    }
+  }
+
+  .testimonials {
+    display: flex;
+
+    &-text a {
+      color: #fff;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+
+  .patient-name {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .react-multi-carousel-dot {
+    button {
+      width: 1.5rem;
+      height: 0.25rem;
+      border: none;
+      border-radius: 0;
+      opacity: 0.5;
+    }
+
+    &--active button {
+      opacity: 1;
+      background-color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .career-testimonials {
+    .testimonials {
+      flex-direction: column;
+    }
+  }
+}

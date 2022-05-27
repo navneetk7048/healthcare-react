@@ -3,6 +3,7 @@ import careerBanner from "../../assets/images/career-banner.jpg";
 import CareerVideo from "./CareerVideo";
 import CareerLife from "./CareerLife";
 import CareerSlider from "./CareerSlider";
+import CareerTestimonials from "./CareerTestimonials";
 
 const Career = () => {
   return (
@@ -16,6 +17,7 @@ const Career = () => {
       <CareerVideo />
       <CareerLife />
       <CareerSlider />
+      <CareerTestimonials />
     </div>
   );
 };
