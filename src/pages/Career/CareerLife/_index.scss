@@ -1,0 +1,41 @@
+@use "../../../assets/scss/abstracts" as *;
+
+.career-life {
+  color: $clr-accent-darkblue;
+
+  h2 {
+    margin-inline: auto;
+    width: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  &-cards {
+    @include grid(repeat(3, 1fr));
+
+    .career-life-card {
+      @include flex(column);
+      gap: 0.5rem;
+
+      svg {
+        font-size: 3.5rem;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .career-life {
+    &-cards {
+      @include grid(repeat(2, 1fr));
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .career-life {
+    &-cards {
+      @include grid(auto);
+    }
+  }
+}
