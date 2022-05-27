@@ -29,8 +29,7 @@ const CareerSlider = () => {
         infinite={true}
         arrows={false}
         autoPlay={true}
-        autoPlaySpeed={2000}
-        ssr={false}>
+        autoPlaySpeed={2000}>
         <div>
           <img src={careerSlide1} alt="" />
         </div>

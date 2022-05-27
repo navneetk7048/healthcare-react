@@ -26,8 +26,7 @@ const CareerTestimonials = () => {
           infinite={true}
           arrows={false}
           autoPlay={true}
-          autoPlaySpeed={5000}
-          ssr={false}>
+          autoPlaySpeed={3000}>
           <div className="testimonials">
             <div className="testimonial">
               <fieldset>

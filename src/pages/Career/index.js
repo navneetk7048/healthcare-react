@@ -4,6 +4,7 @@ import CareerVideo from "./CareerVideo";
 import CareerLife from "./CareerLife";
 import CareerSlider from "./CareerSlider";
 import CareerTestimonials from "./CareerTestimonials";
+import CareerPositions from "./CareerPositions";
 
 const Career = () => {
   return (
@@ -18,6 +19,7 @@ const Career = () => {
       <CareerLife />
       <CareerSlider />
       <CareerTestimonials />
+      <CareerPositions />
     </div>
   );
 };

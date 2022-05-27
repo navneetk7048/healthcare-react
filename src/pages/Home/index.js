@@ -7,8 +7,11 @@ import HomeTestimonials from "./HomeTestimonials/";
 import { doctors } from "./doctors";
 import HomeLocation from "./HomeLocation";
 import HomeBlog from "./HomeBlog";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
     <div className="home">
       <Hero />
