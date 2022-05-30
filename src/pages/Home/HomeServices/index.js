@@ -33,27 +33,27 @@ const HomeServices = () => {
           />
         </div>
         <div className="icons">
-          <div className="icon">
+          <div className="icon" onClick={() => navigate("/service-detail")}>
             <FaHandHoldingMedical />
             <p>Emergency Care</p>
           </div>
-          <div className="icon">
+          <div className="icon" onClick={() => navigate("/service-detail")}>
             <FaBrain />
             <p>Neurology</p>
           </div>
-          <div className="icon">
+          <div className="icon" onClick={() => navigate("/service-detail")}>
             <FaStethoscope />
             <p>Pediatry</p>
           </div>
-          <div className="icon">
+          <div className="icon" onClick={() => navigate("/service-detail")}>
             <FaHeartbeat />
             <p>Cardiology</p>
           </div>
-          <div className="icon">
+          <div className="icon" onClick={() => navigate("/service-detail")}>
             <FaTooth />
             <p>Dentistry</p>
           </div>
-          <div className="icon">
+          <div className="icon" onClick={() => navigate("/service-detail")}>
             <FaBone />
             <p>Orthopedics</p>
           </div>
