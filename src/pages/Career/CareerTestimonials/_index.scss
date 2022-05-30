@@ -33,6 +33,10 @@
       color: #fff;
       transition: color 0.3s ease-in-out;
     }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
   }
 
   .patient-name {
@@ -52,14 +56,6 @@
     &--active button {
       opacity: 1;
       background-color: #fff;
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  .career-testimonials {
-    .testimonials {
-      flex-direction: column;
     }
   }
 }
