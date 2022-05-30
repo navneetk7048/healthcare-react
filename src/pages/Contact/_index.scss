@@ -1,0 +1,67 @@
+@use "../../assets/scss/abstracts" as *;
+
+.contact {
+  .contact-form {
+    background-color: #fff;
+    margin-top: -3rem;
+    position: relative;
+    @include flex();
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: $rounded;
+
+    > * {
+      @include flex(column);
+      padding: 2rem;
+    }
+
+    &-left {
+      gap: 0.5rem;
+      flex: 1;
+      text-align: center;
+
+      input,
+      textarea {
+        padding: 0.5rem;
+        outline: none;
+      }
+
+      button {
+        margin-inline: auto;
+      }
+    }
+
+    &-right {
+      flex-basis: 35%;
+      background-color: $primary-color;
+      color: #fff;
+      gap: 3rem;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      font-size: 1.4rem;
+      font-family: "Oswald", sans-serif;
+
+      > div > svg {
+        box-sizing: initial;
+        background-color: #fff;
+        color: $primary-color;
+        padding: 0.5rem;
+        border-radius: 50%;
+        // outline: 0.5rem solid #fff;
+      }
+
+      .social-media {
+        @include flex(row, center, center);
+        gap: 0.5rem;
+
+        > * {
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
