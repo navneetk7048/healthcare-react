@@ -5,6 +5,7 @@
   background-color: $primary-color;
   color: #fff;
   transition: all 1s ease;
+  font-family: "Oswald", sans-serif;
 
   .logo {
     @include flex(row, center, center);
