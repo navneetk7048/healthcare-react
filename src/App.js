@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Locations from "./pages/Locations";
 import Blog from "./pages/Blog";
 import Career from "./pages/Career";
+import OnlineBillPay from "./pages/OnlineBillPay";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/locations" element={<Locations />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/online-bill-pay" element={<OnlineBillPay />} />
       </Routes>
       <Footer />
     </Router>

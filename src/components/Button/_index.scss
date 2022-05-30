@@ -44,3 +44,7 @@
   @include btn-slide(#fff, $secondary-color, $secondary-color, #fff);
   border: 1px solid $secondary-color;
 }
+
+.btn-grey-blue {
+  @include btn-slide($clr-accent-grey2, $primary-color, #fff, #fff);
+}

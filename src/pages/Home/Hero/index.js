@@ -24,8 +24,7 @@ const Hero = () => {
         responsive={responsive}
         autoPlay={true}
         infinite={true}
-        autoPlaySpeed={1000}
-        ssr={false}>
+        autoPlaySpeed={3000}>
         <div className="hero-img">
           <img src={hero1} alt="" />
           <div className="hero-img-text">

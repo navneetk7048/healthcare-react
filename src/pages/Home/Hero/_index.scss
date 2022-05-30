@@ -13,6 +13,7 @@
       inset: 0;
       @include flex(column, center, center);
       gap: 1rem;
+      margin-inline: 10vw;
       color: #fff;
 
       p {
@@ -24,7 +25,8 @@
 
   .react-multiple-carousel__arrow {
     height: 100%;
-    width: 10rem;
+    width: 10vw;
+    max-width: 10rem;
     border: none;
     border-radius: 0;
     background-color: transparent;
