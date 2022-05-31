@@ -7,7 +7,12 @@ const Banner = ({ banner, previous, current, title }) => {
       <img src={banner} alt="banner" />
       <div className="banner-content">
         <p>
-          <Link to="/">{previous}</Link> / <span>{current}</span>
+          {previous.map((prev) => (
+            <>
+              <Link to={`/${prev.link}`}>{prev.text}</Link> /{" "}
+            </>
+          ))}
+          <span>{current}</span>
         </p>
         <h1>{title}</h1>
       </div>

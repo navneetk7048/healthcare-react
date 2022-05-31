@@ -6,7 +6,7 @@ const OnlineBillPay = () => {
   return (
     <div className="online-bill-pay">
       <Banner
-        previous="Home"
+        previous={[{ text: "Home", link: "" }]}
         current="Online Bill Pay"
         title="Pay Your Bill Online"
         banner={careerBanner}

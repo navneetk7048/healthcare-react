@@ -10,7 +10,12 @@ import AboutGoal from "./AboutGoal";
 const About = () => {
   return (
     <div className="about">
-      <Banner banner={about} previous="Home" current="About" title="About Us" />
+      <Banner
+        banner={about}
+        previous={[{ text: "Home", link: "" }]}
+        current="About"
+        title="About Us"
+      />
       <AboutContent />
       <AboutShowcase />
       <AboutAppointment />

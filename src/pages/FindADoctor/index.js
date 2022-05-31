@@ -9,7 +9,7 @@ const OurDoctors = () => {
     <div className="find-a-doctor">
       <Banner
         banner={about}
-        previous="Home"
+        previous={[{ text: "Home", link: "" }]}
         current="Find Your Doctor"
         title="Physician Directory"
       />

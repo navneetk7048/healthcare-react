@@ -11,7 +11,7 @@ const Services = () => {
     <div className="services">
       <Banner
         banner={serviceBanner}
-        previous="Home"
+        previous={[{ text: "Home", link: "" }]}
         current="Our Services"
         title="Our Services"
       />

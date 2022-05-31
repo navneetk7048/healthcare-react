@@ -8,7 +8,7 @@ const OurDoctors = () => {
     <div className="our-doctors">
       <Banner
         banner={drBanner}
-        previous="Home"
+        previous={[{ text: "Home", link: "" }]}
         current="Our Doctors"
         title="Meet Our Experts"
       />

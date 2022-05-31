@@ -15,7 +15,7 @@ const Contact = () => {
     <div className="contact">
       <Banner
         banner={contactBanner}
-        previous="Home"
+        previous={[{ text: "Home", link: "" }]}
         current="Contact"
         title="Contact Us"
       />
