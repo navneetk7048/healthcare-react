@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner";
 import ExpertList from "../../components/ExpertList";
-import { doctors } from "./doctors";
+import doctors from "../../data/doctors";
 import drBanner from "../../assets/images/dr-banner.jpg";
 
 const OurDoctors = () => {

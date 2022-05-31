@@ -5,7 +5,7 @@ import Button from "../../Button";
 const Expert = ({ doctor }) => {
   const navigate = useNavigate();
 
-  const { name, speciality, picture, profile = "our-doctors" } = doctor;
+  const { name, speciality, picture, username } = doctor;
 
   return (
     <div className="expert">
@@ -17,7 +17,7 @@ const Expert = ({ doctor }) => {
           <Button
             type="btn-darkblue-blue"
             text="View Profile"
-            onClick={() => navigate(`/${profile}`)}
+            onClick={() => navigate(`/${username}`)}
           />
         </div>
       </div>

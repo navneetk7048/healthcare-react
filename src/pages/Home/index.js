@@ -4,7 +4,7 @@ import Info from "./Info";
 import ExpertList from "../../components/ExpertList";
 import HomeServices from "./HomeServices/";
 import HomeTestimonials from "./HomeTestimonials/";
-import { doctors } from "./doctors";
+import doctors from "../../data/doctors-small";
 import HomeLocation from "./HomeLocation";
 import HomeBlog from "./HomeBlog";
 import { useEffect } from "react";
