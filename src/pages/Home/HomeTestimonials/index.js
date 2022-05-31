@@ -106,7 +106,7 @@ const HomeTestimonials = () => {
           </div>
         </Carousel>
         <p className="all-testimonials">
-          <Link to="/">View All Testimonials</Link>
+          <Link to="/testimonials">View All Testimonials</Link>
         </p>
       </div>
     </div>

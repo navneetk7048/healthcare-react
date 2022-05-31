@@ -1,0 +1,37 @@
+@use "../../assets/scss/abstracts" as *;
+
+.testimonials {
+  &-video {
+    @include grid;
+
+    &-card {
+      &-img {
+        position: relative;
+
+        > img {
+          width: 100%;
+        }
+
+        .testimonials-video-play {
+          position: absolute;
+          inset: 0;
+          @include flex($main: center, $cross: center);
+          cursor: pointer;
+        }
+      }
+
+      p {
+        color: $primary-color;
+
+        span {
+          text-transform: uppercase;
+          font-family: "Oswald", sans-serif;
+        }
+      }
+    }
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -14,10 +14,14 @@ import Contact from "./pages/Contact";
 import ServiceDetail from "./pages/ServiceDetail";
 import DoctorProfile from "./pages/DoctorProfile";
 import doctors from "./data/doctors";
+import Testimonials from "./pages/Testimonials";
 
 const AppRoutes = () => (
   <Routes>
+    {/* Home Page */}
     <Route path="/" element={<Home />} />
+
+    {/* Navbar Pages */}
     <Route path="/services" element={<Services />} />
     <Route path="/our-doctors" element={<OurDoctors />} />
     <Route path="/find-a-doctor" element={<FindADoctor />} />
@@ -28,7 +32,10 @@ const AppRoutes = () => (
     <Route path="/online-bill-pay" element={<OnlineBillPay />} />
     <Route path="/patient-info" element={<PatientInfo />} />
     <Route path="/contact" element={<Contact />} />
+
+    {/* Other Pages */}
     <Route path="/service-detail" element={<ServiceDetail />} />
+    <Route path="/testimonials" element={<Testimonials />} />
     {doctors.map((doctor) => (
       <Route
         path={`/${doctor.username}`}
