@@ -16,11 +16,11 @@ const BlogSuggestions = () => {
         <div>
           <h3>Post Categories</h3>
           <div className="post-categories">
-            <Link to="/">Health Care 37</Link>
-            <Link to="/">Medical Treatment 23</Link>
-            <Link to="/">Lifestyle 15</Link>
-            <Link to="/">Fitness 27</Link>
-            <Link to="/">Food 23</Link>
+            <Link to="/blog-detail">Health Care 37</Link>
+            <Link to="/blog-detail">Medical Treatment 23</Link>
+            <Link to="/blog-detail">Lifestyle 15</Link>
+            <Link to="/blog-detail">Fitness 27</Link>
+            <Link to="/blog-detail">Food 23</Link>
           </div>
         </div>
         <div>
@@ -29,32 +29,32 @@ const BlogSuggestions = () => {
             <Button
               type="btn-simple-blue"
               text="Food"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Lifestyle"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Healthcare"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Treatment"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Medical"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Technology"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/blog-detail")}
             />
           </div>
         </div>

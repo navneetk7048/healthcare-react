@@ -1,7 +1,7 @@
 @use "../../assets/scss/abstracts" as *;
 
 .navbar {
-  @include flex;
+  // @include flex;
   background-color: $primary-color;
   color: #fff;
   transition: all 1s ease;
@@ -24,6 +24,20 @@
 
       &.true {
         color: $clr-accent-darkblue;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      background-color: transparent;
+      width: 100%;
+      @include flex(row, space-between, center);
+
+      .toggle {
+        display: block;
+      }
+
+      a {
+        background-color: #fff;
       }
     }
   }
@@ -53,44 +67,35 @@
     .phone {
       justify-content: end;
     }
-  }
-}
 
-@media (max-width: 1000px) {
-  .navbar {
-    flex-direction: column;
-
-    .logo {
-      background-color: transparent;
-      width: 100%;
-      @include flex(row, space-between, center);
-
-      .toggle {
-        display: block;
-      }
-
-      a {
-        background-color: #fff;
-      }
-    }
-  }
-
-  .navlist {
-    &.false {
-      display: none;
+    @media (max-width: 1000px) {
+      position: absolute;
+      top: 3.5rem;
+      z-index: 10000;
+      background-color: inherit;
     }
 
-    &.true {
-      flex-direction: column;
-
-      .big-screen-only {
+    @media (max-width: 1000px) {
+      &.false {
         display: none;
       }
 
-      ul {
+      &.true {
         flex-direction: column;
-        align-items: center;
+
+        .big-screen-only {
+          display: none;
+        }
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
+  }
+
+  @media (min-width: 1000px) {
+    display: flex;
   }
 }

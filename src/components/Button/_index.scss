@@ -32,6 +32,9 @@
   color: $clr-accent-darkblue;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10s rgba(0, 0, 0, 0.7);
+  text-transform: none;
+  font-family: $font-stack-secondary;
+  letter-spacing: normal;
 
   &.active,
   &:hover {

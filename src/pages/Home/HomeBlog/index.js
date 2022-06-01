@@ -18,17 +18,23 @@ const HomeBlog = () => {
       <div className="home-blog-list">
         <div className="home-blog-item">
           <img src={blog1} alt="" />
-          <Link to="/">From Fowl Moving Night Our Wherein Herb Seed</Link>
+          <Link to="/blog-detail">
+            From Fowl Moving Night Our Wherein Herb Seed
+          </Link>
           <p>Sept 03, 2019</p>
         </div>
         <div className="home-blog-item">
           <img src={blog2} alt="" />
-          <Link to="/">Morning Forth There Him Great Darker Lights</Link>
+          <Link to="/blog-detail">
+            Morning Forth There Him Great Darker Lights
+          </Link>
           <p>Sept 03, 2019</p>
         </div>
         <div className="home-blog-item">
           <img src={blog3} alt="" />
-          <Link to="/">Above Darkness Lights Day Blessed Third For Image</Link>
+          <Link to="/blog-detail">
+            Above Darkness Lights Day Blessed Third For Image
+          </Link>
           <p>Sept 03, 2019</p>
         </div>
       </div>

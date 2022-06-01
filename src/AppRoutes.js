@@ -15,6 +15,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import DoctorProfile from "./pages/DoctorProfile";
 import doctors from "./data/doctors";
 import Testimonials from "./pages/Testimonials";
+import BlogDetail from "./pages/BlogDetail";
 
 const AppRoutes = () => (
   <Routes>
@@ -36,6 +37,7 @@ const AppRoutes = () => (
     {/* Other Pages */}
     <Route path="/service-detail" element={<ServiceDetail />} />
     <Route path="/testimonials" element={<Testimonials />} />
+    <Route path="/blog-detail" element={<BlogDetail />} />
     {doctors.map((doctor) => (
       <Route
         path={`/${doctor.username}`}

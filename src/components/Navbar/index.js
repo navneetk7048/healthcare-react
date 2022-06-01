@@ -19,25 +19,39 @@ const Navbar = () => {
       <nav className={`navlist ${active}`}>
         <ul>
           <li>
-            <NavLink to="/services">Services</NavLink>
+            <NavLink onClick={toggle} to="/services">
+              Services
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/our-doctors">Our Doctors</NavLink>
+            <NavLink onClick={toggle} to="/our-doctors">
+              Our Doctors
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/find-a-doctor">Find A Doctor</NavLink>
+            <NavLink onClick={toggle} to="/find-a-doctor">
+              Find A Doctor
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink onClick={toggle} to="/about">
+              About
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/locations">Locations</NavLink>
+            <NavLink onClick={toggle} to="/locations">
+              Locations
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/blog">Blog</NavLink>
+            <NavLink onClick={toggle} to="/blog">
+              Blog
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/career">Career</NavLink>
+            <NavLink onClick={toggle} to="/career">
+              Career
+            </NavLink>
           </li>
         </ul>
         <div>
@@ -49,13 +63,19 @@ const Navbar = () => {
             </li>
             <li className="big-screen-only">|</li>
             <li>
-              <Link to="/online-bill-pay">Online Bill Pay</Link>
+              <Link onClick={toggle} to="/online-bill-pay">
+                Online Bill Pay
+              </Link>
             </li>
             <li>
-              <Link to="/patient-info">Patient Info</Link>
+              <Link onClick={toggle} to="/patient-info">
+                Patient Info
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link onClick={toggle} to="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
           <ul className="phone">

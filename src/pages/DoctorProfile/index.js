@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FaPhoneAlt,
@@ -17,8 +16,6 @@ import drBanner from "../../assets/images/dr-banner.jpg";
 
 const DoctorProfile = ({ doctorDetails }) => {
   const { picture, name, speciality } = doctorDetails;
-
-  useEffect(() => window.scroll(0, 0), [doctorDetails]);
 
   const navigate = useNavigate();
 

@@ -9,7 +9,7 @@ const BlogItem = ({ blogDetails }) => {
       <div className="blog-content">
         <p className="blog-date">{date}</p>
         <h2 className="blog-title">
-          <Link to="/">{title}</Link>
+          <Link to="/blog-detail">{title}</Link>
         </h2>
         <p className="blog-text">{text}</p>
       </div>
