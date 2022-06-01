@@ -3,6 +3,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 import Button from "../../components/Button";
 import BlogSuggestions from "../Blog/BlogSuggestions";
+import comments from "./comments";
 import serviceDetailImg from "../../assets/images/blog-detail-img.jpg";
 
 const BlogDetail = () => {
@@ -137,6 +138,42 @@ const BlogDetail = () => {
               <span>Next Post</span>{" "}
               <p className="title">Daily Morning Exercise Routine</p>
             </Link>
+          </div>
+        </div>
+      </div>
+      <div className="blog-comments">
+        <div className="container">
+          <h2>{comments.length} Comments</h2>
+          <div className="blog-comments-list">
+            {comments.map(({ name, profile, date, time, text }) => (
+              <div className="blog-comments-item">
+                <img src={profile} alt="" />
+                <div className="blog-comments-text">
+                  <p className="name">{name}</p>
+                  <p>
+                    {date} @ {time} / <Link to="/blog-detail">Reply</Link>
+                  </p>
+                  <p>{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="blog-comments-form">
+            <h2>Add Comment</h2>
+            <input
+              type="text"
+              name="comments-name"
+              id="comments-name"
+              placeholder="Your Name"
+            />
+            <input
+              type="email"
+              name="comments-email"
+              id="comments-email"
+              placeholder="Your Email"
+            />
+            <textarea placeholder="Your Message" />
+            <Button type="btn-pink-darkblue" text="Submit Now" />
           </div>
         </div>
       </div>
