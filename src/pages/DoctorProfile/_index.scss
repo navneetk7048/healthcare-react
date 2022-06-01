@@ -1,15 +1,15 @@
 @use "../../assets/scss/abstracts" as *;
 
-.doctor-profile {
+.doctor-profile .container {
   @include grid;
   gap: 2rem;
 
-  &-top {
+  .doctor-profile-top {
     @include flex(column);
     gap: 2rem;
   }
 
-  &-info {
+  .doctor-profile-info {
     @include grid(3fr 2fr);
 
     &-picture {
@@ -54,7 +54,7 @@
     }
   }
 
-  &-education {
+  .doctor-profile-education {
     @include flex(column);
     gap: 1rem;
 
@@ -69,7 +69,7 @@
     }
   }
 
-  &-form {
+  .doctor-profile-form {
     background-color: $primary-color;
     color: #fff;
     padding: 2rem;
@@ -101,7 +101,7 @@
     }
   }
 
-  &-links {
+  .doctor-profile-links {
     @include flex(column);
     gap: 0.5rem;
 

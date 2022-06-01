@@ -1,5 +1,6 @@
 import Carousel from "react-multi-carousel";
 import { FaQuoteLeft } from "react-icons/fa";
+import "react-multi-carousel/lib/styles.css";
 
 const CareerTestimonials = () => {
   const responsive = {

@@ -1,1 +1,50 @@
 @use "../../assets/scss/abstracts" as *;
+
+.testimonial-component {
+  @include flex;
+  box-shadow: 0 0 10px 10px rgba(black, 0.1);
+  border-radius: $rounded;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #fff;
+
+  svg {
+    font-size: 2rem;
+    box-sizing: content-box;
+    color: $primary-color;
+  }
+
+  .comment {
+    flex: 1;
+    @include flex(column);
+    gap: 1rem;
+
+    span {
+      text-transform: uppercase;
+      font-family: "Oswald", sans-serif;
+    }
+
+    :nth-child(2) {
+      color: $primary-color;
+    }
+  }
+
+  &.main {
+    background-color: $secondary-color;
+    color: #fff;
+
+    svg {
+      font-size: 4rem;
+      color: #fff;
+    }
+
+    .comment :nth-child(2) {
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

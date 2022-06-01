@@ -1,4 +1,6 @@
 import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import hero1 from "../../../assets/images/hero-img1.jpg";
 import hero2 from "../../../assets/images/hero-img2.jpg";
 
