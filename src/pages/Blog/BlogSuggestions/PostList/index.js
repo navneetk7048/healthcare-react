@@ -11,7 +11,7 @@ const PostList = () => {
           </div>
           <div className="post-content">
             <h3>
-              <Link to="/blog-detail">{title}</Link>
+              <Link to="/blog/blog-detail">{title}</Link>
             </h3>
             <p>{date}</p>
           </div>

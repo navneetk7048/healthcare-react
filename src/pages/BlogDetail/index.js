@@ -97,44 +97,44 @@ const BlogDetail = () => {
           <Button
             type="btn-simple-blue"
             text="Food"
-            onClick={() => navigate("/blog-detail")}
+            onClick={() => navigate("/blog/blog-detail")}
           />
           <Button
             type="btn-simple-blue"
             text="Lifestyle"
-            onClick={() => navigate("/blog-detail")}
+            onClick={() => navigate("/blog/blog-detail")}
           />
           <Button
             type="btn-simple-blue"
             text="Healthcare"
-            onClick={() => navigate("/blog-detail")}
+            onClick={() => navigate("/blog/blog-detail")}
           />
           <Button
             type="btn-simple-blue"
             text="Treatment"
-            onClick={() => navigate("/blog-detail")}
+            onClick={() => navigate("/blog/blog-detail")}
           />
           <Button
             type="btn-simple-blue"
             text="Medical"
-            onClick={() => navigate("/blog-detail")}
+            onClick={() => navigate("/blog/blog-detail")}
           />
           <Button
             type="btn-simple-blue"
             text="Technology"
-            onClick={() => navigate("/blog-detail")}
+            onClick={() => navigate("/blog/blog-detail")}
           />
         </div>
         <div className="separator" />
         <div className="directions">
           <div>
-            <Link to="/blog-detail">
+            <Link to="/blog/blog-detail">
               <span>Previous Post</span>{" "}
               <p className="title">Moving Beast Lights Form Let Open Sea</p>
             </Link>
           </div>
           <div>
-            <Link to="/blog-detail">
+            <Link to="/blog/blog-detail">
               <span>Next Post</span>{" "}
               <p className="title">Daily Morning Exercise Routine</p>
             </Link>
@@ -151,7 +151,7 @@ const BlogDetail = () => {
                 <div className="blog-comments-text">
                   <p className="name">{name}</p>
                   <p>
-                    {date} @ {time} / <Link to="/blog-detail">Reply</Link>
+                    {date} @ {time} / <Link to="/blog/blog-detail">Reply</Link>
                   </p>
                   <p>{text}</p>
                 </div>

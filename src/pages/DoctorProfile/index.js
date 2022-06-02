@@ -145,8 +145,9 @@ const DoctorProfile = ({ doctorDetails }) => {
           <h2>Our Experts</h2>
           {doctors.map(({ name, username, speciality }) => (
             <div
+              key={username}
               className="doctor-profile-links-item"
-              onClick={() => navigate(`/${username}`)}>
+              onClick={() => navigate(`/our-doctors/${username}`)}>
               <FaAngleDoubleRight />
               <div>
                 <p className="doctor-profile-links-item-name">{name}</p>

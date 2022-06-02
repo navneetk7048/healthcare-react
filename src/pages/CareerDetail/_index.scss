@@ -1,0 +1,57 @@
+@use "../../assets/scss/abstracts" as *;
+
+.career-detail {
+  &-content {
+    @include grid(5fr 3fr);
+    gap: 2rem;
+
+    .career-detail-info {
+      @include flex(column);
+      gap: 2rem;
+
+      li {
+        margin-block: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+
+        &::before {
+          content: "\f058";
+          font-family: FontAwesome;
+          position: absolute;
+          color: $primary-color;
+          left: 0;
+        }
+      }
+    }
+
+    .career-detail-form {
+      background-color: $secondary-color;
+      color: #fff;
+      @include flex(column);
+      gap: 1rem;
+      padding: 3rem;
+
+      .career-file-inputs {
+        @include flex;
+        gap: 1rem;
+
+        > * {
+          flex: 1;
+        }
+
+        .career-file-input > div {
+          background-color: $clr-accent-darkblue;
+          padding: 0.5rem;
+        }
+      }
+
+      input {
+        color: $clr-accent-darkblue;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: auto;
+    }
+  }
+}

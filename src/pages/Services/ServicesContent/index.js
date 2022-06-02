@@ -17,40 +17,48 @@ const ServicesContent = () => {
         </div>
         <div className="services-cards">
           <div className="services-card">
-            <Link to="/service-detail">24/7 Emergency Care</Link>
+            <Link to="/services/service-detail">24/7 Emergency Care</Link>
           </div>
           <div className="services-card">
             <Link to="/">Primary Care</Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Neurology & Sleep Medicine</Link>
+            <Link to="/services/service-detail">
+              Neurology & Sleep Medicine
+            </Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Ophthamology</Link>
+            <Link to="/services/service-detail">Ophthamology</Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Cardiology</Link>
+            <Link to="/services/service-detail">Cardiology</Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Home Care Services</Link>
+            <Link to="/services/service-detail">Home Care Services</Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Behavioral & Mental Health</Link>
+            <Link to="/services/service-detail">
+              Behavioral & Mental Health
+            </Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Diagnostic Imaging</Link>
+            <Link to="/services/service-detail">Diagnostic Imaging</Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Physical Therapy & Rehabilitation</Link>
+            <Link to="/services/service-detail">
+              Physical Therapy & Rehabilitation
+            </Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Orthopedics</Link>
+            <Link to="/services/service-detail">Orthopedics</Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Surgical Services</Link>
+            <Link to="/services/service-detail">Surgical Services</Link>
           </div>
           <div className="services-card">
-            <Link to="/service-detail">Wound Care & Hyperbaric Medicine</Link>
+            <Link to="/services/service-detail">
+              Wound Care & Hyperbaric Medicine
+            </Link>
           </div>
         </div>
         <Note

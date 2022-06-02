@@ -16,11 +16,11 @@ const BlogSuggestions = () => {
         <div>
           <h3>Post Categories</h3>
           <div className="post-categories">
-            <Link to="/blog-detail">Health Care 37</Link>
-            <Link to="/blog-detail">Medical Treatment 23</Link>
-            <Link to="/blog-detail">Lifestyle 15</Link>
-            <Link to="/blog-detail">Fitness 27</Link>
-            <Link to="/blog-detail">Food 23</Link>
+            <Link to="/blog/blog-detail">Health Care 37</Link>
+            <Link to="/blog/blog-detail">Medical Treatment 23</Link>
+            <Link to="/blog/blog-detail">Lifestyle 15</Link>
+            <Link to="/blog/blog-detail">Fitness 27</Link>
+            <Link to="/blog/blog-detail">Food 23</Link>
           </div>
         </div>
         <div>
@@ -29,32 +29,32 @@ const BlogSuggestions = () => {
             <Button
               type="btn-simple-blue"
               text="Food"
-              onClick={() => navigate("/blog-detail")}
+              onClick={() => navigate("/blog/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Lifestyle"
-              onClick={() => navigate("/blog-detail")}
+              onClick={() => navigate("/blog/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Healthcare"
-              onClick={() => navigate("/blog-detail")}
+              onClick={() => navigate("/blog/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Treatment"
-              onClick={() => navigate("/blog-detail")}
+              onClick={() => navigate("/blog/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Medical"
-              onClick={() => navigate("/blog-detail")}
+              onClick={() => navigate("/blog/blog-detail")}
             />
             <Button
               type="btn-simple-blue"
               text="Technology"
-              onClick={() => navigate("/blog-detail")}
+              onClick={() => navigate("/blog/blog-detail")}
             />
           </div>
         </div>

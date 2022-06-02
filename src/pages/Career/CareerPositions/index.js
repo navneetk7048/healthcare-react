@@ -17,7 +17,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -28,7 +28,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -39,7 +39,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -50,7 +50,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -61,7 +61,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -72,7 +72,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -83,7 +83,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -94,7 +94,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -105,7 +105,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
         <div className="career-positions-card">
@@ -116,7 +116,7 @@ const CareerPositions = () => {
           <Button
             text="Apply Now"
             type="btn-special-pink"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/career/career-detail")}
           />
         </div>
       </div>

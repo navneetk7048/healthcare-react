@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppRoutes from "./AppRoutes";
 import ScrollToTop from "./hoc/ScrollToTop";
+import ScrollButton from "./components/ScrollButton";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Navbar />
         <AppRoutes />
         <Footer />
+        <ScrollButton />
       </ScrollToTop>
     </Router>
   );

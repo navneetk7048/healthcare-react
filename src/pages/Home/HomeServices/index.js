@@ -33,27 +33,39 @@ const HomeServices = () => {
           />
         </div>
         <div className="icons">
-          <div className="icon" onClick={() => navigate("/service-detail")}>
+          <div
+            className="icon"
+            onClick={() => navigate("/services/service-detail")}>
             <FaHandHoldingMedical />
             <p>Emergency Care</p>
           </div>
-          <div className="icon" onClick={() => navigate("/service-detail")}>
+          <div
+            className="icon"
+            onClick={() => navigate("/services/service-detail")}>
             <FaBrain />
             <p>Neurology</p>
           </div>
-          <div className="icon" onClick={() => navigate("/service-detail")}>
+          <div
+            className="icon"
+            onClick={() => navigate("/services/service-detail")}>
             <FaStethoscope />
             <p>Pediatry</p>
           </div>
-          <div className="icon" onClick={() => navigate("/service-detail")}>
+          <div
+            className="icon"
+            onClick={() => navigate("/services/service-detail")}>
             <FaHeartbeat />
             <p>Cardiology</p>
           </div>
-          <div className="icon" onClick={() => navigate("/service-detail")}>
+          <div
+            className="icon"
+            onClick={() => navigate("/services/service-detail")}>
             <FaTooth />
             <p>Dentistry</p>
           </div>
-          <div className="icon" onClick={() => navigate("/service-detail")}>
+          <div
+            className="icon"
+            onClick={() => navigate("/services/service-detail")}>
             <FaBone />
             <p>Orthopedics</p>
           </div>
