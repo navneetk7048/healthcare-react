@@ -1,9 +1,9 @@
 import Banner from "../../components/Banner";
-import testimonialBanner from "../../assets/images/testimonial-banner.jpg";
-import innerVideoIcon from "../../assets/images/inner-video-icon.png";
-import patientVideo1 from "../../assets/images/patient-video-1.jpg";
-import patientVideo2 from "../../assets/images/patient-video-2.jpg";
-import patientVideo3 from "../../assets/images/patient-video-3.jpg";
+import testimonialBanner from "../../images/testimonial-banner.jpg";
+import innerVideoIcon from "../../images/inner-video-icon.png";
+import patientVideo1 from "../../images/patient-video-1.jpg";
+import patientVideo2 from "../../images/patient-video-2.jpg";
+import patientVideo3 from "../../images/patient-video-3.jpg";
 import Testimonial from "../../components/Testimonial";
 
 const Testimonials = () => {

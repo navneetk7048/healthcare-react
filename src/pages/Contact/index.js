@@ -8,7 +8,7 @@ import {
 
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
-import contactBanner from "../../assets/images/location-banner.jpg";
+import contactBanner from "../../images/location-banner.jpg";
 
 const Contact = () => {
   return (

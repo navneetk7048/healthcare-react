@@ -1,6 +1,6 @@
-import member1 from "../../assets/images/member-1.jpg";
-import member2 from "../../assets/images/member-2.jpg";
-import member3 from "../../assets/images/member-3.jpg";
+import member1 from "../../images/member-1.jpg";
+import member2 from "../../images/member-2.jpg";
+import member3 from "../../images/member-3.jpg";
 
 export const doctors = [
   {

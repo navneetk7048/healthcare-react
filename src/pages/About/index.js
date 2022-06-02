@@ -4,7 +4,7 @@ import AboutShowcase from "./AboutShowcase";
 import ExpertList from "../../components/ExpertList";
 import AboutAppointment from "./AboutAppointment";
 import { doctors } from "./doctors";
-import about from "../../assets/images/about-banner.jpg";
+import about from "../../images/about-banner.jpg";
 import AboutGoal from "./AboutGoal";
 
 const About = () => {

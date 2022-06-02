@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
-import careerBanner from "../../assets/images/career-banner.jpg";
+import careerBanner from "../../images/career-banner.jpg";
 
 const OnlineBillPay = () => {
   return (

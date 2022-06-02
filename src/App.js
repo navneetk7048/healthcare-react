@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppRoutes from "./AppRoutes";
-import ScrollToTop from "./hoc/ScrollToTop";
+import ScrollToTop from "./helpers/ScrollToTop";
 import ScrollButton from "./components/ScrollButton";
 
 const App = () => {

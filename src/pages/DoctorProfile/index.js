@@ -12,7 +12,7 @@ import {
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
 import doctors from "../../data/doctors";
-import drBanner from "../../assets/images/dr-banner.jpg";
+import drBanner from "../../images/dr-banner.jpg";
 
 const DoctorProfile = ({ doctorDetails }) => {
   const { picture, name, speciality } = doctorDetails;

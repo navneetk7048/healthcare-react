@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import Button from "../Button";
+import Button from "./Button";
 import Expert from "./Expert";
 
 const ExpertList = ({ heading, text, doctors }) => {

@@ -1,9 +1,9 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import careerSlide1 from "../../../assets/images/career-slide-1.jpg";
-import careerSlide2 from "../../../assets/images/career-slide-2.jpg";
-import careerSlide3 from "../../../assets/images/career-slide-3.jpg";
+import careerSlide1 from "../../../images/career-slide-1.jpg";
+import careerSlide2 from "../../../images/career-slide-2.jpg";
+import careerSlide3 from "../../../images/career-slide-3.jpg";
 
 const CareerSlider = () => {
   const responsive = {

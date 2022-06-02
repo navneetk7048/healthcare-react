@@ -1,6 +1,6 @@
 import { FaBed, FaIdCard, FaUserMd, FaHandPaper } from "react-icons/fa";
 
-import weAreSec from "../../../assets/images/we-are-sec.jpg";
+import weAreSec from "../../../images/we-are-sec.jpg";
 
 const AboutShowcase = () => {
   return (

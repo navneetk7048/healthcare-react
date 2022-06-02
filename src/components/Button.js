@@ -1,5 +1,3 @@
-import React from "react";
-
 const Button = ({ type, text, onClick }) => {
   return (
     <button className={"btn " + type} onClick={onClick}>

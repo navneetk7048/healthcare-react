@@ -4,7 +4,7 @@ import AppointmentForm from "./AppointmentForm";
 import Testimonials from "./Testimonials";
 import ExpertList from "../../components/ExpertList";
 import doctors from "../../data/doctors-small";
-import serviceBanner from "../../assets/images/service-banner.jpg";
+import serviceBanner from "../../images/service-banner.jpg";
 
 const Services = () => {
   return (

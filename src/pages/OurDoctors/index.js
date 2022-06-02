@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner";
 import ExpertList from "../../components/ExpertList";
 import doctors from "../../data/doctors";
-import drBanner from "../../assets/images/dr-banner.jpg";
+import drBanner from "../../images/dr-banner.jpg";
 
 const OurDoctors = () => {
   return (

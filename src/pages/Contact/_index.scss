@@ -1,4 +1,4 @@
-@use "../../assets/scss/abstracts" as *;
+@use "../../styles/abstracts" as *;
 
 .contact {
   .contact-form {
@@ -23,6 +23,7 @@
       textarea {
         padding: 0.5rem;
         outline: none;
+        border: 1px solid #333;
       }
 
       button {

@@ -1,4 +1,4 @@
-@use "./abstracts" as *;
+@use "../abstracts" as *;
 
 *,
 *::before,
@@ -54,4 +54,9 @@ h5,
 h6 {
   text-transform: uppercase;
   font-family: $font-stack-primary;
+}
+
+.container {
+  width: min(90%, 960px);
+  margin: 3.125rem auto;
 }

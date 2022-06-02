@@ -1,9 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 
 import Button from "../../../components/Button";
-import blog1 from "../../../assets/images/blog-1.jpg";
-import blog2 from "../../../assets/images/blog-2.jpg";
-import blog3 from "../../../assets/images/blog-3.jpg";
+import blog1 from "../../../images/blog-1.jpg";
+import blog2 from "../../../images/blog-2.jpg";
+import blog3 from "../../../images/blog-3.jpg";
 
 const HomeBlog = () => {
   const navigate = useNavigate();

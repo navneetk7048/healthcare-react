@@ -1,4 +1,4 @@
-@use "../../../assets/scss/abstracts" as *;
+@use "../../../styles/abstracts" as *;
 
 .home-appointment {
   @include grid(3fr 6fr);

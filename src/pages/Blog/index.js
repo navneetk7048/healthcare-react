@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner";
-import blogBanner from "../../assets/images/blog-banner.jpg";
+import blogBanner from "../../images/blog-banner.jpg";
 import BlogList from "./BlogList";
 import BlogSuggestions from "./BlogSuggestions";
 

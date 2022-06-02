@@ -7,7 +7,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import footerLogo from "../../assets/images/footer-logo.png";
+import footerLogo from "../images/footer-logo.png";
 
 const Footer = () => {
   return (

@@ -1,9 +1,9 @@
-import popularPost1 from "../../../../assets/images/popular-post-1.jpg";
-import popularPost2 from "../../../../assets/images/popular-post-2.jpg";
-import popularPost3 from "../../../../assets/images/popular-post-3.jpg";
-import popularPost4 from "../../../../assets/images/popular-post-4.jpg";
-import popularPost5 from "../../../../assets/images/popular-post-5.jpg";
-import popularPost6 from "../../../../assets/images/popular-post-6.jpg";
+import popularPost1 from "../../../../images/popular-post-1.jpg";
+import popularPost2 from "../../../../images/popular-post-2.jpg";
+import popularPost3 from "../../../../images/popular-post-3.jpg";
+import popularPost4 from "../../../../images/popular-post-4.jpg";
+import popularPost5 from "../../../../images/popular-post-5.jpg";
+import popularPost6 from "../../../../images/popular-post-6.jpg";
 
 const posts = [
   {

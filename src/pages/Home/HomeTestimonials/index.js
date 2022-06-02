@@ -4,7 +4,7 @@ import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import videoIcon from "../../../assets/images/video-icon.png";
+import videoIcon from "../../../images/video-icon.png";
 
 const HomeTestimonials = () => {
   const [click, setClick] = useState(false);
@@ -27,14 +27,16 @@ const HomeTestimonials = () => {
   return (
     <div className="home-testimonials container">
       <div className={`home-testimonials-video ${click}`}>
-        <iframe
-          src="https://www.youtube.com/embed/xcJtL7QggTI"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-        <FaRegTimesCircle onClick={() => setClick(false)} />
+        <div className="iframe-div">
+          <iframe
+            src="https://www.youtube.com/embed/xcJtL7QggTI"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+          <FaRegTimesCircle onClick={() => setClick(false)} />
+        </div>
       </div>
       <div className="home-testimonials-img">
         {/* <img src={videoImg} alt="" /> */}

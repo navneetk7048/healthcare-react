@@ -3,7 +3,7 @@ import { FaUserMd, FaAmbulance, FaRegHospital } from "react-icons/fa";
 
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
-import patientInfoBanner from "../../assets/images/patient-info-banner.jpg";
+import patientInfoBanner from "../../images/patient-info-banner.jpg";
 
 const PatientInfo = () => {
   return (

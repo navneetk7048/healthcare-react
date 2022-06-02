@@ -1,5 +1,4 @@
-@use "../../assets/scss/abstracts" as *;
-@forward "./Expert";
+@use "../abstracts" as *;
 
 .expert-list {
   text-align: center;

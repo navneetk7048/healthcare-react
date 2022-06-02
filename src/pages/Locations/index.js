@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
 import { locations } from "./locations";
-import locationBanner from "../../assets/images/location-banner.jpg";
+import locationBanner from "../../images/location-banner.jpg";
 
 const Locations = () => {
   return (

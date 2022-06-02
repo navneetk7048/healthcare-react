@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaHome, FaPhoneAlt, FaBars } from "react-icons/fa";
-import logo from "../../assets/images/logo.png";
+import logo from "../images/logo.png";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);

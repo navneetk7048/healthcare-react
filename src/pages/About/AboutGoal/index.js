@@ -1,6 +1,6 @@
 import { FaQuoteLeft } from "react-icons/fa";
 
-import goalSec from "../../../assets/images/goal-sec.jpg";
+import goalSec from "../../../images/goal-sec.jpg";
 
 const AboutGoal = () => {
   return (

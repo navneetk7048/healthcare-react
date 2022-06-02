@@ -1,6 +1,6 @@
 import Banner from "../../components/Banner";
 import Note from "../../components/Note";
-import about from "../../assets/images/about-banner.jpg";
+import about from "../../images/about-banner.jpg";
 import SearchBox from "../../components/SearchBox";
 import Button from "../../components/Button";
 

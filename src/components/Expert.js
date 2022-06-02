@@ -1,6 +1,5 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../Button";
+import Button from "./Button";
 
 const Expert = ({ doctor }) => {
   const navigate = useNavigate();

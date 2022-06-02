@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner";
-import careerBanner from "../../assets/images/career-banner.jpg";
+import careerBanner from "../../images/career-banner.jpg";
 import CareerVideo from "./CareerVideo";
 import CareerLife from "./CareerLife";
 import CareerSlider from "./CareerSlider";

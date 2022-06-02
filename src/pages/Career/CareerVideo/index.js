@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
 import Button from "../../../components/Button";
-import career1 from "../../../assets/images/career-1.jpg";
-import career2 from "../../../assets/images/career-2.jpg";
-import career3 from "../../../assets/images/career-3.jpg";
-import innerVideoIcon from "../../../assets/images/inner-video-icon.png";
+import career1 from "../../../images/career-1.jpg";
+import career2 from "../../../images/career-2.jpg";
+import career3 from "../../../images/career-3.jpg";
+import innerVideoIcon from "../../../images/inner-video-icon.png";
 
 const CareerVideo = () => {
   const navigate = useNavigate();

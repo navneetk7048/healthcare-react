@@ -1,6 +1,6 @@
-import cust1 from "../../assets/images/cust-1.jpg";
-import cust2 from "../../assets/images/cust-2.jpg";
-import cust3 from "../../assets/images/cust-3.jpg";
+import cust1 from "../../images/cust-1.jpg";
+import cust2 from "../../images/cust-2.jpg";
+import cust3 from "../../images/cust-3.jpg";
 
 const comments = [
   {

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaRegQuestionCircle } from "react-icons/fa";
 
 const Note = ({ text }) => {

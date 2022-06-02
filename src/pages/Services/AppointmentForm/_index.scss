@@ -1,7 +1,7 @@
-@use "../../../assets/scss/abstracts" as *;
+@use "../../../styles/abstracts" as *;
 
 .appointment {
-  background: url("../../../assets/images/heart-img.png") no-repeat;
+  background: url("../../../images/heart-img.png") no-repeat;
   background-position: right center;
   background-color: $secondary-color;
 

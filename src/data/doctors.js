@@ -1,12 +1,12 @@
-import member1 from "../assets/images/member-1.jpg";
-import member2 from "../assets/images/member-2.jpg";
-import member3 from "../assets/images/member-3.jpg";
-import member4 from "../assets/images/member-4.jpg";
-import member5 from "../assets/images/member-5.jpg";
-import member6 from "../assets/images/member-6.jpg";
-import member7 from "../assets/images/member-7.jpg";
-import member8 from "../assets/images/member-8.jpg";
-import member9 from "../assets/images/member-9.jpg";
+import member1 from "../images/member-1.jpg";
+import member2 from "../images/member-2.jpg";
+import member3 from "../images/member-3.jpg";
+import member4 from "../images/member-4.jpg";
+import member5 from "../images/member-5.jpg";
+import member6 from "../images/member-6.jpg";
+import member7 from "../images/member-7.jpg";
+import member8 from "../images/member-8.jpg";
+import member9 from "../images/member-9.jpg";
 
 const doctors = [
   {

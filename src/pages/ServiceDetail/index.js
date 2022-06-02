@@ -1,6 +1,6 @@
 import { FaQuoteLeft } from "react-icons/fa";
 
-import serviceDetailImg from "../../assets/images/blog-detail-img.jpg";
+import serviceDetailImg from "../../images/blog-detail-img.jpg";
 
 const ServiceDetail = () => {
   return (

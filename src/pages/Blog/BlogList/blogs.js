@@ -1,13 +1,13 @@
 import { FaQuoteLeft, FaLink } from "react-icons/fa";
 
-import innerBlog1 from "../../../assets/images/inner-blog-1.jpg";
-import innerBlog2 from "../../../assets/images/inner-blog-2.jpg";
-import innerBlog3 from "../../../assets/images/inner-blog-3.jpg";
-import innerBlog4 from "../../../assets/images/inner-blog-4.jpg";
-import innerBlog5 from "../../../assets/images/inner-blog-5.jpg";
-import innerBlog6 from "../../../assets/images/inner-blog-6.jpg";
-import innerBlog7 from "../../../assets/images/inner-blog-7.jpg";
-import innerBlog8 from "../../../assets/images/inner-blog-8.jpg";
+import innerBlog1 from "../../../images/inner-blog-1.jpg";
+import innerBlog2 from "../../../images/inner-blog-2.jpg";
+import innerBlog3 from "../../../images/inner-blog-3.jpg";
+import innerBlog4 from "../../../images/inner-blog-4.jpg";
+import innerBlog5 from "../../../images/inner-blog-5.jpg";
+import innerBlog6 from "../../../images/inner-blog-6.jpg";
+import innerBlog7 from "../../../images/inner-blog-7.jpg";
+import innerBlog8 from "../../../images/inner-blog-8.jpg";
 
 export const blogs = [
   {

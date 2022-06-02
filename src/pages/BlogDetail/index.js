@@ -4,7 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import Button from "../../components/Button";
 import BlogSuggestions from "../Blog/BlogSuggestions";
 import comments from "./comments";
-import serviceDetailImg from "../../assets/images/blog-detail-img.jpg";
+import serviceDetailImg from "../../images/blog-detail-img.jpg";
 
 const BlogDetail = () => {
   const navigate = useNavigate();

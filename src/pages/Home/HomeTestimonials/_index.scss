@@ -1,11 +1,11 @@
-@use "../../../assets/scss/abstracts" as *;
+@use "../../../styles/abstracts" as *;
 
 .home-testimonials {
   @include grid(1fr 1fr, 0);
 
   &-img {
     position: relative;
-    background: url("../../../assets/images/video-img.jpg") no-repeat;
+    background: url("../../../images/video-img.jpg") no-repeat;
     background-position: center center;
     background-size: cover;
 
@@ -105,17 +105,29 @@
     @include flex(row, center, center);
     background-color: rgba($color: #000000, $alpha: 0.5);
 
+    .iframe-div {
+      position: relative;
+      min-width: 40%;
+    }
+
     iframe {
-      width: 40%;
+      width: 100%;
       aspect-ratio: 16/9;
     }
 
     svg {
       cursor: pointer;
-      margin-top: -15.5rem;
-      margin-left: -1rem;
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
       font-size: 2rem;
       color: #fff;
+      opacity: 0.5;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &.false {
