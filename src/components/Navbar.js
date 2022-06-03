@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <Link to="/" onClick={toggle}>
+        <Link to="/" onClick={() => setActive(false)}>
           <img src={logo} alt="Health-Care" />
         </Link>
         <FaBars className={`toggle ${active}`} onClick={toggle} />

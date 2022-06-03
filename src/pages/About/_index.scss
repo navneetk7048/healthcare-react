@@ -1,4 +1,82 @@
-@forward "./AboutContent";
 @forward "./AboutShowcase";
-@forward "./AboutAppointment";
-@forward "./AboutGoal";
+@use "../../styles/abstracts" as *;
+
+.about {
+  .about-content {
+    position: relative;
+    background-color: $secondary-color;
+    color: #fff;
+    margin-top: -2.5rem;
+    @include flex(column, center, center);
+    gap: 1.5rem;
+    padding: 3rem;
+    text-align: center;
+    border-radius: $rounded;
+
+    @media (max-width: 700px) {
+      margin-top: 3.125rem;
+    }
+  }
+
+  .about-goal {
+    padding-block: 3.125rem;
+    background-color: $clr-accent-grey;
+    color: $clr-accent-darkblue;
+
+    .container {
+      margin-block: 0;
+      @include flex;
+      position: relative;
+      gap: 2rem;
+      padding: 1rem;
+
+      .about-goal-image {
+        flex-basis: 40%;
+
+        img {
+          @media (max-width: 1000px) {
+            aspect-ratio: 4/3;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .about-goal-text {
+        flex-basis: 50%;
+        flex: 1;
+        @include flex(column);
+        gap: 1rem;
+      }
+
+      .about-goal-special {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 2rem 3rem;
+        @include flex(column);
+        gap: 2rem;
+
+        border-radius: $rounded;
+
+        @media (min-width: 1000px) {
+          position: absolute;
+          bottom: 10%;
+          right: 0;
+          left: 20%;
+        }
+
+        svg {
+          font-size: 2rem;
+
+          @media (min-width: 1000px) {
+            font-size: 4rem;
+            margin-top: -3rem;
+          }
+        }
+      }
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+    }
+  }
+}

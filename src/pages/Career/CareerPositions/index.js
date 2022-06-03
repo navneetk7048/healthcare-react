@@ -6,7 +6,7 @@ const CareerPositions = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="career-positions container">
+    <div className="career-positions container" id="career-positions">
       <h2>Current Positions</h2>
       <div className="career-positions-cards">
         <div className="career-positions-card">

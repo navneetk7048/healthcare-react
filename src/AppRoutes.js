@@ -13,7 +13,6 @@ import PatientInfo from "./pages/PatientInfo";
 import Contact from "./pages/Contact";
 import ServiceDetail from "./pages/ServiceDetail";
 import DoctorProfile from "./pages/DoctorProfile";
-import doctors from "./data/doctors";
 import Testimonials from "./pages/Testimonials";
 import BlogDetail from "./pages/BlogDetail";
 import CareerDetail from "./pages/CareerDetail";
@@ -40,13 +39,7 @@ const AppRoutes = () => (
     <Route path="/testimonials" element={<Testimonials />} />
     <Route path="/blog/blog-detail" element={<BlogDetail />} />
     <Route path="/career/career-detail" element={<CareerDetail />} />
-    {doctors.map((doctor) => (
-      <Route
-        key={doctor.username}
-        path={`/our-doctors/${doctor.username}`}
-        element={<DoctorProfile doctorDetails={doctor} />}
-      />
-    ))}
+    <Route path="/our-doctors/:username" element={<DoctorProfile />} />
   </Routes>
 );
 

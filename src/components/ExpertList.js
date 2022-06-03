@@ -18,7 +18,7 @@ const ExpertList = ({ heading, text, doctors }) => {
       <Button
         type="btn-blue-pink"
         text="Meet Our All Experts"
-        onClick={() => navigate("/our-doctors")}
+        onClick={() => navigate("/our-doctors/")}
       />
     </div>
   );

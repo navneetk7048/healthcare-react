@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -14,12 +14,15 @@ import Button from "../../components/Button";
 import doctors from "../../data/doctors";
 import drBanner from "../../images/dr-banner.jpg";
 
-const DoctorProfile = ({ doctorDetails }) => {
-  const { picture, name, speciality } = doctorDetails;
-
+const DoctorProfile = () => {
+  const { username } = useParams();
   const navigate = useNavigate();
 
-  return (
+  const doctor = doctors.filter((doctor) => doctor.username === username)[0];
+
+  console.log(doctor);
+
+  return doctor ? (
     <div className="doctor-profile">
       <Banner
         banner={drBanner}
@@ -27,19 +30,19 @@ const DoctorProfile = ({ doctorDetails }) => {
           { text: "Home", link: "" },
           { text: "Our Doctors", link: "our-doctors" },
         ]}
-        current={name}
-        title={name}
+        current={doctor.name}
+        title={doctor.name}
       />
       <div className="container">
         <div className="doctor-profile-top">
           <div className="doctor-profile-info">
             <div className="doctor-profile-info-picture">
-              <img src={picture} alt="" />
+              <img src={doctor.picture} alt="" />
             </div>
             <div className="doctor-profile-info-text">
               <div>
-                <h2>{name}</h2>
-                <p>{speciality}</p>
+                <h2>{doctor.name}</h2>
+                <p>{doctor.speciality}</p>
               </div>
               <div className="separator" />
               <div>
@@ -143,9 +146,9 @@ const DoctorProfile = ({ doctorDetails }) => {
         </div>
         <div className="doctor-profile-links">
           <h2>Our Experts</h2>
-          {doctors.map(({ name, username, speciality }) => (
+          {doctors.map(({ id, name, speciality, username }) => (
             <div
-              key={username}
+              key={id}
               className="doctor-profile-links-item"
               onClick={() => navigate(`/our-doctors/${username}`)}>
               <FaAngleDoubleRight />
@@ -160,7 +163,7 @@ const DoctorProfile = ({ doctorDetails }) => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default DoctorProfile;

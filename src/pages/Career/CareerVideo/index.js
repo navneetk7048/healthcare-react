@@ -1,14 +1,9 @@
-import { useNavigate } from "react-router-dom";
-
-import Button from "../../../components/Button";
 import career1 from "../../../images/career-1.jpg";
 import career2 from "../../../images/career-2.jpg";
 import career3 from "../../../images/career-3.jpg";
 import innerVideoIcon from "../../../images/inner-video-icon.png";
 
 const CareerVideo = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="career-video">
       <div className="career-video-text container">
@@ -21,11 +16,9 @@ const CareerVideo = () => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidata-bst non proident.
         </p>
-        <Button
-          type="btn-white-blue"
-          text="View Current Openings"
-          onClick={() => navigate("/")}
-        />
+        <a href="#career-positions" className="btn btn-white-blue">
+          View Current Openings
+        </a>
       </div>
       <div className="career-video-cards container">
         <div className="career-video-card">
