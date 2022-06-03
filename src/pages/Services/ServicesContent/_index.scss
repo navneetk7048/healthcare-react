@@ -2,17 +2,17 @@
 
 .services-content {
   padding-block: 50px;
-  background-color: $clr-accent-grey;
+  background-color: $clr-alice-blue;
 
   .services-content-heading {
-    color: $clr-accent-darkblue;
+    color: $clr-police-blue;
     text-align: center;
   }
 
   .services-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    color: $primary-color;
+    color: $clr-tiffany-blue;
     font-weight: bold;
     padding: 1rem;
     gap: 1rem;

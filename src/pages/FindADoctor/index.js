@@ -25,7 +25,7 @@ const OurDoctors = () => {
           text="Type a keyword, specialty or condition to find the right specialist."
           placeholder="Keyword"
         />
-        <Button type="btn-blue-pink" text="Meet Our All Experts" />
+        <Button type="btn-blue-pink">Meet Our All Experts</Button>
       </div>
     </div>
   );

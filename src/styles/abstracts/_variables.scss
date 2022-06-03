@@ -1,14 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap");
+$clr-alice-blue: #f1f8fc;
+$clr-pastel-blue: #b5c5cc;
+$clr-pastel-red: #f96869;
+$clr-police-blue: #214e66;
+$clr-tiffany-blue: #00bcbd;
+$clr-tart-orange: #f84d4f;
 
-$primary-color: #00bcbd;
-$secondary-color: #f84d4f;
+$font-oswald: "Oswald", sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
 
-$clr-accent-darkblue: #214e66;
-$clr-accent-grey: #f1f8fc;
-$clr-accent-grey2: #b5c5cc;
-$clr-accent-pink: #f96869;
+$rounded: 0.3rem;
 
-$font-stack-primary: "Oswald", sans-serif;
-$font-stack-secondary: "Open Sans", sans-serif;
+// To access from javascript
+:export {
+  clr-alice-blue: $clr-alice-blue;
+  clr-pastel-blue: $clr-pastel-blue;
+  clr-pastel-red: $clr-pastel-red;
+  clr-police-blue: $clr-police-blue;
+  clr-tiffany-blue: $clr-tiffany-blue;
+  clr-tart-orange: $clr-tart-orange;
 
-$rounded: 0.5rem;
+  font-oswald: $font-oswald;
+  font-open-sans: $font-open-sans;
+
+  rounded: $rounded;
+}

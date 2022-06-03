@@ -84,7 +84,7 @@ const PatientInfo = () => {
             whose help you need! Visit us at the scheduled time and get your
             treatment.
           </p>
-          <Button type="btn-white-blue" text="book an appointment" />
+          <Button type="btn-white-blue">Book An Appointment</Button>
         </div>
       </div>
       <div className="patient-info-icons container">

@@ -3,7 +3,7 @@
 .home-blog {
   @include flex;
   flex-direction: column;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
   padding: 1rem;
   gap: 1rem;
 
@@ -19,7 +19,7 @@
     .home-blog-item {
       @include flex(column);
       gap: 1rem;
-      background-color: $clr-accent-grey;
+      background-color: $clr-alice-blue;
 
       a,
       p {
@@ -30,12 +30,12 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: $secondary-color;
+          color: $clr-tart-orange;
         }
       }
 
       p {
-        color: $secondary-color;
+        color: $clr-tart-orange;
         margin-bottom: 1rem;
       }
     }

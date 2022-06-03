@@ -8,6 +8,7 @@ import {
 
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
+import { scrollToTop } from "../../Functions";
 import contactBanner from "../../images/location-banner.jpg";
 
 const Contact = () => {
@@ -51,7 +52,7 @@ const Contact = () => {
             rows="5"
             placeholder="How May We Help You?"
           />
-          <Button type="btn-pink-darkblue" text="Submit Now" />
+          <Button type="btn-pink-darkblue">Submit Now</Button>
         </div>
         <div className="contact-form-right">
           <div>
@@ -67,9 +68,9 @@ const Contact = () => {
           <div>
             <p>Stay Conected With Us</p>
             <p className="social-media">
-              <FaFacebookF onClick={() => window.scroll(0, 0)} />
-              <FaTwitter onClick={() => window.scroll(0, 0)} />
-              <FaYoutube onClick={() => window.scroll(0, 0)} />
+              <FaFacebookF onClick={scrollToTop} />
+              <FaTwitter onClick={scrollToTop} />
+              <FaYoutube onClick={scrollToTop} />
             </p>
           </div>
         </div>

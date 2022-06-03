@@ -55,13 +55,9 @@ const Info = () => {
           seasons greater, land sea, the created gathered bring spirit whose
           upon years fruitful third dominion cattle midst night morning bring.
         </p>
-        <Button
-          type="btn-blue-pink"
-          text="Contact Us"
-          onClick={() => {
-            navigate("/contact");
-          }}
-        />
+        <Button type="btn-blue-pink" onClick={() => navigate("/contact")}>
+          Contact Us
+        </Button>
       </div>
     </div>
   );

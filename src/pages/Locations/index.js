@@ -30,9 +30,9 @@ const Locations = () => {
                 </a>
                 <Button
                   type="btn-pink-darkblue"
-                  text="Get Directions"
-                  onClick={() => window.open(link, "_blank")}
-                />
+                  onClick={() => window.open(link, "_blank")}>
+                  Get Directions
+                </Button>
               </div>
               {iframe}
             </div>

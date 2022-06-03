@@ -38,11 +38,9 @@ const HomeBlog = () => {
           <p>Sept 03, 2019</p>
         </div>
       </div>
-      <Button
-        type="btn-blue-pink"
-        text="See All Healthcare Blog"
-        onClick={() => navigate("/blog")}
-      />
+      <Button type="btn-blue-pink" onClick={() => navigate("/blog")}>
+        See All Healthcare Blog
+      </Button>
     </div>
   );
 };

@@ -119,7 +119,7 @@ const CareerDetail = () => {
                 </div>
               </div>
             </div>
-            <Button type="btn-white-blue" text="Submit Now" />
+            <Button type="btn-white-blue">Submit Now</Button>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const AppointmentForm = () => {
           <option value="other">Other</option>
         </select>
         <input type="date" name="date" id="date" />
-        <Button type="btn-white-blue" text="Book Appointment" />
+        <Button type="btn-white-blue">Book Appointment</Button>
       </form>
     </div>
   );

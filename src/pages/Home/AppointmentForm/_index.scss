@@ -2,7 +2,7 @@
 
 .home-appointment {
   @include grid(3fr 6fr);
-  background-color: $secondary-color;
+  background-color: $clr-tart-orange;
   color: #fff;
   position: relative;
   top: -8rem;
@@ -26,7 +26,7 @@
 
     input,
     select {
-      background-color: $clr-accent-pink;
+      background-color: $clr-pastel-red;
       color: #fff;
       border: none;
       border-radius: 0.3125rem;

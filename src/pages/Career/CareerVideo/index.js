@@ -1,6 +1,7 @@
 import career1 from "../../../images/career-1.jpg";
 import career2 from "../../../images/career-2.jpg";
 import career3 from "../../../images/career-3.jpg";
+import { scrollToTop } from "../../../Functions";
 import innerVideoIcon from "../../../images/inner-video-icon.png";
 
 const CareerVideo = () => {
@@ -24,9 +25,7 @@ const CareerVideo = () => {
         <div className="career-video-card">
           <div className="career-video-img">
             <img src={career1} alt="" />
-            <div
-              className="career-video-play"
-              onClick={() => window.scroll(0, 0)}>
+            <div className="career-video-play" onClick={scrollToTop}>
               <img src={innerVideoIcon} alt="" />
             </div>
           </div>
@@ -40,9 +39,7 @@ const CareerVideo = () => {
         <div className="career-video-card">
           <div className="career-video-img">
             <img src={career2} alt="" />
-            <div
-              className="career-video-play"
-              onClick={() => window.scroll(0, 0)}>
+            <div className="career-video-play" onClick={scrollToTop}>
               <img src={innerVideoIcon} alt="" />
             </div>
           </div>
@@ -56,9 +53,7 @@ const CareerVideo = () => {
         <div className="career-video-card">
           <div className="career-video-img">
             <img src={career3} alt="" />
-            <div
-              className="career-video-play"
-              onClick={() => window.scroll(0, 0)}>
+            <div className="career-video-play" onClick={scrollToTop}>
               <img src={innerVideoIcon} alt="" />
             </div>
           </div>

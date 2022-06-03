@@ -14,11 +14,9 @@ const AboutAppointment = () => {
           whose help you need! Visit us at the scheduled time and get your
           treatment.
         </p>
-        <Button
-          type="btn-pink-darkblue"
-          text="Book An Appointment"
-          onClick={() => navigate("/contact")}
-        />
+        <Button type="btn-pink-darkblue" onClick={() => navigate("/contact")}>
+          Book An Appointment
+        </Button>
       </div>
     </div>
   );

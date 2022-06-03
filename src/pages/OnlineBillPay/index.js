@@ -35,8 +35,8 @@ const OnlineBillPay = () => {
           <input type="text" name="payment-amount" id="payment-amount" />
         </div>
         <div className="payment-buttons">
-          <Button type="btn-blue-pink" text="Continue" />
-          <Button type="btn-grey-blue" text="Reset" />
+          <Button type="btn-blue-pink">Continue</Button>
+          <Button type="btn-grey-blue">Reset</Button>
         </div>
       </div>
     </div>

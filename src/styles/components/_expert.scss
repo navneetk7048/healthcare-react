@@ -2,22 +2,22 @@
 
 .expert {
   .slide {
-    background-color: $clr-accent-grey;
+    background-color: $clr-alice-blue;
     width: 100%;
 
     div {
       height: 3.75rem;
       overflow: hidden;
-      background-color: $clr-accent-grey;
+      background-color: $clr-alice-blue;
       transition: transform 0.3s ease-in-out;
     }
 
     p {
-      color: $secondary-color;
+      color: $clr-tart-orange;
     }
 
     .btn {
-      @include btn-slide($clr-accent-darkblue, $primary-color);
+      @include btn-slide($clr-police-blue, $clr-tiffany-blue);
     }
   }
 

@@ -4,6 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import Button from "../../components/Button";
 import BlogSuggestions from "../Blog/BlogSuggestions";
 import comments from "./comments";
+import { scrollToTop } from "../../Functions";
 import serviceDetailImg from "../../images/blog-detail-img.jpg";
 
 const BlogDetail = () => {
@@ -16,7 +17,7 @@ const BlogDetail = () => {
           <h1>Evening Shall Appear Fruitful Brought Forth Signs His Name</h1>
           <p>
             December 15, 2019 /{" "}
-            <span onClick={() => window.scroll(0, 0)}>Lifestyle, Health</span>
+            <span onClick={scrollToTop}>Lifestyle, Health</span>
           </p>
           <div>
             <img src={serviceDetailImg} alt="" />
@@ -96,34 +97,34 @@ const BlogDetail = () => {
         <div>
           <Button
             type="btn-simple-blue"
-            text="Food"
-            onClick={() => navigate("/blog/blog-detail")}
-          />
+            onClick={() => navigate("/blog/blog-detail")}>
+            Food
+          </Button>
           <Button
             type="btn-simple-blue"
-            text="Lifestyle"
-            onClick={() => navigate("/blog/blog-detail")}
-          />
+            onClick={() => navigate("/blog/blog-detail")}>
+            Lifestyle
+          </Button>
           <Button
             type="btn-simple-blue"
-            text="Healthcare"
-            onClick={() => navigate("/blog/blog-detail")}
-          />
+            onClick={() => navigate("/blog/blog-detail")}>
+            Healthcare
+          </Button>
           <Button
             type="btn-simple-blue"
-            text="Treatment"
-            onClick={() => navigate("/blog/blog-detail")}
-          />
+            onClick={() => navigate("/blog/blog-detail")}>
+            Treatment
+          </Button>
           <Button
             type="btn-simple-blue"
-            text="Medical"
-            onClick={() => navigate("/blog/blog-detail")}
-          />
+            onClick={() => navigate("/blog/blog-detail")}>
+            Medical
+          </Button>
           <Button
             type="btn-simple-blue"
-            text="Technology"
-            onClick={() => navigate("/blog/blog-detail")}
-          />
+            onClick={() => navigate("/blog/blog-detail")}>
+            Technology
+          </Button>
         </div>
         <div className="separator" />
         <div className="directions">
@@ -173,7 +174,7 @@ const BlogDetail = () => {
               placeholder="Your Email"
             />
             <textarea placeholder="Your Message" />
-            <Button type="btn-pink-darkblue" text="Submit Now" />
+            <Button type="btn-pink-darkblue">Submit Now</Button>
           </div>
         </div>
       </div>

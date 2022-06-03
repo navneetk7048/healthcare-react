@@ -14,10 +14,10 @@
     inset: 0;
     text-align: center;
     @include flex(column, center, center);
-    background-color: rgba($clr-accent-darkblue, 0.7);
+    background-color: rgba($clr-police-blue, 0.7);
 
     span {
-      color: $primary-color;
+      color: $clr-tiffany-blue;
     }
   }
 }

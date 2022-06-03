@@ -11,7 +11,7 @@
   svg {
     font-size: 2rem;
     box-sizing: content-box;
-    color: $primary-color;
+    color: $clr-tiffany-blue;
   }
 
   .comment {
@@ -25,12 +25,12 @@
     }
 
     :nth-child(2) {
-      color: $primary-color;
+      color: $clr-tiffany-blue;
     }
   }
 
   &.main {
-    background-color: $secondary-color;
+    background-color: $clr-tart-orange;
     color: #fff;
 
     svg {

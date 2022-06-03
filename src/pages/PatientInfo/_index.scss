@@ -2,8 +2,8 @@
 
 .patient-info {
   &-introduction {
-    color: $clr-accent-darkblue;
-    background-color: $clr-accent-grey;
+    color: $clr-police-blue;
+    background-color: $clr-alice-blue;
     padding-block: 3.125rem;
 
     .container {
@@ -13,7 +13,7 @@
 
       .patient-info-cards {
         @include grid(repeat(3, 1fr));
-        color: $primary-color;
+        color: $clr-tiffany-blue;
 
         &-item {
           background-color: #fff;
@@ -48,7 +48,7 @@
   }
 
   &-appointment {
-    background-color: $secondary-color;
+    background-color: $clr-tart-orange;
     color: #fff;
 
     .container {
@@ -65,7 +65,7 @@
 
     svg,
     h3 {
-      color: $primary-color;
+      color: $clr-tiffany-blue;
     }
 
     svg {

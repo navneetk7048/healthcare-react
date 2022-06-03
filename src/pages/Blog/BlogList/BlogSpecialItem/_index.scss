@@ -5,7 +5,7 @@
   background-color: #fff;
   text-align: center;
   padding: 1rem;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
   @include flex(column, center, center);
   gap: 1rem;
 
@@ -15,11 +15,11 @@
 }
 
 .special-blue {
-  background-color: $primary-color;
+  background-color: $clr-tiffany-blue;
   color: #fff;
 }
 
 .special-pink {
-  background-color: $secondary-color;
+  background-color: $clr-tart-orange;
   color: #fff;
 }

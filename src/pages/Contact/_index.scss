@@ -33,7 +33,7 @@
 
     &-right {
       flex-basis: 35%;
-      background-color: $primary-color;
+      background-color: $clr-tiffany-blue;
       color: #fff;
       gap: 3rem;
       justify-content: space-evenly;
@@ -45,7 +45,7 @@
       > div > svg {
         box-sizing: initial;
         background-color: #fff;
-        color: $primary-color;
+        color: $clr-tiffany-blue;
         padding: 0.5rem;
         border-radius: 50%;
         // outline: 0.5rem solid #fff;

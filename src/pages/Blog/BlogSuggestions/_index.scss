@@ -3,7 +3,7 @@
 
 .blog-suggestions {
   @include flex;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
 
   > * {
     padding: 1rem;
@@ -19,11 +19,11 @@
     padding-block: 1rem;
 
     a {
-      color: $clr-accent-darkblue;
+      color: $clr-police-blue;
       transition: color 0.3s ease-in-out;
 
       &:hover {
-        color: $primary-color;
+        color: $clr-tiffany-blue;
       }
     }
   }

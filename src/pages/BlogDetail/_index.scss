@@ -2,7 +2,7 @@
 
 .blog-detail {
   .blog-intro {
-    background-color: $clr-accent-grey;
+    background-color: $clr-alice-blue;
     padding-block: 3.125rem;
 
     .container {
@@ -11,10 +11,10 @@
       margin-block: 0;
 
       > p {
-        font-family: $font-stack-primary;
+        font-family: $font-oswald;
 
         span {
-          color: $secondary-color;
+          color: $clr-tart-orange;
           cursor: pointer;
         }
       }
@@ -28,7 +28,7 @@
   .blog-tags {
     .separator {
       height: 1px;
-      background-color: $clr-accent-grey2;
+      background-color: $clr-pastel-blue;
     }
 
     .directions {
@@ -40,11 +40,11 @@
       }
 
       .title {
-        color: $primary-color;
+        color: $clr-tiffany-blue;
       }
 
       a:hover .title {
-        color: $clr-accent-darkblue;
+        color: $clr-police-blue;
       }
 
       @media (max-width: 700px) {
@@ -54,7 +54,7 @@
   }
 
   .blog-comments {
-    background-color: $clr-accent-grey;
+    background-color: $clr-alice-blue;
     padding-block: 3.125rem;
 
     .container {
@@ -80,18 +80,18 @@
 
           .blog-comments-text {
             .name {
-              color: $primary-color;
+              color: $clr-tiffany-blue;
             }
 
             a {
-              color: $secondary-color;
+              color: $clr-tart-orange;
             }
           }
         }
       }
 
       .blog-comments-form {
-        background-color: $primary-color;
+        background-color: $clr-tiffany-blue;
         @include flex(column);
         gap: 1rem;
         padding: 3rem;

@@ -2,6 +2,7 @@ import BlogItem from "./BlogItem";
 import BlogSpecialItem from "./BlogSpecialItem";
 import Button from "../../../components/Button";
 import { blogs } from "./blogs";
+import { scrollToTop } from "../../../Functions";
 
 const BlogList = () => {
   const blogItemList = [];
@@ -36,31 +37,21 @@ const BlogList = () => {
       <div className="container">
         {blogItemList}
         <div className="blog-buttons">
-          <Button
-            type="btn-simple-blue"
-            text="Prev"
-            onClick={() => window.scroll(0, 0)}
-          />
-          <Button
-            type="btn-simple-blue active"
-            text="1"
-            onClick={() => window.scroll(0, 0)}
-          />
-          <Button
-            type="btn-simple-blue"
-            text="2"
-            onClick={() => window.scroll(0, 0)}
-          />
-          <Button
-            type="btn-simple-blue"
-            text="3"
-            onClick={() => window.scroll(0, 0)}
-          />
-          <Button
-            type="btn-simple-blue"
-            text="Next"
-            onClick={() => window.scroll(0, 0)}
-          />
+          <Button type="btn-simple-blue" onClick={scrollToTop}>
+            Prev
+          </Button>
+          <Button type="btn-simple-blue" onClick={scrollToTop}>
+            1
+          </Button>
+          <Button type="btn-simple-blue" onClick={scrollToTop}>
+            2
+          </Button>
+          <Button type="btn-simple-blue" onClick={scrollToTop}>
+            3
+          </Button>
+          <Button type="btn-simple-blue" onClick={scrollToTop}>
+            Next
+          </Button>
         </div>
       </div>
     </div>

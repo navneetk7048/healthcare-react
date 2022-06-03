@@ -3,7 +3,7 @@
 .about-showcase {
   position: relative;
   @include flex;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
   gap: 1rem;
 
   .about-text {
@@ -33,12 +33,12 @@
       text-align: center;
 
       :nth-child(1) {
-        color: $primary-color;
+        color: $clr-tiffany-blue;
         font-size: 3.5rem;
       }
 
       :nth-child(2) {
-        color: $secondary-color;
+        color: $clr-tart-orange;
         font-size: 2.5rem;
       }
     }

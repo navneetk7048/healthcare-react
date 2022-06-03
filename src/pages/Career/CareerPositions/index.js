@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
+import positions from "../../../data/positions";
 import Button from "../../../components/Button";
 
 const CareerPositions = () => {
@@ -9,116 +10,19 @@ const CareerPositions = () => {
     <div className="career-positions container" id="career-positions">
       <h2>Current Positions</h2>
       <div className="career-positions-cards">
-        <div className="career-positions-card">
-          <div>
-            <h3>Technical Ambassador</h3>
-            <p>Full Time - San Francisco</p>
+        {positions.map(({ id, title, description }) => (
+          <div className="career-positions-card" key={id}>
+            <div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
+            <Button
+              type="btn-special-pink"
+              onClick={() => navigate("/career/career-detail")}>
+              Apply Now
+            </Button>
           </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>Account Excutive</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>Infection Control Officer</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>Research Associate</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>AR Analyst</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>HCC Medical Coding</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>Head - Human Resource</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>Medical Transcriptionist</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>Medical Representative</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
-        <div className="career-positions-card">
-          <div>
-            <h3>Orthopaedic Surgeon</h3>
-            <p>Full Time - San Francisco</p>
-          </div>
-          <Button
-            text="Apply Now"
-            type="btn-special-pink"
-            onClick={() => navigate("/career/career-detail")}
-          />
-        </div>
+        ))}
       </div>
     </div>
   );

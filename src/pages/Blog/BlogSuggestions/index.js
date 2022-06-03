@@ -28,34 +28,34 @@ const BlogSuggestions = () => {
           <div className="post-tags">
             <Button
               type="btn-simple-blue"
-              text="Food"
-              onClick={() => navigate("/blog/blog-detail")}
-            />
+              onClick={() => navigate("/blog/blog-detail")}>
+              Food
+            </Button>
             <Button
               type="btn-simple-blue"
-              text="Lifestyle"
-              onClick={() => navigate("/blog/blog-detail")}
-            />
+              onClick={() => navigate("/blog/blog-detail")}>
+              Lifestyle
+            </Button>
             <Button
               type="btn-simple-blue"
-              text="Healthcare"
-              onClick={() => navigate("/blog/blog-detail")}
-            />
+              onClick={() => navigate("/blog/blog-detail")}>
+              Healthcare
+            </Button>
             <Button
               type="btn-simple-blue"
-              text="Treatment"
-              onClick={() => navigate("/blog/blog-detail")}
-            />
+              onClick={() => navigate("/blog/blog-detail")}>
+              Treatment
+            </Button>
             <Button
               type="btn-simple-blue"
-              text="Medical"
-              onClick={() => navigate("/blog/blog-detail")}
-            />
+              onClick={() => navigate("/blog/blog-detail")}>
+              Medical
+            </Button>
             <Button
               type="btn-simple-blue"
-              text="Technology"
-              onClick={() => navigate("/blog/blog-detail")}
-            />
+              onClick={() => navigate("/blog/blog-detail")}>
+              Technology
+            </Button>
           </div>
         </div>
       </div>

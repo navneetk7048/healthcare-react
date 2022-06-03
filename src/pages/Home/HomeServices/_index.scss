@@ -1,7 +1,7 @@
 @use "../../../styles/abstracts" as *;
 
 .home-services {
-  background-color: $primary-color;
+  background-color: $clr-tiffany-blue;
   color: #fff;
 
   .container {
@@ -22,7 +22,7 @@
       .icon {
         @include flex(column, center, center);
         background-color: #fff;
-        color: $primary-color;
+        color: $clr-tiffany-blue;
         border-radius: $rounded;
         gap: 1rem;
         padding: 1rem;
@@ -34,7 +34,7 @@
         }
 
         &:hover {
-          color: $secondary-color;
+          color: $clr-tart-orange;
         }
       }
     }

@@ -2,27 +2,13 @@
 
 .expert-list {
   text-align: center;
-  color: $clr-accent-darkblue;
-
-  > * {
-    margin-block: 1rem;
-  }
+  @include flex(column);
 
   .experts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
+    @include grid;
 
-  .btn {
-    @include btn-slide($primary-color, $secondary-color);
-  }
-}
-
-@media (max-width: 576px) {
-  .expert-list {
-    .experts {
-      grid-template-columns: auto;
+    @media (min-width: 576px) {
+      @include grid(repeat(3, 1fr));
     }
   }
 }

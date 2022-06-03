@@ -15,11 +15,9 @@ const ExpertList = ({ heading, text, doctors }) => {
           <Expert doctor={doctor} key={doctor.id} />
         ))}
       </div>
-      <Button
-        type="btn-blue-pink"
-        text="Meet Our All Experts"
-        onClick={() => navigate("/our-doctors/")}
-      />
+      <Button type="btn-blue-pink" onClick={() => navigate("/our-doctors/")}>
+        Meet Our All Experts
+      </Button>
     </div>
   );
 };

@@ -22,7 +22,7 @@
         width: auto;
         position: absolute;
         right: 5%;
-        border: 5px solid $secondary-color;
+        border: 5px solid $clr-tart-orange;
         border-radius: 50%;
         animation: play-button-animation 1.4s infinite;
       }
@@ -30,7 +30,7 @@
   }
 
   &-text {
-    background-color: $primary-color;
+    background-color: $clr-tiffany-blue;
     color: #fff;
     padding-block: 0.5rem;
 
@@ -92,7 +92,7 @@
         transition: color 0.3s;
 
         &:hover {
-          color: $clr-accent-darkblue;
+          color: $clr-police-blue;
         }
       }
     }
@@ -143,9 +143,9 @@
 
 @keyframes play-button-animation {
   from {
-    outline: 1px solid rgba($secondary-color, 1);
+    outline: 1px solid rgba($clr-tart-orange, 1);
   }
   to {
-    outline: 20px solid rgba($secondary-color, 0);
+    outline: 20px solid rgba($clr-tart-orange, 0);
   }
 }

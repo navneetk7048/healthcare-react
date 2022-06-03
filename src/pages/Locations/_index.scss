@@ -1,7 +1,7 @@
 @use "../../styles/abstracts" as *;
 
 .location-list {
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
 
   h1 {
     margin-inline: 1rem;
@@ -9,7 +9,7 @@
 
   .location-separator {
     margin: 2rem 1rem;
-    border: 1px solid rgba($primary-color, 0.2);
+    border: 1px solid rgba($clr-tiffany-blue, 0.2);
   }
 
   .location {

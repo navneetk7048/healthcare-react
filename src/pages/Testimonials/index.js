@@ -5,6 +5,7 @@ import patientVideo1 from "../../images/patient-video-1.jpg";
 import patientVideo2 from "../../images/patient-video-2.jpg";
 import patientVideo3 from "../../images/patient-video-3.jpg";
 import Testimonial from "../../components/Testimonial";
+import { scrollToTop } from "../../Functions";
 
 const Testimonials = () => {
   const patients = [
@@ -91,9 +92,7 @@ const Testimonials = () => {
             <div className="testimonials-video-card">
               <div className="testimonials-video-card-img">
                 <img src={picture} alt="" />
-                <div
-                  className="testimonials-video-play"
-                  onClick={() => window.scroll(0, 0)}>
+                <div className="testimonials-video-play" onClick={scrollToTop}>
                   <img src={innerVideoIcon} alt="" />
                 </div>
               </div>

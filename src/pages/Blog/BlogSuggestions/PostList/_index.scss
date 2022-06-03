@@ -9,15 +9,15 @@
 
     &-content {
       p {
-        color: $secondary-color;
+        color: $clr-tart-orange;
       }
 
       a {
-        color: $primary-color;
+        color: $clr-tiffany-blue;
         transition: color 0.3s ease-in-out;
 
         &:hover {
-          color: $clr-accent-darkblue;
+          color: $clr-police-blue;
         }
       }
     }

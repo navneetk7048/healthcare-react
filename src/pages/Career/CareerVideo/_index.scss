@@ -1,10 +1,10 @@
 @use "../../../styles/abstracts" as *;
 
 .career-video {
-  background-color: $clr-accent-grey;
+  background-color: $clr-alice-blue;
 
   &-text {
-    background-color: $secondary-color;
+    background-color: $clr-tart-orange;
     color: #fff;
     margin-top: -3rem;
     margin-bottom: 3.125rem;
@@ -34,11 +34,11 @@
       }
 
       h2 {
-        color: $primary-color;
+        color: $clr-tiffany-blue;
       }
 
       p {
-        color: $clr-accent-darkblue;
+        color: $clr-police-blue;
       }
     }
   }

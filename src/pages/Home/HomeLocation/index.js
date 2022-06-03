@@ -9,11 +9,9 @@ const HomeLocation = () => {
     <div className="home-location container">
       <h2>Find a Healthcare Facilities</h2>
       <h1>Near You</h1>
-      <Button
-        type="btn-blue-pink"
-        text="Healthcare Locations"
-        onClick={() => navigate("/locations")}
-      />
+      <Button type="btn-blue-pink" onClick={() => navigate("/locations")}>
+        Healthcare Locations
+      </Button>
     </div>
   );
 };

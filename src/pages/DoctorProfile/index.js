@@ -12,6 +12,7 @@ import {
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
 import doctors from "../../data/doctors";
+import { scrollToTop } from "../../Functions";
 import drBanner from "../../images/dr-banner.jpg";
 
 const DoctorProfile = () => {
@@ -56,9 +57,9 @@ const DoctorProfile = () => {
               </div>
               <div>
                 <p className="social-media-icons">
-                  <FaFacebookF onClick={() => window.scroll(0, 0)} />
-                  <FaTwitter onClick={() => window.scroll(0, 0)} />
-                  <FaInstagram onClick={() => window.scroll(0, 0)} />
+                  <FaFacebookF onClick={scrollToTop} />
+                  <FaTwitter onClick={scrollToTop} />
+                  <FaInstagram onClick={scrollToTop} />
                 </p>
               </div>
               <div className="separator" />
@@ -140,7 +141,7 @@ const DoctorProfile = () => {
                 id="doctor-profile-case-description"
                 placeholder="Case Description"
               />
-              <Button type="btn-pink-darkblue" text="Submit Now" />
+              <Button type="btn-pink-darkblue">Submit Now</Button>
             </div>
           </div>
         </div>

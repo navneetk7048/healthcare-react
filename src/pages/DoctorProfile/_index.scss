@@ -19,7 +19,7 @@
     }
 
     &-text {
-      background-color: $primary-color;
+      background-color: $clr-tiffany-blue;
       padding: 2rem;
       @include flex(column, space-evenly);
 
@@ -60,7 +60,7 @@
 
     &-item {
       p:nth-child(1) {
-        color: $primary-color;
+        color: $clr-tiffany-blue;
       }
 
       span {
@@ -70,7 +70,7 @@
   }
 
   .doctor-profile-form {
-    background-color: $primary-color;
+    background-color: $clr-tiffany-blue;
     color: #fff;
     padding: 2rem;
     @include flex(column);
@@ -111,7 +111,7 @@
       padding-block: 0.5rem;
       transition: all 0.4s;
       cursor: pointer;
-      color: $primary-color;
+      color: $clr-tiffany-blue;
 
       &-speciality {
         color: #92a4ae;

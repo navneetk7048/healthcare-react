@@ -4,7 +4,7 @@
   background-color: #fff;
   margin-block: 3.125rem;
   padding: 1rem;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   > * {
@@ -24,7 +24,7 @@
       transition: border 0.3s ease-out;
 
       &:focus {
-        border-color: $primary-color;
+        border-color: $clr-tiffany-blue;
       }
     }
   }

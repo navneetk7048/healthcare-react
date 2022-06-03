@@ -4,7 +4,7 @@
   background: url("../../../images/location-bg.jpg") no-repeat;
   background-position: center;
   @include flex(column, center, center);
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
   gap: 1rem;
   min-height: 40vh;
 }

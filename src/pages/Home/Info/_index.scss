@@ -3,7 +3,7 @@
 .info {
   @include flex($main: space-between);
   gap: 1rem;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
   margin-top: -8rem;
 
   > * {
@@ -22,12 +22,12 @@
         text-align: center;
 
         :nth-child(1) {
-          color: $primary-color;
+          color: $clr-tiffany-blue;
           font-size: 3.5rem;
         }
 
         :nth-child(2) {
-          color: $secondary-color;
+          color: $clr-tart-orange;
           font-size: 2.5rem;
         }
       }
@@ -37,7 +37,7 @@
   .info-right {
     flex-basis: 20%;
     gap: 1rem;
-    background-color: $clr-accent-grey;
+    background-color: $clr-alice-blue;
     border-radius: $rounded;
     @include flex(column, space-between);
 

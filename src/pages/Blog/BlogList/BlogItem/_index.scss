@@ -12,22 +12,22 @@
     padding: 1rem;
 
     .blog-date {
-      color: $secondary-color;
+      color: $clr-tart-orange;
     }
 
     .blog-title {
       a {
-        color: $primary-color;
+        color: $clr-tiffany-blue;
         transition: all 0.3s ease-in-out;
 
         &:hover {
-          color: $secondary-color;
+          color: $clr-tart-orange;
         }
       }
     }
 
     .blog-text {
-      color: $clr-accent-darkblue;
+      color: $clr-police-blue;
     }
   }
 }

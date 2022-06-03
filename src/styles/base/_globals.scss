@@ -13,11 +13,11 @@ html {
 }
 
 body {
-  font-family: $font-stack-secondary;
+  font-family: $font-open-sans;
   min-height: 100vh;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
 }
 
 a {
@@ -53,7 +53,7 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-family: $font-stack-primary;
+  font-family: $font-oswald;
 }
 
 .container {

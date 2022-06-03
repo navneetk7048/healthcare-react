@@ -1,8 +1,8 @@
 @use "./variables" as *;
 
 @mixin btn-slide(
-  $bg1: $primary-color,
-  $bg2: $secondary-color,
+  $bg1: $clr-tiffany-blue,
+  $bg2: $clr-tart-orange,
   $txt1: #fff,
   $txt2: #fff
 ) {
@@ -18,11 +18,12 @@
   }
 }
 
-@mixin flex($direction: row, $main: flex-start, $cross: stretch) {
+@mixin flex($direction: row, $main: flex-start, $cross: stretch, $gap: 1rem) {
   display: flex;
   flex-direction: $direction;
   justify-content: $main;
   align-items: $cross;
+  gap: $gap;
 }
 
 @mixin grid($columns: auto, $gap: 1rem) {

@@ -2,7 +2,7 @@
 
 .navbar {
   // @include flex;
-  background-color: $primary-color;
+  background-color: $clr-tiffany-blue;
   color: #fff;
   transition: all 1s ease;
   font-family: "Oswald", sans-serif;
@@ -23,7 +23,7 @@
       display: none;
 
       &.true {
-        color: $clr-accent-darkblue;
+        color: $clr-police-blue;
       }
     }
 
@@ -56,12 +56,12 @@
       transition: all 0.4s ease;
 
       &:hover {
-        color: $clr-accent-darkblue;
+        color: $clr-police-blue;
       }
     }
 
     .active {
-      color: $clr-accent-darkblue;
+      color: $clr-police-blue;
     }
 
     .phone {

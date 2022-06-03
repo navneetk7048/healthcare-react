@@ -9,7 +9,7 @@ const SearchBox = ({ title, text, placeholder }) => {
       </div>
       <div className="input">
         <input type="text" placeholder={placeholder} />
-        <Button type="btn-pink-darkblue" text="Search" />
+        <Button type="btn-pink-darkblue">Search</Button>
       </div>
     </div>
   );

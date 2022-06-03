@@ -11,7 +11,8 @@ export const locations = [
         style={{ border: "0" }}
         allowfullscreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade"
+      />
     ),
     link: "https://goo.gl/maps/hkK2yaJX3SDbsJhb6",
   },

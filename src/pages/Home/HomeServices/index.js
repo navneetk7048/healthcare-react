@@ -28,9 +28,9 @@ const HomeServices = () => {
           </p>
           <Button
             type="btn-pink-darkblue"
-            text="See All Services"
-            onClick={() => navigate("/services")}
-          />
+            onClick={() => navigate("/services")}>
+            See All Services
+          </Button>
         </div>
         <div className="icons">
           <div

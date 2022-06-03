@@ -15,9 +15,9 @@ const Expert = ({ doctor }) => {
           <p>{speciality}</p>
           <Button
             type="btn-darkblue-blue"
-            text="View Profile"
-            onClick={() => navigate(`/our-doctors/${username}`)}
-          />
+            onClick={() => navigate(`/our-doctors/${username}`)}>
+            View Profile
+          </Button>
         </div>
       </div>
     </div>

@@ -9,12 +9,13 @@
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 0.1rem;
+  font-family: $font-oswald;
 }
 
 .btn-blue-pink {
   @include btn-slide(
-    $bg1: $primary-color,
-    $bg2: $secondary-color,
+    $bg1: $clr-tiffany-blue,
+    $bg2: $clr-tart-orange,
     $txt1: #fff,
     $txt2: #fff
   );
@@ -22,8 +23,8 @@
 
 .btn-pink-darkblue {
   @include btn-slide(
-    $bg1: $secondary-color,
-    $bg2: $clr-accent-darkblue,
+    $bg1: $clr-tart-orange,
+    $bg2: $clr-police-blue,
     $txt1: #fff,
     $txt2: #fff
   );
@@ -32,33 +33,33 @@
 .btn-white-blue {
   @include btn-slide(
     $bg1: #fff,
-    $bg2: $primary-color,
-    $txt1: $secondary-color,
+    $bg2: $clr-tiffany-blue,
+    $txt1: $clr-tart-orange,
     $txt2: #fff
   );
 }
 
 .btn-simple-blue {
   background-color: #fff;
-  color: $clr-accent-darkblue;
+  color: $clr-police-blue;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10s rgba(0, 0, 0, 0.7);
   text-transform: none;
-  font-family: $font-stack-secondary;
+  font-family: $font-open-sans;
   letter-spacing: normal;
 
   &.active,
   &:hover {
-    background-color: $primary-color;
+    background-color: $clr-tiffany-blue;
     color: #fff;
   }
 }
 
 .btn-special-pink {
-  @include btn-slide(#fff, $secondary-color, $secondary-color, #fff);
-  border: 1px solid $secondary-color;
+  @include btn-slide(#fff, $clr-tart-orange, $clr-tart-orange, #fff);
+  border: 1px solid $clr-tart-orange;
 }
 
 .btn-grey-blue {
-  @include btn-slide($clr-accent-grey2, $primary-color, #fff, #fff);
+  @include btn-slide($clr-pastel-blue, $clr-tiffany-blue, #fff, #fff);
 }
