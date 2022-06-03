@@ -25,12 +25,12 @@
 
       h2,
       h2 + p {
-        color: #fff;
+        color: $clr-white;
       }
 
       .separator {
         height: 1px;
-        background-color: #fff;
+        background-color: $clr-white;
       }
 
       a,
@@ -39,7 +39,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          color: #fff;
+          color: $clr-white;
         }
       }
 
@@ -71,7 +71,7 @@
 
   .doctor-profile-form {
     background-color: $clr-tiffany-blue;
-    color: #fff;
+    color: $clr-white;
     padding: 2rem;
     @include flex(column);
     gap: 1.5rem;
@@ -82,7 +82,7 @@
       input,
       textarea {
         padding: 0.5rem 1rem;
-        color: black;
+        color: $clr-black;
         outline: none;
       }
 
@@ -97,7 +97,7 @@
     }
 
     ::placeholder {
-      color: black;
+      color: $clr-black;
     }
   }
 

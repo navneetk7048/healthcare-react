@@ -21,7 +21,7 @@
   .icons {
     @include grid(repeat(4, 1fr), 1rem);
     padding: 1rem;
-    background-color: #fff;
+    background-color: $clr-white;
     box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
     border-radius: $rounded;
     position: absolute;

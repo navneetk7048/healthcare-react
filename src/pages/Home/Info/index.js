@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaBed, FaIdCard, FaUserMd, FaHandPaper } from "react-icons/fa";
 
-import Button from "../../../components/Button";
+import { ButtonSlide } from "../../../components/Button";
 
 const Info = () => {
-  let navigate = useNavigate();
-
   return (
     <div className="info container">
       <div className="info-left">
@@ -55,9 +53,13 @@ const Info = () => {
           seasons greater, land sea, the created gathered bring spirit whose
           upon years fruitful third dominion cattle midst night morning bring.
         </p>
-        <Button type="btn-blue-pink" onClick={() => navigate("/contact")}>
+        <ButtonSlide
+          type="tiffanyBlue-tartOrange"
+          // onClick={() => navigate("/contact")}
+          as={Link}
+          to="/contact">
           Contact Us
-        </Button>
+        </ButtonSlide>
       </div>
     </div>
   );

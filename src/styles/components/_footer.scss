@@ -1,7 +1,7 @@
 @use "../../styles/abstracts" as *;
 
 .footer {
-  color: #fff;
+  color: $clr-white;
 
   a {
     transition: all 0.3s ease;
@@ -43,7 +43,7 @@
       .separator {
         width: 1px;
         padding: 0;
-        background-color: #fff;
+        background-color: $clr-white;
       }
     }
   }

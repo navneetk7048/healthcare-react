@@ -1,8 +1,10 @@
+@use "../abstracts" as *;
+
 .scroll-button {
   opacity: 0.5;
   cursor: pointer;
-  background-color: #f84d4f;
-  color: #fff;
+  background-color: $clr-tart-orange;
+  color: $clr-white;
   position: fixed;
   bottom: 1rem;
   right: 1rem;

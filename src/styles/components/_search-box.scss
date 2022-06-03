@@ -1,7 +1,7 @@
 @use "../../styles/abstracts" as *;
 
 .search-box {
-  background-color: #fff;
+  background-color: $clr-white;
   margin-block: 3.125rem;
   padding: 1rem;
   color: $clr-police-blue;
@@ -19,7 +19,7 @@
       width: 100%;
       padding: 0.25rem 0.5rem;
       outline: none;
-      border: 1px solid black;
+      border: 1px solid $clr-black;
       border-radius: 0.25rem;
       transition: border 0.3s ease-out;
 

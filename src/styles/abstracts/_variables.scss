@@ -1,9 +1,11 @@
 $clr-alice-blue: #f1f8fc;
+$clr-black: #000;
 $clr-pastel-blue: #b5c5cc;
 $clr-pastel-red: #f96869;
 $clr-police-blue: #214e66;
 $clr-tiffany-blue: #00bcbd;
 $clr-tart-orange: #f84d4f;
+$clr-white: #fff;
 
 $font-oswald: "Oswald", sans-serif;
 $font-open-sans: "Open Sans", sans-serif;
@@ -12,15 +14,16 @@ $rounded: 0.3rem;
 
 // To access from javascript
 :export {
-  clr-alice-blue: $clr-alice-blue;
-  clr-pastel-blue: $clr-pastel-blue;
-  clr-pastel-red: $clr-pastel-red;
-  clr-police-blue: $clr-police-blue;
-  clr-tiffany-blue: $clr-tiffany-blue;
-  clr-tart-orange: $clr-tart-orange;
+  clrAliceBlue: $clr-alice-blue;
+  clrPastelBlue: $clr-pastel-blue;
+  clrPastelRed: $clr-pastel-red;
+  clrPoliceBlue: $clr-police-blue;
+  clrTiffanyBlue: $clr-tiffany-blue;
+  clrTartOrange: $clr-tart-orange;
+  clrWhite: $clr-white;
 
-  font-oswald: $font-oswald;
-  font-open-sans: $font-open-sans;
+  fontOswald: $font-oswald;
+  fontOpenSans: $font-open-sans;
 
   rounded: $rounded;
 }

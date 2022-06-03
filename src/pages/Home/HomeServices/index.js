@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaHandHoldingMedical,
   FaStethoscope,
@@ -26,9 +26,7 @@ const HomeServices = () => {
             days signs void creepeth Together in face for he can't us. Seas air
             beast behold creature itself herb place, days.
           </p>
-          <Button
-            type="btn-pink-darkblue"
-            onClick={() => navigate("/services")}>
+          <Button type="btn-pink-darkblue" as={Link} to="/services">
             See All Services
           </Button>
         </div>

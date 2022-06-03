@@ -16,8 +16,8 @@
   @include btn-slide(
     $bg1: $clr-tiffany-blue,
     $bg2: $clr-tart-orange,
-    $txt1: #fff,
-    $txt2: #fff
+    $txt1: $clr-white,
+    $txt2: $clr-white
   );
 }
 
@@ -25,22 +25,22 @@
   @include btn-slide(
     $bg1: $clr-tart-orange,
     $bg2: $clr-police-blue,
-    $txt1: #fff,
-    $txt2: #fff
+    $txt1: $clr-white,
+    $txt2: $clr-white
   );
 }
 
 .btn-white-blue {
   @include btn-slide(
-    $bg1: #fff,
+    $bg1: $clr-white,
     $bg2: $clr-tiffany-blue,
     $txt1: $clr-tart-orange,
-    $txt2: #fff
+    $txt2: $clr-white
   );
 }
 
 .btn-simple-blue {
-  background-color: #fff;
+  background-color: $clr-white;
   color: $clr-police-blue;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 10s rgba(0, 0, 0, 0.7);
@@ -51,15 +51,25 @@
   &.active,
   &:hover {
     background-color: $clr-tiffany-blue;
-    color: #fff;
+    color: $clr-white;
   }
 }
 
 .btn-special-pink {
-  @include btn-slide(#fff, $clr-tart-orange, $clr-tart-orange, #fff);
+  @include btn-slide(
+    $clr-white,
+    $clr-tart-orange,
+    $clr-tart-orange,
+    $clr-white
+  );
   border: 1px solid $clr-tart-orange;
 }
 
 .btn-grey-blue {
-  @include btn-slide($clr-pastel-blue, $clr-tiffany-blue, #fff, #fff);
+  @include btn-slide(
+    $clr-pastel-blue,
+    $clr-tiffany-blue,
+    $clr-white,
+    $clr-white
+  );
 }

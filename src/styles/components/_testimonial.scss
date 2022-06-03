@@ -2,11 +2,11 @@
 
 .testimonial-component {
   @include flex;
-  box-shadow: 0 0 10px 10px rgba(black, 0.1);
+  box-shadow: 0 0 10px 10px rgba($clr-black, 0.1);
   border-radius: $rounded;
   padding: 2rem;
   gap: 2rem;
-  background-color: #fff;
+  background-color: $clr-white;
 
   svg {
     font-size: 2rem;
@@ -31,15 +31,15 @@
 
   &.main {
     background-color: $clr-tart-orange;
-    color: #fff;
+    color: $clr-white;
 
     svg {
       font-size: 4rem;
-      color: #fff;
+      color: $clr-white;
     }
 
     .comment :nth-child(2) {
-      color: #fff;
+      color: $clr-white;
     }
   }
 

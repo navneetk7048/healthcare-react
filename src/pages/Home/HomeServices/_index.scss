@@ -2,7 +2,7 @@
 
 .home-services {
   background-color: $clr-tiffany-blue;
-  color: #fff;
+  color: $clr-white;
 
   .container {
     @include flex($main: space-between);
@@ -21,7 +21,7 @@
 
       .icon {
         @include flex(column, center, center);
-        background-color: #fff;
+        background-color: $clr-white;
         color: $clr-tiffany-blue;
         border-radius: $rounded;
         gap: 1rem;

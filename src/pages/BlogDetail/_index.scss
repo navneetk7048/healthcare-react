@@ -68,8 +68,8 @@
 
         .blog-comments-item {
           @include flex($cross: flex-start);
-          background-color: #fff;
-          box-shadow: 0 0 10px 10px rgba(black, 0.1);
+          background-color: $clr-white;
+          box-shadow: 0 0 10px 10px rgba($clr-black, 0.1);
           padding: 1rem;
           gap: 1rem;
           border-radius: $rounded;
@@ -97,7 +97,7 @@
         padding: 3rem;
 
         h2 {
-          color: #fff;
+          color: $clr-white;
         }
 
         ::placeholder {

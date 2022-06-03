@@ -1,4 +1,4 @@
-import Button from "../../../components/Button";
+import { ButtonSlide } from "../../../components/Button";
 
 const AppointmentForm = () => {
   return (
@@ -22,7 +22,7 @@ const AppointmentForm = () => {
           <option value="other">Other</option>
         </select>
         <input type="date" name="date" id="date" />
-        <Button type="btn-white-blue">Book Appointment</Button>
+        <ButtonSlide type="white-tiffanyBlue">Book Appointment</ButtonSlide>
       </form>
     </div>
   );

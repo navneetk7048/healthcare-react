@@ -2,7 +2,7 @@
 
 .career-testimonials {
   background-color: $clr-tiffany-blue;
-  color: #fff;
+  color: $clr-white;
   margin-top: 1rem;
   padding-block: 0.5rem;
 
@@ -16,7 +16,7 @@
   }
 
   fieldset {
-    border: 3px solid #fff;
+    border: 3px solid $clr-white;
     margin: 15px;
 
     legend {
@@ -30,7 +30,7 @@
     display: flex;
 
     &-text a {
-      color: #fff;
+      color: $clr-white;
       transition: color 0.3s ease-in-out;
     }
 
@@ -55,7 +55,7 @@
 
     &--active button {
       opacity: 1;
-      background-color: #fff;
+      background-color: $clr-white;
     }
   }
 }

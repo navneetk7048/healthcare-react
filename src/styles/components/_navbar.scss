@@ -3,13 +3,13 @@
 .navbar {
   // @include flex;
   background-color: $clr-tiffany-blue;
-  color: #fff;
+  color: $clr-white;
   transition: all 1s ease;
   font-family: "Oswald", sans-serif;
 
   .logo {
     @include flex(row, center, center);
-    background-color: #fff;
+    background-color: $clr-white;
 
     img {
       width: 100%;
@@ -37,7 +37,7 @@
       }
 
       a {
-        background-color: #fff;
+        background-color: $clr-white;
       }
     }
   }

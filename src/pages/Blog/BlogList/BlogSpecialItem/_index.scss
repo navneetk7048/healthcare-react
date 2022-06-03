@@ -2,7 +2,7 @@
 
 .blog-special-item {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  background-color: #fff;
+  background-color: $clr-white;
   text-align: center;
   padding: 1rem;
   color: $clr-police-blue;
@@ -16,10 +16,10 @@
 
 .special-blue {
   background-color: $clr-tiffany-blue;
-  color: #fff;
+  color: $clr-white;
 }
 
 .special-pink {
   background-color: $clr-tart-orange;
-  color: #fff;
+  color: $clr-white;
 }

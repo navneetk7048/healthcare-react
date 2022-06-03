@@ -16,7 +16,7 @@
         color: $clr-tiffany-blue;
 
         &-item {
-          background-color: #fff;
+          background-color: $clr-white;
           transition: transform 0.4s ease-in-out;
           border-radius: 5px;
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@
 
   &-appointment {
     background-color: $clr-tart-orange;
-    color: #fff;
+    color: $clr-white;
 
     .container {
       @include flex(column, center, center);

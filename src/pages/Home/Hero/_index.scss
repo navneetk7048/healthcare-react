@@ -16,7 +16,7 @@
       @include flex(column, center, center);
       gap: 1rem;
       margin-inline: 10vw;
-      color: #fff;
+      color: $clr-white;
       text-align: center;
 
       p {

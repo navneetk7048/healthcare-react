@@ -3,8 +3,8 @@
 @mixin btn-slide(
   $bg1: $clr-tiffany-blue,
   $bg2: $clr-tart-orange,
-  $txt1: #fff,
-  $txt2: #fff
+  $txt1: $clr-white,
+  $txt2: $clr-white
 ) {
   background: linear-gradient(to right, $bg2 50%, $bg1 50%);
   background-size: 200% 100%;

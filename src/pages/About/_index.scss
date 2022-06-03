@@ -5,7 +5,7 @@
   .about-content {
     position: relative;
     background-color: $clr-tart-orange;
-    color: #fff;
+    color: $clr-white;
     margin-top: -2.5rem;
     @include flex(column, center, center);
     gap: 1.5rem;
@@ -50,7 +50,7 @@
 
       .about-goal-special {
         background-color: $clr-tiffany-blue;
-        color: #fff;
+        color: $clr-white;
         padding: 2rem 3rem;
         @include flex(column);
         gap: 2rem;

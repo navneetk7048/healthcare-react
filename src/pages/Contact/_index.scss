@@ -2,7 +2,7 @@
 
 .contact {
   .contact-form {
-    background-color: #fff;
+    background-color: $clr-white;
     margin-top: -3rem;
     position: relative;
     @include flex();
@@ -34,7 +34,7 @@
     &-right {
       flex-basis: 35%;
       background-color: $clr-tiffany-blue;
-      color: #fff;
+      color: $clr-white;
       gap: 3rem;
       justify-content: space-evenly;
       align-items: center;
@@ -44,11 +44,11 @@
 
       > div > svg {
         box-sizing: initial;
-        background-color: #fff;
+        background-color: $clr-white;
         color: $clr-tiffany-blue;
         padding: 0.5rem;
         border-radius: 50%;
-        // outline: 0.5rem solid #fff;
+        // outline: 0.5rem solid $clr-white;
       }
 
       .social-media {
