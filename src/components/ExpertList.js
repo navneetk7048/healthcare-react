@@ -21,7 +21,7 @@ const ExpertList = ({ heading, doctors }) => {
                 <ButtonSlide
                   type="policeBlue-tiffanyBlue"
                   as={Link}
-                  to={`/our-doctors/${username}`}>
+                  to={`/our-doctors/${id}`}>
                   View Profile
                 </ButtonSlide>
               </div>

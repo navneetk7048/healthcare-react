@@ -1,0 +1,16 @@
+@use "../../styles/abstracts" as *;
+
+.service-detail {
+  background-color: $clr-alice-blue;
+  padding-block: 3rem;
+
+  .container {
+    @include flex(column);
+    gap: 2rem;
+    margin-block: 0;
+
+    > div > * {
+      margin-block: 1rem;
+    }
+  }
+}

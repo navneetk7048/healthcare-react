@@ -1,0 +1,74 @@
+@use "../abstracts" as *;
+
+.blog {
+  .blog-suggestions {
+    @include flex;
+    color: $clr-police-blue;
+
+    > * {
+      padding: 1rem;
+    }
+
+    h2 {
+      padding-block: 1rem;
+    }
+
+    .post-list {
+      @include grid(1fr 1fr);
+
+      .post {
+        @include flex($cross: flex-start);
+        gap: 1rem;
+
+        &-content {
+          p {
+            color: $clr-tart-orange;
+          }
+
+          a {
+            color: $clr-tiffany-blue;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: $clr-police-blue;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 700px) {
+        @include grid(1fr);
+      }
+    }
+
+    .post-categories {
+      @include flex(column);
+      gap: 1rem;
+      padding-block: 1rem;
+
+      a {
+        color: $clr-police-blue;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $clr-tiffany-blue;
+        }
+      }
+    }
+
+    .post-tags {
+      @include flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-block: 1rem;
+
+      button {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+}

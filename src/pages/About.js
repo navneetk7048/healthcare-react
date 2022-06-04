@@ -10,7 +10,7 @@ import {
 import { ButtonSlide } from "../components/Button";
 import Banner from "../components/Banner";
 import ExpertList from "../components/ExpertList";
-import doctors from "../data/doctors-small";
+import doctors from "../data/doctors";
 import about from "../images/about-banner.jpg";
 import goalSec from "../images/goal-sec.jpg";
 import weAreSec from "../images/we-are-sec.jpg";
@@ -125,7 +125,7 @@ const About = () => {
         heading="Meet Our Experts"
         text="Together own seas said fowl third herb saw also that had saying darkness
         may After together"
-        doctors={doctors}
+        doctors={doctors.slice(0, 3)}
       />
     </div>
   );

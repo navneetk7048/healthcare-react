@@ -1,10 +1,10 @@
 import { FaRegQuestionCircle } from "react-icons/fa";
 
-const Note = ({ text }) => {
+const Note = ({ children }) => {
   return (
     <div className="note">
       <FaRegQuestionCircle />
-      <p>{text}</p>
+      <p>{children}</p>
     </div>
   );
 };

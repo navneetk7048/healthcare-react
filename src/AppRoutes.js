@@ -16,6 +16,7 @@ import DoctorProfile from "./pages/DoctorProfile";
 import Testimonials from "./pages/Testimonials";
 import BlogDetail from "./pages/BlogDetail";
 import CareerDetail from "./pages/CareerDetail";
+import PageNotFound from "./pages/PageNotFound";
 
 const AppRoutes = () => (
   <Routes>
@@ -35,11 +36,13 @@ const AppRoutes = () => (
     <Route path="/contact" element={<Contact />} />
 
     {/* Other Pages */}
-    <Route path="/services/service-detail" element={<ServiceDetail />} />
+    <Route path="/services/:id" element={<ServiceDetail />} />
     <Route path="/testimonials" element={<Testimonials />} />
     <Route path="/blog/blog-detail" element={<BlogDetail />} />
     <Route path="/career/career-detail" element={<CareerDetail />} />
-    <Route path="/our-doctors/:username" element={<DoctorProfile />} />
+    <Route path="/our-doctors/:id" element={<DoctorProfile />} />
+
+    <Route path="*" element={<PageNotFound />} />
   </Routes>
 );
 

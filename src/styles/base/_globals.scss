@@ -57,5 +57,10 @@ h6 {
 
 .container {
   width: min(90%, 960px);
-  margin: 3.125rem auto;
+  margin: 1rem auto;
+}
+
+.separator {
+  height: 1px;
+  background-color: $clr-white;
 }

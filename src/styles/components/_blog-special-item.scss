@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.blog-special-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  background-color: $clr-white;
+  text-align: center;
+  padding: 1rem;
+  color: $clr-police-blue;
+  @include flex(column, center, center);
+  gap: 1rem;
+
+  svg {
+    font-size: 3rem;
+  }
+}
+
+.special-blue {
+  background-color: $clr-tiffany-blue;
+  color: $clr-white;
+}
+
+.special-pink {
+  background-color: $clr-tart-orange;
+  color: $clr-white;
+}

@@ -1,0 +1,434 @@
+@use "../../styles/abstracts/" as *;
+
+.home {
+  .hero {
+    img {
+      object-fit: cover;
+      min-height: 50vh;
+      width: 100%;
+    }
+
+    .hero-img {
+      position: relative;
+
+      .hero-img-text {
+        position: absolute;
+        inset: 0;
+        @include flex(column, center, center);
+        gap: 1rem;
+        margin-inline: 10vw;
+        color: $clr-white;
+        text-align: center;
+
+        p {
+          background-color: rgba($clr-tiffany-blue, 0.7);
+          padding: 0.5rem 1.5rem;
+        }
+      }
+    }
+
+    .react-multiple-carousel__arrow {
+      height: 100%;
+      width: 10vw;
+      max-width: 10rem;
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
+      opacity: 0.5;
+      font-weight: 900;
+
+      &--left {
+        left: 0;
+      }
+
+      &--right {
+        right: 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .home-appointment {
+    @include flex(column);
+    background-color: $clr-tart-orange;
+    color: $clr-white;
+    border-radius: $rounded;
+    padding: 3rem 2rem;
+
+    &-label {
+      flex: 1 1 20%;
+    }
+
+    .home-appointment-form {
+      @include grid;
+      flex: 1 1 70%;
+
+      input,
+      select {
+        background-color: $clr-pastel-red;
+        border: none;
+        border-radius: $rounded;
+        padding: 0.5rem 1rem;
+      }
+
+      button {
+        justify-self: end;
+      }
+
+      @media (min-width: 36em) {
+        @include grid(1fr 1fr);
+
+        button {
+          grid-column: 1/3;
+        }
+      }
+    }
+
+    ::placeholder {
+      color: $clr-white;
+      opacity: 1;
+    }
+
+    @media (min-width: 36rem) {
+      margin-top: -3.125rem;
+      position: relative;
+    }
+
+    @media (min-width: 48em) {
+      @include flex($main: space-between);
+
+      .separator {
+        height: 1px;
+        background-color: $clr-white;
+        margin-block: 0.3rem 0.6rem;
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 48em) {
+      .separator {
+        display: none;
+      }
+    }
+  }
+
+  .info {
+    margin-block: 3rem;
+    @include flex(column, $gap: 2rem);
+
+    .info-left {
+      @include flex(column);
+      flex: 1 1 70%;
+
+      .icons {
+        @include grid(1fr 1fr);
+        padding: 1rem;
+        align-items: stretch;
+
+        .icon {
+          text-align: center;
+          height: 100%;
+
+          img {
+            width: 50%;
+            filter: invert(58%) sepia(84%) saturate(3064%) hue-rotate(142deg)
+              brightness(97%) contrast(101%);
+          }
+
+          .numbers {
+            color: $clr-tart-orange;
+            font-size: 2rem;
+          }
+        }
+
+        @media (min-width: 36em) {
+          @include grid(repeat(4, 1fr));
+        }
+      }
+    }
+
+    .info-right {
+      @include flex(column);
+      flex: 1 1 25%;
+      background-color: $clr-alice-blue;
+      border-radius: $rounded;
+      padding: 1rem;
+
+      .separator {
+        background-color: $clr-pastel-blue;
+      }
+
+      a {
+        width: max-content;
+      }
+
+      @media (min-width: 48em) {
+        padding: 3rem 2rem;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (min-width: 48em) {
+      @include flex;
+    }
+  }
+
+  .home-services {
+    background-color: $clr-tiffany-blue;
+    color: $clr-white;
+    padding-block: 1rem;
+
+    .container {
+      @include flex(column);
+
+      .home-services-text {
+        flex-basis: 35%;
+        @include flex(column);
+        padding: 1rem;
+      }
+
+      .icons {
+        flex-basis: 60%;
+        padding: 1rem;
+        @include grid(1fr 1fr);
+
+        .icon {
+          @include flex(column, center, center);
+          background-color: $clr-white;
+          color: $clr-tiffany-blue;
+          border-radius: $rounded;
+          padding: 1rem;
+          cursor: pointer;
+          transition: all 0.4s ease-in-out;
+
+          img {
+            width: 50%;
+            filter: invert(58%) sepia(84%) saturate(3064%) hue-rotate(142deg)
+              brightness(97%) contrast(101%);
+          }
+
+          &:hover {
+            color: $clr-tart-orange;
+          }
+
+          &:hover img {
+            filter: brightness(0) saturate(100%) invert(36%) sepia(15%)
+              saturate(7397%) hue-rotate(333deg) brightness(111%) contrast(95%);
+          }
+        }
+
+        @media (min-width: 43.75em) {
+          @include grid(repeat(3, 1fr));
+        }
+      }
+
+      @media (min-width: 60em) {
+        @include flex;
+      }
+    }
+  }
+
+  .home-testimonials {
+    @include grid(1fr 1fr, 0);
+
+    &-img {
+      position: relative;
+      background: url("../../images/video-img.jpg") no-repeat;
+      background-position: center center;
+      background-size: cover;
+
+      &-text {
+        position: absolute;
+        @include flex($main: space-between, $cross: center);
+        width: 100%;
+        background-color: rgba($clr-black, 0.5);
+        bottom: 10%;
+        color: $clr-white;
+        padding: 0.5rem 1rem;
+
+        img {
+          width: auto;
+          position: absolute;
+          right: 5%;
+          border: 5px solid $clr-tart-orange;
+          border-radius: 50%;
+          animation: play-button-animation 1.4s infinite;
+        }
+      }
+    }
+
+    &-text {
+      background-color: $clr-tiffany-blue;
+      color: $clr-white;
+      padding-block: 0.5rem;
+
+      p {
+        text-align: left;
+        padding: 2rem;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      fieldset {
+        border: 3px solid $clr-white;
+        margin: 15px;
+
+        legend {
+          margin-left: 2rem;
+          font-size: 2rem;
+          padding-inline: 1rem;
+        }
+      }
+
+      .testimonials {
+        display: flex;
+
+        &-text a {
+          color: $clr-white;
+          transition: color 0.3s ease-in-out;
+        }
+      }
+
+      .patient-name {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .react-multi-carousel-dot {
+        button {
+          width: 1.5rem;
+          height: 0.25rem;
+          border: none;
+          border-radius: 0;
+          opacity: 0.5;
+        }
+
+        &--active button {
+          opacity: 1;
+          background-color: $clr-white;
+        }
+      }
+
+      .all-testimonials {
+        text-align: right;
+
+        a {
+          font-family: "Oswald", sans-serif;
+          text-transform: uppercase;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $clr-police-blue;
+          }
+        }
+      }
+    }
+
+    &-video {
+      position: fixed;
+      z-index: 10;
+      inset: 0;
+      @include flex(row, center, center);
+      background-color: rgba($clr-black, 0.5);
+
+      .iframe-div {
+        position: relative;
+        min-width: 40%;
+      }
+
+      iframe {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+
+      svg {
+        cursor: pointer;
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        font-size: 2rem;
+        color: $clr-white;
+        opacity: 0.5;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &.false {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  .home-location {
+    background: url("../../images/location-bg.jpg") no-repeat;
+    background-position: center;
+    @include flex(column, center, center);
+    color: $clr-police-blue;
+    gap: 1rem;
+    min-height: 40vh;
+  }
+
+  .home-blog {
+    @include flex(column, $cross: center);
+    color: $clr-police-blue;
+    padding: 1rem;
+
+    > :nth-child(1),
+    > :nth-child(2) {
+      padding-inline: 1rem;
+    }
+
+    .home-blog-list {
+      @include flex;
+
+      .home-blog-item {
+        @include flex(column);
+        background-color: $clr-alice-blue;
+
+        a,
+        p {
+          margin-inline: 1rem;
+        }
+
+        a {
+          transition: all 0.4s ease-in-out;
+
+          &:hover {
+            color: $clr-tart-orange;
+          }
+        }
+
+        p {
+          color: $clr-tart-orange;
+          margin-bottom: 1rem;
+        }
+      }
+
+      @media (max-width: 36em) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@keyframes play-button-animation {
+  from {
+    outline: 1px solid rgba($clr-tart-orange, 1);
+  }
+  to {
+    outline: 20px solid rgba($clr-tart-orange, 0);
+  }
+}

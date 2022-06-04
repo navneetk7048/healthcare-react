@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaHome, FaPhoneAlt, FaBars } from "react-icons/fa";
 import logo from "../images/logo.png";
@@ -7,11 +7,26 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
 
   const toggle = () => setActive(!active);
+  const disable = () => setActive(false);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
+  useEffect(() => {
+    if (width > 1000) setActive(false);
+  }, [width]);
 
   return (
     <div className="navbar">
       <div className="logo">
-        <Link to="/" onClick={() => setActive(false)}>
+        <Link to="/" onClick={disable}>
           <img src={logo} alt="Health-Care" />
         </Link>
         <FaBars className={`toggle ${active}`} onClick={toggle} />
@@ -19,37 +34,37 @@ const Navbar = () => {
       <nav className={`navlist ${active}`}>
         <ul>
           <li>
-            <NavLink onClick={toggle} to="/services">
+            <NavLink onClick={disable} to="/services">
               Services
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggle} to="/our-doctors">
+            <NavLink onClick={disable} to="/our-doctors">
               Our Doctors
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggle} to="/find-a-doctor">
+            <NavLink onClick={disable} to="/find-a-doctor">
               Find A Doctor
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggle} to="/about">
+            <NavLink onClick={disable} to="/about">
               About
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggle} to="/locations">
+            <NavLink onClick={disable} to="/locations">
               Locations
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggle} to="/blog">
+            <NavLink onClick={disable} to="/blog">
               Blog
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggle} to="/career">
+            <NavLink onClick={disable} to="/career">
               Career
             </NavLink>
           </li>
@@ -63,17 +78,17 @@ const Navbar = () => {
             </li>
             <li className="big-screen-only">|</li>
             <li>
-              <Link onClick={toggle} to="/online-bill-pay">
+              <Link onClick={disable} to="/online-bill-pay">
                 Online Bill Pay
               </Link>
             </li>
             <li>
-              <Link onClick={toggle} to="/patient-info">
+              <Link onClick={disable} to="/patient-info">
                 Patient Info
               </Link>
             </li>
             <li>
-              <Link onClick={toggle} to="/contact">
+              <Link onClick={disable} to="/contact">
                 Contact
               </Link>
             </li>
