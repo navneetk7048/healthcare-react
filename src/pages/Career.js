@@ -2,13 +2,7 @@
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {
-  FaUmbrellaBeach,
-  FaHeart,
-  FaHeadSideVirus,
-  FaQuoteLeft,
-} from "react-icons/fa";
-import { GiMoneyStack, GiStairsGoal, GiDramaMasks } from "react-icons/gi";
+import { FaQuoteLeft } from "react-icons/fa";
 
 // Components
 import Banner from "../components/Banner";
@@ -27,6 +21,12 @@ import careerSlide1 from "../images/career-slide-1.jpg";
 import careerSlide2 from "../images/career-slide-2.jpg";
 import careerSlide3 from "../images/career-slide-3.jpg";
 import innerVideoIcon from "../images/inner-video-icon.png";
+import sunUmbrella from "../icons/sun-umbrella.png";
+import lightHeartShape from "../icons/light-heart-shape.png";
+import money from "../icons/money.png";
+import mind from "../icons/mind.png";
+import goal from "../icons/goal.png";
+import theatre from "../icons/theatre.png";
 
 const Career = () => {
   const responsive = {
@@ -131,7 +131,7 @@ const Career = () => {
         <h2>Life At Healthcare </h2>
         <div className="career-life-cards">
           <div className="career-life-card">
-            <FaUmbrellaBeach />
+            <img src={sunUmbrella} alt="" />
             <h3>Paid parental leave</h3>
             <p>
               Under make after own them night ssea dominion fowl lights third
@@ -139,7 +139,7 @@ const Career = () => {
             </p>
           </div>
           <div className="career-life-card">
-            <FaHeart />
+            <img src={lightHeartShape} alt="" />
             <h3>Healthcare coverage</h3>
             <p>
               Under make after own them night ssea dominion fowl lights third
@@ -147,7 +147,7 @@ const Career = () => {
             </p>
           </div>
           <div className="career-life-card">
-            <GiMoneyStack />
+            <img src={money} alt="" />
             <h3>Competitive compensation</h3>
             <p>
               Under make after own them night ssea dominion fowl lights third
@@ -155,7 +155,7 @@ const Career = () => {
             </p>
           </div>
           <div className="career-life-card">
-            <FaHeadSideVirus />
+            <img src={mind} alt="" style={{ scale: "-1 1" }} />
             <h3>Work/life balance</h3>
             <p>
               Under make after own them night ssea dominion fowl lights third
@@ -163,7 +163,7 @@ const Career = () => {
             </p>
           </div>
           <div className="career-life-card">
-            <GiStairsGoal />
+            <img src={goal} alt="" />
             <h3>Learning and development</h3>
             <p>
               Under make after own them night ssea dominion fowl lights third
@@ -171,7 +171,7 @@ const Career = () => {
             </p>
           </div>
           <div className="career-life-card">
-            <GiDramaMasks />
+            <img src={theatre} alt="" />
             <h3>Culinary programs</h3>
             <p>
               Under make after own them night ssea dominion fowl lights third

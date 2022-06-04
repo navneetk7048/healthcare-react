@@ -78,6 +78,11 @@
           font-size: 3.5rem;
           color: $clr-tiffany-blue;
         }
+        img {
+          max-width: 4rem;
+          filter: invert(58%) sepia(84%) saturate(3064%) hue-rotate(142deg)
+            brightness(97%) contrast(101%);
+        }
       }
     }
 

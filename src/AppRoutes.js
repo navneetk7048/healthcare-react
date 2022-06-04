@@ -42,6 +42,7 @@ const AppRoutes = () => (
     <Route path="/career/career-detail" element={<CareerDetail />} />
     <Route path="/our-doctors/:id" element={<DoctorProfile />} />
 
+    {/* Error Page */}
     <Route path="*" element={<PageNotFound />} />
   </Routes>
 );
