@@ -27,7 +27,7 @@
         gap: 1rem;
         padding: 1rem;
         cursor: pointer;
-        transition: color 0.3s;
+        transition: all 0.4s ease-in-out;
 
         :nth-child(1) {
           font-size: 3.5rem;

@@ -2,9 +2,8 @@
 
 .search-box {
   background-color: $clr-white;
-  margin-block: 3.125rem;
   padding: 1rem;
-  color: $clr-police-blue;
+  width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   > * {
@@ -12,14 +11,12 @@
   }
 
   .input {
-    display: flex;
-    gap: 1rem;
+    @include flex;
 
     input {
       width: 100%;
       padding: 0.25rem 0.5rem;
-      outline: none;
-      border: 1px solid $clr-black;
+      border: 1px solid;
       border-radius: 0.25rem;
       transition: border 0.3s ease-out;
 

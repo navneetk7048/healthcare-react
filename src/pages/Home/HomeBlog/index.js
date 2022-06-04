@@ -1,13 +1,11 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import Button from "../../../components/Button";
+import { ButtonSlide } from "../../../components/Button";
 import blog1 from "../../../images/blog-1.jpg";
 import blog2 from "../../../images/blog-2.jpg";
 import blog3 from "../../../images/blog-3.jpg";
 
 const HomeBlog = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="home-blog container">
       <h1>A healthcare Blog</h1>
@@ -38,9 +36,9 @@ const HomeBlog = () => {
           <p>Sept 03, 2019</p>
         </div>
       </div>
-      <Button type="btn-blue-pink" onClick={() => navigate("/blog")}>
+      <ButtonSlide type="tiffanyBlue-tartOrange" as={Link} to="/blog">
         See All Healthcare Blog
-      </Button>
+      </ButtonSlide>
     </div>
   );
 };

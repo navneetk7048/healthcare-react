@@ -8,7 +8,7 @@ import {
   FaBrain,
 } from "react-icons/fa";
 
-import Button from "../../../components/Button";
+import { ButtonSlide } from "../../../components/Button";
 
 const HomeServices = () => {
   const navigate = useNavigate();
@@ -26,9 +26,9 @@ const HomeServices = () => {
             days signs void creepeth Together in face for he can't us. Seas air
             beast behold creature itself herb place, days.
           </p>
-          <Button type="btn-pink-darkblue" as={Link} to="/services">
+          <ButtonSlide type="tartOrange-policeBlue" as={Link} to="/services">
             See All Services
-          </Button>
+          </ButtonSlide>
         </div>
         <div className="icons">
           <div

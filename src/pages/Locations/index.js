@@ -1,7 +1,7 @@
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
+import { ButtonSlide } from "../../components/Button";
 import { locations } from "./locations";
 import locationBanner from "../../images/location-banner.jpg";
 
@@ -28,11 +28,13 @@ const Locations = () => {
                 <a href={`tel:${contact}`} className="location-contact">
                   <FaPhoneAlt /> {contact}
                 </a>
-                <Button
-                  type="btn-pink-darkblue"
-                  onClick={() => window.open(link, "_blank")}>
+                <ButtonSlide
+                  type="tartOrange-policeBlue"
+                  as="a"
+                  href={link}
+                  target="_blank">
                   Get Directions
-                </Button>
+                </ButtonSlide>
               </div>
               {iframe}
             </div>

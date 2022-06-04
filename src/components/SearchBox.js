@@ -1,4 +1,4 @@
-import Button from "./Button";
+import { ButtonSlide } from "./Button";
 
 const SearchBox = ({ title, text, placeholder }) => {
   return (
@@ -9,7 +9,7 @@ const SearchBox = ({ title, text, placeholder }) => {
       </div>
       <div className="input">
         <input type="text" placeholder={placeholder} />
-        <Button type="btn-pink-darkblue">Search</Button>
+        <ButtonSlide type="tartOrange-policeBlue">Search</ButtonSlide>
       </div>
     </div>
   );

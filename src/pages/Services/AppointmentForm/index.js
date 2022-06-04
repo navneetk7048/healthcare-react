@@ -1,9 +1,11 @@
+import { ButtonSlide } from "../../../components/Button";
+
 const AppointmentForm = () => {
   return (
     <div className="appointment">
       <div className="container">
         <h2 className="appointment-label">Make an appointment</h2>
-        <form action="#" className="appointment-form">
+        <div className="appointment-form">
           <input type="text" name="name" id="name" placeholder="Your Name*" />
           <input
             type="email"
@@ -22,8 +24,8 @@ const AppointmentForm = () => {
             <option value="other">Other</option>
           </select>
           <input type="date" name="date" id="date" />
-          <input type="submit" value="Book Appointment" className="btn" />
-        </form>
+        </div>
+        <ButtonSlide type="white-tiffanyBlue">Book Appointment</ButtonSlide>
       </div>
     </div>
   );

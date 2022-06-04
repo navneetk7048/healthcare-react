@@ -1,19 +1,15 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import Button from "../../../components/Button";
+import { ButtonSlide } from "../../../components/Button";
 
-const HomeLocation = () => {
-  const navigate = useNavigate();
-
-  return (
-    <div className="home-location container">
-      <h2>Find a Healthcare Facilities</h2>
-      <h1>Near You</h1>
-      <Button type="btn-blue-pink" onClick={() => navigate("/locations")}>
-        Healthcare Locations
-      </Button>
-    </div>
-  );
-};
+const HomeLocation = () => (
+  <div className="home-location container">
+    <h2>Find a Healthcare Facilities</h2>
+    <h1>Near You</h1>
+    <ButtonSlide type="tiffanyBlue-tartOrange" as={Link} to="/locations">
+      Healthcare Locations
+    </ButtonSlide>
+  </div>
+);
 
 export default HomeLocation;

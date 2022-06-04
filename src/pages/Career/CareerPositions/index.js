@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+import { ButtonSlide } from "../../../components/Button";
 import positions from "../../../data/positions";
-import Button from "../../../components/Button";
 
 const CareerPositions = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="career-positions container" id="career-positions">
       <h2>Current Positions</h2>
@@ -16,11 +14,12 @@ const CareerPositions = () => {
               <h3>{title}</h3>
               <p>{description}</p>
             </div>
-            <Button
-              type="btn-special-pink"
-              onClick={() => navigate("/career/career-detail")}>
+            <ButtonSlide
+              type="white-tartOrange"
+              as={Link}
+              to="/career/career-detail">
               Apply Now
-            </Button>
+            </ButtonSlide>
           </div>
         ))}
       </div>

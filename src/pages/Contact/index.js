@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
+import { ButtonSlide } from "../../components/Button";
 import { scrollToTop } from "../../Functions";
 import contactBanner from "../../images/location-banner.jpg";
 
@@ -52,7 +52,7 @@ const Contact = () => {
             rows="5"
             placeholder="How May We Help You?"
           />
-          <Button type="btn-pink-darkblue">Submit Now</Button>
+          <ButtonSlide type="tartOrange-policeBlue">Submit Now</ButtonSlide>
         </div>
         <div className="contact-form-right">
           <div>

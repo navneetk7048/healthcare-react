@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
+import { ButtonSlide } from "../../components/Button";
 import doctors from "../../data/doctors";
 import { scrollToTop } from "../../Functions";
 import drBanner from "../../images/dr-banner.jpg";
@@ -141,7 +141,7 @@ const DoctorProfile = () => {
                 id="doctor-profile-case-description"
                 placeholder="Case Description"
               />
-              <Button type="btn-pink-darkblue">Submit Now</Button>
+              <ButtonSlide type="tartOrange-policeBlue">Submit Now</ButtonSlide>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import BlogItem from "./BlogItem";
 import BlogSpecialItem from "./BlogSpecialItem";
-import Button from "../../../components/Button";
+import { ButtonSpecial } from "../../../components/Button";
 import { blogs } from "./blogs";
 import { scrollToTop } from "../../../Functions";
 
@@ -37,21 +37,21 @@ const BlogList = () => {
       <div className="container">
         {blogItemList}
         <div className="blog-buttons">
-          <Button type="btn-simple-blue" onClick={scrollToTop}>
+          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
             Prev
-          </Button>
-          <Button type="btn-simple-blue" onClick={scrollToTop}>
+          </ButtonSpecial>
+          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
             1
-          </Button>
-          <Button type="btn-simple-blue" onClick={scrollToTop}>
+          </ButtonSpecial>
+          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
             2
-          </Button>
-          <Button type="btn-simple-blue" onClick={scrollToTop}>
+          </ButtonSpecial>
+          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
             3
-          </Button>
-          <Button type="btn-simple-blue" onClick={scrollToTop}>
+          </ButtonSpecial>
+          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
             Next
-          </Button>
+          </ButtonSpecial>
         </div>
       </div>
     </div>

@@ -1,11 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import Button from "../../../components/Button";
+import { ButtonSpecial } from "../../../components/Button";
 import PostList from "./PostList";
 
 const BlogSuggestions = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="blog-suggestions container">
       <div className="popular-posts">
@@ -26,36 +24,42 @@ const BlogSuggestions = () => {
         <div>
           <h3>Tags</h3>
           <div className="post-tags">
-            <Button
-              type="btn-simple-blue"
-              onClick={() => navigate("/blog/blog-detail")}>
+            <ButtonSpecial
+              type="simple-tiffanyBlue"
+              as={Link}
+              to="/blog/blog-detail">
               Food
-            </Button>
-            <Button
-              type="btn-simple-blue"
-              onClick={() => navigate("/blog/blog-detail")}>
+            </ButtonSpecial>
+            <ButtonSpecial
+              type="simple-tiffanyBlue"
+              as={Link}
+              to="/blog/blog-detail">
               Lifestyle
-            </Button>
-            <Button
-              type="btn-simple-blue"
-              onClick={() => navigate("/blog/blog-detail")}>
+            </ButtonSpecial>
+            <ButtonSpecial
+              type="simple-tiffanyBlue"
+              as={Link}
+              to="/blog/blog-detail">
               Healthcare
-            </Button>
-            <Button
-              type="btn-simple-blue"
-              onClick={() => navigate("/blog/blog-detail")}>
+            </ButtonSpecial>
+            <ButtonSpecial
+              type="simple-tiffanyBlue"
+              as={Link}
+              to="/blog/blog-detail">
               Treatment
-            </Button>
-            <Button
-              type="btn-simple-blue"
-              onClick={() => navigate("/blog/blog-detail")}>
+            </ButtonSpecial>
+            <ButtonSpecial
+              type="simple-tiffanyBlue"
+              as={Link}
+              to="/blog/blog-detail">
               Medical
-            </Button>
-            <Button
-              type="btn-simple-blue"
-              onClick={() => navigate("/blog/blog-detail")}>
+            </ButtonSpecial>
+            <ButtonSpecial
+              type="simple-tiffanyBlue"
+              as={Link}
+              to="/blog/blog-detail">
               Technology
-            </Button>
+            </ButtonSpecial>
           </div>
         </div>
       </div>

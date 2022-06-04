@@ -18,11 +18,7 @@ const Services = () => {
       <ServicesContent />
       <AppointmentForm />
       <Testimonials />
-      <ExpertList
-        heading="Meet Our Experts"
-        text="Together own seas said fowl third herb saw also that had saying darkness may After together"
-        doctors={doctors}
-      />
+      <ExpertList heading="Meet Our Experts" doctors={doctors} />
     </div>
   );
 };

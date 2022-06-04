@@ -1,11 +1,9 @@
 @use "../../../styles/abstracts" as *;
 
 .home-blog {
-  @include flex;
-  flex-direction: column;
+  @include flex(column, $cross: center);
   color: $clr-police-blue;
   padding: 1rem;
-  gap: 1rem;
 
   > :nth-child(1),
   > :nth-child(2) {
@@ -14,11 +12,9 @@
 
   .home-blog-list {
     @include flex;
-    gap: 1rem;
 
     .home-blog-item {
       @include flex(column);
-      gap: 1rem;
       background-color: $clr-alice-blue;
 
       a,
@@ -27,7 +23,7 @@
       }
 
       a {
-        transition: color 0.3s ease;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
           color: $clr-tart-orange;

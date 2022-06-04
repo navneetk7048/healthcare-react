@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FaUserMd, FaAmbulance, FaRegHospital } from "react-icons/fa";
 
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
+import { ButtonSlide } from "../../components/Button";
 import patientInfoBanner from "../../images/patient-info-banner.jpg";
 
 const PatientInfo = () => {
@@ -84,7 +84,9 @@ const PatientInfo = () => {
             whose help you need! Visit us at the scheduled time and get your
             treatment.
           </p>
-          <Button type="btn-white-blue">Book An Appointment</Button>
+          <ButtonSlide type="white-tiffanyBlue">
+            Book An Appointment
+          </ButtonSlide>
         </div>
       </div>
       <div className="patient-info-icons container">

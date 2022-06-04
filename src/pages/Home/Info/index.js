@@ -53,11 +53,7 @@ const Info = () => {
           seasons greater, land sea, the created gathered bring spirit whose
           upon years fruitful third dominion cattle midst night morning bring.
         </p>
-        <ButtonSlide
-          type="tiffanyBlue-tartOrange"
-          // onClick={() => navigate("/contact")}
-          as={Link}
-          to="/contact">
+        <ButtonSlide type="tiffanyBlue-tartOrange" as={Link} to="/contact">
           Contact Us
         </ButtonSlide>
       </div>

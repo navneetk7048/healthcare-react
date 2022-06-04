@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
+import { ButtonSlide } from "../../components/Button";
 import careerBanner from "../../images/career-banner.jpg";
 
 const OnlineBillPay = () => {
@@ -35,8 +35,8 @@ const OnlineBillPay = () => {
           <input type="text" name="payment-amount" id="payment-amount" />
         </div>
         <div className="payment-buttons">
-          <Button type="btn-blue-pink">Continue</Button>
-          <Button type="btn-grey-blue">Reset</Button>
+          <ButtonSlide type="tiffanyBlue-tartOrange">Continue</ButtonSlide>
+          <ButtonSlide type="pastelBlue-tiffanyBlue">Reset</ButtonSlide>
         </div>
       </div>
     </div>

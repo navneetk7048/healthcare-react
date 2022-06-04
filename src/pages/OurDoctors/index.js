@@ -12,11 +12,7 @@ const OurDoctors = () => {
         current="Our Doctors"
         title="Meet Our Experts"
       />
-      <ExpertList
-        heading="Better Doctors. Better Care."
-        text="Together own seas said fowl third herb saw also that had saying darkness may After together"
-        doctors={doctors}
-      />
+      <ExpertList heading="Better Doctors. Better Care." doctors={doctors} />
     </div>
   );
 };

@@ -4,9 +4,9 @@ import Info from "./Info";
 import ExpertList from "../../components/ExpertList";
 import HomeServices from "./HomeServices/";
 import HomeTestimonials from "./HomeTestimonials/";
-import doctors from "../../data/doctors-small";
 import HomeLocation from "./HomeLocation";
 import HomeBlog from "./HomeBlog";
+import doctors from "../../data/doctors-small";
 
 const Home = () => {
   return (
@@ -15,12 +15,7 @@ const Home = () => {
       <AppointmentForm />
       <Info />
       <HomeServices />
-      <ExpertList
-        heading="Meet Our Experts"
-        text="Together own seas said fowl third herb saw also that had saying darkness
-        may After together"
-        doctors={doctors}
-      />
+      <ExpertList heading="Meet Our Experts" doctors={doctors} />
       <HomeTestimonials />
       <HomeLocation />
       <HomeBlog />

@@ -2,7 +2,7 @@ import Banner from "../../components/Banner";
 import Note from "../../components/Note";
 import about from "../../images/about-banner.jpg";
 import SearchBox from "../../components/SearchBox";
-import Button from "../../components/Button";
+import { ButtonSlide } from "../../components/Button";
 
 const OurDoctors = () => {
   return (
@@ -25,7 +25,9 @@ const OurDoctors = () => {
           text="Type a keyword, specialty or condition to find the right specialist."
           placeholder="Keyword"
         />
-        <Button type="btn-blue-pink">Meet Our All Experts</Button>
+        <ButtonSlide type="tiffanyBlue-tartOrange">
+          Meet Our All Experts
+        </ButtonSlide>
       </div>
     </div>
   );

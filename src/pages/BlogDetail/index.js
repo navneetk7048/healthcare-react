@@ -1,15 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
 
-import Button from "../../components/Button";
+import { ButtonSpecial } from "../../components/Button";
 import BlogSuggestions from "../Blog/BlogSuggestions";
 import comments from "./comments";
 import { scrollToTop } from "../../Functions";
 import serviceDetailImg from "../../images/blog-detail-img.jpg";
 
 const BlogDetail = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="blog-detail">
       <div className="blog-intro">
@@ -95,36 +93,42 @@ const BlogDetail = () => {
       <div className="blog-tags container">
         <h1>Post Tags</h1>
         <div>
-          <Button
-            type="btn-simple-blue"
-            onClick={() => navigate("/blog/blog-detail")}>
+          <ButtonSpecial
+            type="simple-tiffanyBlue"
+            as={Link}
+            to="/blog/blog-detail">
             Food
-          </Button>
-          <Button
-            type="btn-simple-blue"
-            onClick={() => navigate("/blog/blog-detail")}>
+          </ButtonSpecial>
+          <ButtonSpecial
+            type="simple-tiffanyBlue"
+            as={Link}
+            to="/blog/blog-detail">
             Lifestyle
-          </Button>
-          <Button
-            type="btn-simple-blue"
-            onClick={() => navigate("/blog/blog-detail")}>
+          </ButtonSpecial>
+          <ButtonSpecial
+            type="simple-tiffanyBlue"
+            as={Link}
+            to="/blog/blog-detail">
             Healthcare
-          </Button>
-          <Button
-            type="btn-simple-blue"
-            onClick={() => navigate("/blog/blog-detail")}>
+          </ButtonSpecial>
+          <ButtonSpecial
+            type="simple-tiffanyBlue"
+            as={Link}
+            to="/blog/blog-detail">
             Treatment
-          </Button>
-          <Button
-            type="btn-simple-blue"
-            onClick={() => navigate("/blog/blog-detail")}>
+          </ButtonSpecial>
+          <ButtonSpecial
+            type="simple-tiffanyBlue"
+            as={Link}
+            to="/blog/blog-detail">
             Medical
-          </Button>
-          <Button
-            type="btn-simple-blue"
-            onClick={() => navigate("/blog/blog-detail")}>
+          </ButtonSpecial>
+          <ButtonSpecial
+            type="simple-tiffanyBlue"
+            as={Link}
+            to="/blog/blog-detail">
             Technology
-          </Button>
+          </ButtonSpecial>
         </div>
         <div className="separator" />
         <div className="directions">
@@ -174,7 +178,9 @@ const BlogDetail = () => {
               placeholder="Your Email"
             />
             <textarea placeholder="Your Message" />
-            <Button type="btn-pink-darkblue">Submit Now</Button>
+            <ButtonSpecial type="tartOrange-policeBlue">
+              Submit Now
+            </ButtonSpecial>
           </div>
         </div>
       </div>

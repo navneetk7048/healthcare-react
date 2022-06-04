@@ -1,7 +1,7 @@
 import { FaPaperclip } from "react-icons/fa";
 
 import Banner from "../../components/Banner";
-import Button from "../../components/Button";
+import { ButtonSlide } from "../../components/Button";
 import careerBanner from "../../images/career-banner.jpg";
 
 const CareerDetail = () => {
@@ -119,7 +119,7 @@ const CareerDetail = () => {
                 </div>
               </div>
             </div>
-            <Button type="btn-white-blue">Submit Now</Button>
+            <ButtonSlide type="white-tiffanyBlue">Submit Now</ButtonSlide>
           </div>
         </div>
       </div>
