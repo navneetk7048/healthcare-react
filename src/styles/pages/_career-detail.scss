@@ -39,14 +39,21 @@
           flex: 1;
         }
 
-        .career-file-input > div {
+        label {
+          display: block;
+          cursor: pointer;
           background-color: $clr-police-blue;
+          border-radius: $rounded;
           padding: 0.5rem;
-        }
-      }
 
-      input {
-        color: $clr-police-blue;
+          svg {
+            scale: 1 -1;
+          }
+
+          input {
+            display: none;
+          }
+        }
       }
     }
 

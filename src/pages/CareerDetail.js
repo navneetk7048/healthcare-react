@@ -1,11 +1,18 @@
+import { useParams } from "react-router-dom";
 import { FaPaperclip } from "react-icons/fa";
 
 import Banner from "../components/Banner";
+import positions from "../data/positions";
 import { ButtonSlide } from "../components/Button";
 import careerBanner from "../images/career-banner.jpg";
+import PageNotFound from "./PageNotFound";
 
 const CareerDetail = () => {
-  return (
+  const { id } = useParams();
+
+  const position = positions.find((position) => String(position.id) === id);
+
+  return position ? (
     <div className="career-detail">
       <Banner
         banner={careerBanner}
@@ -13,14 +20,15 @@ const CareerDetail = () => {
           { text: "Home", link: "" },
           { text: "Career", link: "career" },
         ]}
-        current="Technical Ambassador"
+        current={position.title}
+        title={position.title}
       />
       <div className="career-detail-content container">
         <div className="career-detail-info">
           <div>
-            <h1>Technical Ambassador</h1>
+            <h1>{position.title}</h1>
             <p>
-              Product | <em>New York, NY, United States</em>
+              Product | <em>{position.description}</em>
             </p>
           </div>
           <div>
@@ -104,19 +112,17 @@ const CareerDetail = () => {
             <div className="career-file-inputs">
               <div className="career-file-input">
                 <p>Resume</p>
-                <div>
-                  <p>
-                    <FaPaperclip /> ATTACH
-                  </p>
-                </div>
+                <label htmlFor="career-resume">
+                  <FaPaperclip /> Attach
+                  <input type="file" name="career-resume" id="career-resume" />
+                </label>
               </div>
               <div className="career-file-input">
                 <p>Cover letter</p>
-                <div>
-                  <p>
-                    <FaPaperclip /> ATTACH
-                  </p>
-                </div>
+                <label htmlFor="career-cv">
+                  <FaPaperclip /> Attach
+                  <input type="file" name="career-cv" id="career-cv" />
+                </label>
               </div>
             </div>
             <ButtonSlide type="white-tiffanyBlue">Submit Now</ButtonSlide>
@@ -124,6 +130,8 @@ const CareerDetail = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <PageNotFound />
   );
 };
 

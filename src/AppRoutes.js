@@ -38,8 +38,8 @@ const AppRoutes = () => (
     {/* Other Pages */}
     <Route path="/services/:id" element={<ServiceDetail />} />
     <Route path="/testimonials" element={<Testimonials />} />
-    <Route path="/blog/blog-detail" element={<BlogDetail />} />
-    <Route path="/career/career-detail" element={<CareerDetail />} />
+    <Route path="/blog/:id" element={<BlogDetail />} />
+    <Route path="/career/:id" element={<CareerDetail />} />
     <Route path="/our-doctors/:id" element={<DoctorProfile />} />
 
     {/* Error Page */}

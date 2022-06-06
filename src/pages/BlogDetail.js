@@ -1,5 +1,5 @@
 // Packages
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
 
 // Components
@@ -14,16 +14,30 @@ import { scrollToTop } from "../Functions";
 
 // Images
 import serviceDetailImg from "../images/blog-detail-img.jpg";
+import blogs from "../data/blogs";
+import PageNotFound from "./PageNotFound";
 
 const BlogDetail = () => {
-  return (
+  const { id } = useParams();
+
+  let blog = {};
+
+  if (id === "blog-detail") {
+    blog = {
+      title: "Evening Shall Appear Fruitful Brought Forth Signs His Name",
+      date: "December 15, 2019",
+    };
+  } else {
+    blog = blogs.find((blog) => String(blog.id) === id);
+  }
+
+  return blog ? (
     <div className="blog-detail">
       <div className="blog-intro">
         <div className="container">
-          <h1>Evening Shall Appear Fruitful Brought Forth Signs His Name</h1>
+          <h1>{blog.title}</h1>
           <p>
-            December 15, 2019 /{" "}
-            <span onClick={scrollToTop}>Lifestyle, Health</span>
+            {blog.date} / <span onClick={scrollToTop}>Lifestyle, Health</span>
           </p>
           <div>
             <img src={serviceDetailImg} alt="" />
@@ -266,6 +280,8 @@ const BlogDetail = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <PageNotFound />
   );
 };
 

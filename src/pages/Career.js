@@ -340,7 +340,7 @@ const Career = () => {
               <ButtonSlide
                 type="white-tartOrange"
                 as={Link}
-                to="/career/career-detail">
+                to={`/career/${id}`}>
                 Apply Now
               </ButtonSlide>
             </div>
