@@ -202,7 +202,6 @@
           border-radius: $rounded;
           padding: 1rem;
           cursor: pointer;
-          transition: all 0.4s ease-in-out;
 
           img {
             width: 50%;
@@ -212,11 +211,12 @@
 
           &:hover {
             color: $clr-tart-orange;
-          }
 
-          &:hover img {
-            filter: brightness(0) saturate(100%) invert(36%) sepia(15%)
-              saturate(7397%) hue-rotate(333deg) brightness(111%) contrast(95%);
+            & img {
+              filter: brightness(0) saturate(100%) invert(36%) sepia(15%)
+                saturate(7397%) hue-rotate(333deg) brightness(111%)
+                contrast(95%);
+            }
           }
         }
 
