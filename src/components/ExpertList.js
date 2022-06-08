@@ -19,9 +19,10 @@ const ExpertList = ({ heading, doctors }) => {
                 <h2>{name}</h2>
                 <p>{speciality}</p>
                 <ButtonSlide
-                  type="policeBlue-tiffanyBlue"
+                  variant="policeBlue-tiffanyBlue"
                   as={Link}
-                  to={`/our-doctors/${id}`}>
+                  to={`/our-doctors/${id}`}
+                >
                   View Profile
                 </ButtonSlide>
               </div>
@@ -29,7 +30,7 @@ const ExpertList = ({ heading, doctors }) => {
           </div>
         ))}
       </div>
-      <ButtonSlide type="tiffanyBlue-tartOrange" as={Link} to="/our-doctors">
+      <ButtonSlide variant="tiffanyBlue-tartOrange" as={Link} to="/our-doctors">
         Meet Our All Experts
       </ButtonSlide>
     </div>

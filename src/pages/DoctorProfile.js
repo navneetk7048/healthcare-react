@@ -139,7 +139,9 @@ const DoctorProfile = () => {
                 id="doctor-profile-case-description"
                 placeholder="Case Description"
               />
-              <ButtonSlide type="tartOrange-policeBlue">Submit Now</ButtonSlide>
+              <ButtonSlide variant="tartOrange-policeBlue">
+                Submit Now
+              </ButtonSlide>
             </div>
           </div>
         </div>
@@ -149,7 +151,8 @@ const DoctorProfile = () => {
             <Link
               key={id}
               className="doctor-profile-links-item"
-              to={`/our-doctors/${id}`}>
+              to={`/our-doctors/${id}`}
+            >
               <FaAngleDoubleRight />
               <div>
                 <p className="doctor-profile-links-item-name">{name}</p>

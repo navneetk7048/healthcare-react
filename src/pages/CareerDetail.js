@@ -125,7 +125,7 @@ const CareerDetail = () => {
                 </label>
               </div>
             </div>
-            <ButtonSlide type="white-tiffanyBlue">Submit Now</ButtonSlide>
+            <ButtonSlide variant="white-tiffanyBlue">Submit Now</ButtonSlide>
           </div>
         </div>
       </div>

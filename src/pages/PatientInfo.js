@@ -84,7 +84,7 @@ const PatientInfo = () => {
             whose help you need! Visit us at the scheduled time and get your
             treatment.
           </p>
-          <ButtonSlide type="white-tiffanyBlue">
+          <ButtonSlide variant="white-tiffanyBlue">
             Book An Appointment
           </ButtonSlide>
         </div>

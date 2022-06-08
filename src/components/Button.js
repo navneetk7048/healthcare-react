@@ -27,8 +27,8 @@ const Button = styled.button`
 // 5. pastelBlue-tiffanyBlue
 // 6. white-tartOrange
 export const ButtonSlide = styled(Button)`
-  ${({ type }) => {
-    switch (type) {
+  ${({ variant }) => {
+    switch (variant) {
       case "white-tiffanyBlue":
         return css`
           background: linear-gradient(
@@ -131,8 +131,8 @@ export const ButtonSlide = styled(Button)`
 // Available Special Buttons
 // 1. simple-tiffanyBlue
 export const ButtonSpecial = styled(Button)`
-  ${({ type }) => {
-    switch (type) {
+  ${({ variant }) => {
+    switch (variant) {
       case "simple-tiffanyBlue":
         return css`
           box-shadow: 0 0 10s rgba(0, 0, 0, 0.7);

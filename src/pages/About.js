@@ -84,7 +84,7 @@ const About = () => {
             whose help you need! Visit us at the scheduled time and get your
             treatment.
           </p>
-          <ButtonSlide type="tartOrange-policeBlue" as={Link} to="/contact">
+          <ButtonSlide variant="tartOrange-policeBlue" as={Link} to="/contact">
             Book An Appointment
           </ButtonSlide>
         </div>

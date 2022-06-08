@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
+import "react-toastify/dist/ReactToastify.css";
 
 import { ButtonSlide } from "../components/Button";
 import ExpertList from "../components/ExpertList";
@@ -27,6 +28,13 @@ import blog1 from "../images/blog-1.jpg";
 import blog2 from "../images/blog-2.jpg";
 import blog3 from "../images/blog-3.jpg";
 
+import {
+  isValidName,
+  isValidEmail,
+  isValidDate,
+  isValidService,
+} from "../Functions";
+
 const Home = () => {
   const [click, setClick] = useState(false);
 
@@ -45,6 +53,31 @@ const Home = () => {
     },
   };
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    service: "",
+    date: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    try {
+      isValidName(formData.name);
+      isValidEmail(formData.email);
+      isValidService(formData.service);
+      isValidDate(formData.date);
+      alert("Success");
+    } catch (error) {
+      alert(error);
+    }
+  };
+
   return (
     <div className="home">
       <div className="hero">
@@ -52,7 +85,8 @@ const Home = () => {
           responsive={responsive}
           autoPlay={true}
           infinite={true}
-          autoPlaySpeed={3000}>
+          autoPlaySpeed={3000}
+        >
           <div className="hero-img">
             <img src={hero1} alt="" />
             <div className="hero-img-text">
@@ -81,16 +115,35 @@ const Home = () => {
           <div className="separator" />
           <p>A specialist will contact you shortly</p>
         </div>
-        <div className="home-appointment-form">
-          <input type="text" name="name" id="name" placeholder="Your Name*" />
+        <form
+          className="home-appointment-form"
+          onSubmit={handleSubmit}
+          noValidate
+          autoComplete="off"
+        >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name*"
+            onChange={handleChange}
+            value={formData.name}
+          />
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Your Email*"
+            onChange={handleChange}
+            value={formData.email}
           />
-          <select name="service" id="service">
-            <option value="null">Select Service</option>
+          <select
+            name="service"
+            id="service"
+            onChange={handleChange}
+            value={formData.service}
+          >
+            <option value="">Select Service</option>
             <option value="emergency-care">Emergency Care</option>
             <option value="neurology">Neurology</option>
             <option value="pediatry">Pediatry</option>
@@ -99,9 +152,17 @@ const Home = () => {
             <option value="orthopedics">Orthopedics</option>
             <option value="other">Other</option>
           </select>
-          <input type="date" name="date" id="date" />
-          <ButtonSlide type="white-tiffanyBlue">Book Appointment</ButtonSlide>
-        </div>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            onChange={handleChange}
+            value={formData.date}
+          />
+          <ButtonSlide variant="white-tiffanyBlue">
+            Book Appointment
+          </ButtonSlide>
+        </form>
       </div>
       <div className="info container">
         <div className="info-left">
@@ -152,7 +213,7 @@ const Home = () => {
             whose upon years fruitful third dominion cattle midst night morning
             bring.
           </p>
-          <ButtonSlide type="tiffanyBlue-tartOrange" as={Link} to="/contact">
+          <ButtonSlide variant="tiffanyBlue-tartOrange" as={Link} to="/contact">
             Contact Us
           </ButtonSlide>
         </div>
@@ -170,7 +231,11 @@ const Home = () => {
               he can't us. Seas air beast behold creature itself herb place,
               days.
             </p>
-            <ButtonSlide type="tartOrange-policeBlue" as={Link} to="/services">
+            <ButtonSlide
+              variant="tartOrange-policeBlue"
+              as={Link}
+              to="/services"
+            >
               See All Services
             </ButtonSlide>
           </div>
@@ -235,7 +300,8 @@ const Home = () => {
             infinite={true}
             arrows={false}
             autoPlay={true}
-            autoPlaySpeed={3000}>
+            autoPlaySpeed={3000}
+          >
             <div className="testimonial">
               <fieldset>
                 <legend>
@@ -296,7 +362,7 @@ const Home = () => {
       <div className="home-location container">
         <h2>Find a Healthcare Facilities</h2>
         <h1>Near You</h1>
-        <ButtonSlide type="tiffanyBlue-tartOrange" as={Link} to="/locations">
+        <ButtonSlide variant="tiffanyBlue-tartOrange" as={Link} to="/locations">
           Healthcare Locations
         </ButtonSlide>
       </div>
@@ -329,7 +395,7 @@ const Home = () => {
             <p>Sept 03, 2019</p>
           </div>
         </div>
-        <ButtonSlide type="tiffanyBlue-tartOrange" as={Link} to="/blog">
+        <ButtonSlide variant="tiffanyBlue-tartOrange" as={Link} to="/blog">
           See All Healthcare Blog
         </ButtonSlide>
       </div>

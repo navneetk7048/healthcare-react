@@ -1,3 +1,5 @@
+// Packages
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -13,6 +15,13 @@ import services from "../data/services";
 
 import serviceBanner from "../images/service-banner.jpg";
 
+import {
+  isValidName,
+  isValidEmail,
+  isValidService,
+  isValidDate,
+} from "../Functions";
+
 const Services = () => {
   const responsive = {
     desktop: {
@@ -27,6 +36,31 @@ const Services = () => {
       breakpoint: { max: 576, min: 0 },
       items: 1,
     },
+  };
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    service: "",
+    date: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    try {
+      isValidName(formData.name);
+      isValidEmail(formData.email);
+      isValidService(formData.service);
+      isValidDate(formData.date);
+      alert("Success");
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
@@ -66,15 +100,34 @@ const Services = () => {
       <div className="appointment">
         <div className="container">
           <h2 className="appointment-label">Make an appointment</h2>
-          <div className="appointment-form">
-            <input type="text" name="name" id="name" placeholder="Your Name*" />
+          <form
+            className="appointment-form"
+            noValidate
+            onSubmit={handleSubmit}
+            autoComplete="off"
+          >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name*"
+              onChange={handleChange}
+              value={formData.name}
+            />
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Your Email*"
+              onChange={handleChange}
+              value={formData.email}
             />
-            <select name="service" id="service">
+            <select
+              name="service"
+              id="service"
+              onChange={handleChange}
+              value={formData.service}
+            >
               <option value="null">Select Service</option>
               <option value="emergency-care">Emergency Care</option>
               <option value="neurology">Neurology</option>
@@ -84,9 +137,17 @@ const Services = () => {
               <option value="orthopedics">Orthopedics</option>
               <option value="other">Other</option>
             </select>
-            <input type="date" name="date" id="date" />
-          </div>
-          <ButtonSlide type="white-tiffanyBlue">Book Appointment</ButtonSlide>
+            <input
+              type="date"
+              name="date"
+              id="date"
+              onChange={handleChange}
+              value={formData.date}
+            />
+            <ButtonSlide variant="white-tiffanyBlue">
+              Book Appointment
+            </ButtonSlide>
+          </form>
         </div>
       </div>
       <div className="testimonials-section">
@@ -98,7 +159,8 @@ const Services = () => {
             infinite={true}
             arrows={false}
             autoPlay={true}
-            autoPlaySpeed={3000}>
+            autoPlaySpeed={3000}
+          >
             <div className="testimonials">
               <div className="testimonial">
                 <fieldset>

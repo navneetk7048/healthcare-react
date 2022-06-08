@@ -36,19 +36,19 @@ const BlogList = ({ blogs }) => {
       <div className="container">
         {blogItemList}
         <div className="blog-buttons">
-          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
+          <ButtonSpecial variant="simple-tiffanyBlue" onClick={scrollToTop}>
             Prev
           </ButtonSpecial>
-          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
+          <ButtonSpecial variant="simple-tiffanyBlue" onClick={scrollToTop}>
             1
           </ButtonSpecial>
-          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
+          <ButtonSpecial variant="simple-tiffanyBlue" onClick={scrollToTop}>
             2
           </ButtonSpecial>
-          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
+          <ButtonSpecial variant="simple-tiffanyBlue" onClick={scrollToTop}>
             3
           </ButtonSpecial>
-          <ButtonSpecial type="simple-tiffanyBlue" onClick={scrollToTop}>
+          <ButtonSpecial variant="simple-tiffanyBlue" onClick={scrollToTop}>
             Next
           </ButtonSpecial>
         </div>

@@ -19,13 +19,15 @@ const OurDoctors = () => {
           title="Search by Doctor Name"
           text="Enter the first letters of a doctor's last name."
           placeholder="Name"
+          name="name"
         />
         <SearchBox
           title="Search by Condition or Specialty"
           text="Type a keyword, specialty or condition to find the right specialist."
           placeholder="Keyword"
+          name="keyword"
         />
-        <ButtonSlide type="tiffanyBlue-tartOrange">
+        <ButtonSlide variant="tiffanyBlue-tartOrange">
           Meet Our All Experts
         </ButtonSlide>
       </div>

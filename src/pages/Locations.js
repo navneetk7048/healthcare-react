@@ -29,10 +29,11 @@ const Locations = () => {
                   <FaPhoneAlt /> {contact}
                 </a>
                 <ButtonSlide
-                  type="tartOrange-policeBlue"
+                  variant="tartOrange-policeBlue"
                   as="a"
                   href={link}
-                  target="_blank">
+                  target="_blank"
+                >
                   Get Directions
                 </ButtonSlide>
               </div>

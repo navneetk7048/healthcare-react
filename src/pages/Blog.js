@@ -57,39 +57,45 @@ const Blog = () => {
             <h3>Tags</h3>
             <div className="post-tags">
               <ButtonSpecial
-                type="simple-tiffanyBlue"
+                variant="simple-tiffanyBlue"
                 as={Link}
-                to="/blog/blog-detail">
+                to="/blog/blog-detail"
+              >
                 Food
               </ButtonSpecial>
               <ButtonSpecial
-                type="simple-tiffanyBlue"
+                variant="simple-tiffanyBlue"
                 as={Link}
-                to="/blog/blog-detail">
+                to="/blog/blog-detail"
+              >
                 Lifestyle
               </ButtonSpecial>
               <ButtonSpecial
-                type="simple-tiffanyBlue"
+                variant="simple-tiffanyBlue"
                 as={Link}
-                to="/blog/blog-detail">
+                to="/blog/blog-detail"
+              >
                 Healthcare
               </ButtonSpecial>
               <ButtonSpecial
-                type="simple-tiffanyBlue"
+                variant="simple-tiffanyBlue"
                 as={Link}
-                to="/blog/blog-detail">
+                to="/blog/blog-detail"
+              >
                 Treatment
               </ButtonSpecial>
               <ButtonSpecial
-                type="simple-tiffanyBlue"
+                variant="simple-tiffanyBlue"
                 as={Link}
-                to="/blog/blog-detail">
+                to="/blog/blog-detail"
+              >
                 Medical
               </ButtonSpecial>
               <ButtonSpecial
-                type="simple-tiffanyBlue"
+                variant="simple-tiffanyBlue"
                 as={Link}
-                to="/blog/blog-detail">
+                to="/blog/blog-detail"
+              >
                 Technology
               </ButtonSpecial>
             </div>

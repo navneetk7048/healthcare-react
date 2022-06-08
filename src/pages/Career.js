@@ -187,7 +187,8 @@ const Career = () => {
           infinite={true}
           arrows={false}
           autoPlay={true}
-          autoPlaySpeed={2000}>
+          autoPlaySpeed={2000}
+        >
           <div>
             <img src={careerSlide1} alt="" />
           </div>
@@ -216,7 +217,8 @@ const Career = () => {
             infinite={true}
             arrows={false}
             autoPlay={true}
-            autoPlaySpeed={3000}>
+            autoPlaySpeed={3000}
+          >
             <div className="testimonials">
               <div className="testimonial">
                 <fieldset>
@@ -338,9 +340,10 @@ const Career = () => {
                 <p>{description}</p>
               </div>
               <ButtonSlide
-                type="white-tartOrange"
+                variant="white-tartOrange"
                 as={Link}
-                to={`/career/${id}`}>
+                to={`/career/${id}`}
+              >
                 Apply Now
               </ButtonSlide>
             </div>

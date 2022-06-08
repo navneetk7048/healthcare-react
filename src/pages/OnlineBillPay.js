@@ -1,8 +1,34 @@
+import { useState } from "react";
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
+import { isValidPhone, isValidAccount, isValidAmount } from "../Functions";
 import careerBanner from "../images/career-banner.jpg";
 
 const OnlineBillPay = () => {
+  const [paymentData, setPaymentData] = useState({
+    phone: "",
+    account: "",
+    amount: "",
+  });
+
+  const handleChange = (e) => {
+    setPaymentData({ ...paymentData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    try {
+      isValidPhone(paymentData.phone);
+      isValidAccount(paymentData.account);
+      isValidAmount(paymentData.amount);
+
+      alert("Success");
+    } catch (error) {
+      alert(error);
+    }
+  };
+
   return (
     <div className="online-bill-pay">
       <Banner
@@ -22,22 +48,36 @@ const OnlineBillPay = () => {
           </a>{" "}
           Monday through Friday from 8 a.m. to 5 p.m.
         </p>
-        <div className="payment-form">
-          <label htmlFor="payment-number">
-            Please enter your mobile number
-          </label>
-          <input type="text" name="payment-number" id="payment-number" />
-          <label htmlFor="payment-account">
-            Please enter your account number
-          </label>
-          <input type="text" name="payment-account" id="payment-account" />
-          <label htmlFor="payment-amount">Payment amount</label>
-          <input type="text" name="payment-amount" id="payment-amount" />
-        </div>
-        <div className="payment-buttons">
-          <ButtonSlide type="tiffanyBlue-tartOrange">Continue</ButtonSlide>
-          <ButtonSlide type="pastelBlue-tiffanyBlue">Reset</ButtonSlide>
-        </div>
+        <form onSubmit={handleSubmit} noValidate autoComplete="off">
+          <div className="payment-form">
+            <label htmlFor="phone">Please enter your mobile number</label>
+            <input name="phone" id="phone" onChange={handleChange} />
+            <label htmlFor="account">Please enter your account number</label>
+            <input name="account" id="account" onChange={handleChange} />
+            <label htmlFor="amount">Payment amount</label>
+            <input
+              name="amount"
+              id="amount"
+              onChange={(e) =>
+                setPaymentData({
+                  ...paymentData,
+                  amount: e.target.value.replace(",", ""),
+                })
+              }
+              value={
+                paymentData.amount > 0
+                  ? Number(paymentData.amount).toLocaleString()
+                  : ""
+              }
+            />
+          </div>
+          <div className="payment-buttons">
+            <ButtonSlide variant="tiffanyBlue-tartOrange">Continue</ButtonSlide>
+            <ButtonSlide variant="pastelBlue-tiffanyBlue" type="reset">
+              Reset
+            </ButtonSlide>
+          </div>
+        </form>
       </div>
     </div>
   );
