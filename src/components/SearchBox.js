@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { isValidName } from "../Functions";
+import { toast } from "react-toastify";
+import { isAlphabet, isRequired } from "../validations";
 import { ButtonSlide } from "./Button";
 
 const SearchBox = ({ title, text, name, placeholder }) => {
@@ -9,12 +10,13 @@ const SearchBox = ({ title, text, name, placeholder }) => {
     e.preventDefault();
 
     try {
-      isValidName(value, placeholder);
-    } catch (error) {
-      alert(error);
-    }
+      isRequired(value, placeholder);
+      isAlphabet(value, placeholder);
 
-    console.log("hello");
+      toast.success("Success");
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+    }
   };
 
   return (
@@ -36,7 +38,7 @@ const SearchBox = ({ title, text, name, placeholder }) => {
           onChange={(e) => setValue(e.target.value)}
           value={value}
         />
-        <ButtonSlide type="tartOrange-policeBlue">Search</ButtonSlide>
+        <ButtonSlide variant="tartOrange-policeBlue">Search</ButtonSlide>
       </form>
     </div>
   );

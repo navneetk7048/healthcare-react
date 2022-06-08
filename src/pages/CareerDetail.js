@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaPaperclip } from "react-icons/fa";
 
@@ -6,11 +7,63 @@ import positions from "../data/positions";
 import { ButtonSlide } from "../components/Button";
 import careerBanner from "../images/career-banner.jpg";
 import PageNotFound from "./PageNotFound";
+import { toast } from "react-toastify";
+import {
+  isAlphabet,
+  isEmailFormat,
+  isRequired,
+  isValidPhone,
+} from "../validations";
 
 const CareerDetail = () => {
   const { id } = useParams();
 
   const position = positions.find((position) => String(position.id) === id);
+
+  const [applyData, setApplyData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    phone: "",
+    resume: "",
+    cv: "",
+  });
+
+  const handleChange = (e) => {
+    setApplyData({ ...applyData, [e.target.name]: e.target.value });
+  };
+
+  const validate = () => {
+    const { fname, lname, email, phone, resume, cv } = applyData;
+
+    try {
+      isRequired(fname, "First name");
+      isAlphabet(fname, "First name");
+
+      isRequired(lname, "Last name");
+      isAlphabet(lname, "Last name");
+
+      isRequired(email, "Email");
+      isEmailFormat(email, "Email");
+
+      isRequired(phone, "Phone number");
+      isValidPhone(phone, "Phone numer");
+
+      isRequired(resume, "Resume");
+
+      isRequired(cv, "Cover letter");
+
+      toast.success("Success");
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    validate();
+  };
 
   return position ? (
     <div className="career-detail">
@@ -95,38 +148,49 @@ const CareerDetail = () => {
           </div>
         </div>
         <div>
-          <div className="career-detail-form">
+          <form
+            className="career-detail-form"
+            onSubmit={handleSubmit}
+            noValidate
+            autoComplete="off"
+          >
             <h2>Apply to Job</h2>
-            <label htmlFor="career-first-name">First Name*</label>
-            <input
-              type="text"
-              name="career-first-name"
-              id="career-first-name"
-            />
-            <label htmlFor="career-last-name">Last Name*</label>
-            <input type="text" name="career-last-name" id="career-last-name" />
-            <label htmlFor="career-email">Email*</label>
-            <input type="text" name="career-email" id="career-email" />
-            <label htmlFor="career-contact">Contact Number*</label>
-            <input type="text" name="career-contact" id="career-contact" />
+            <label>First Name*</label>
+            <input name="fname" onChange={handleChange} />
+            <label>Last Name*</label>
+            <input name="lname" onChange={handleChange} />
+            <label>Email*</label>
+            <input name="email" onChange={handleChange} />
+            <label>Contact Number*</label>
+            <input name="phone" onChange={handleChange} />
             <div className="career-file-inputs">
               <div className="career-file-input">
                 <p>Resume</p>
-                <label htmlFor="career-resume">
+                <label htmlFor="resume">
                   <FaPaperclip /> Attach
-                  <input type="file" name="career-resume" id="career-resume" />
+                  <input
+                    type="file"
+                    name="resume"
+                    id="resume"
+                    onChange={handleChange}
+                  />
                 </label>
               </div>
               <div className="career-file-input">
                 <p>Cover letter</p>
-                <label htmlFor="career-cv">
+                <label htmlFor="cv">
                   <FaPaperclip /> Attach
-                  <input type="file" name="career-cv" id="career-cv" />
+                  <input
+                    type="file"
+                    name="cv"
+                    id="cv"
+                    onChange={handleChange}
+                  />
                 </label>
               </div>
             </div>
             <ButtonSlide variant="white-tiffanyBlue">Submit Now</ButtonSlide>
-          </div>
+          </form>
         </div>
       </div>
     </div>

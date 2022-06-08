@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { FaUserMd, FaAmbulance, FaRegHospital } from "react-icons/fa";
 
+import patientInfo from "../data/patientInfo";
+
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
 import patientInfoBanner from "../images/patient-info-banner.jpg";
@@ -32,33 +34,11 @@ const PatientInfo = () => {
             fish firmament days is.
           </p>
           <div className="patient-info-cards">
-            <div className="patient-info-cards-item">
-              <Link to="/">Emergency Department</Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/">Inpatient Information</Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/">Outpatient Information</Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/">Hospital Stay Checklist</Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/">Billing Information</Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/">Get Healthcard</Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/">Interpreter Services</Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/"> Patients & Family Rights </Link>
-            </div>
-            <div className="patient-info-cards-item">
-              <Link to="/">Visiting Consultants</Link>
-            </div>
+            {patientInfo.map((p) => (
+              <div className="patient-info-cards-item">
+                <Link to={`/patient-info/${p.id}`}>{p.title}</Link>
+              </div>
+            ))}
           </div>
           <p>
             Days so whose every fruit wherein also good fruitful appear signs
@@ -84,7 +64,7 @@ const PatientInfo = () => {
             whose help you need! Visit us at the scheduled time and get your
             treatment.
           </p>
-          <ButtonSlide variant="white-tiffanyBlue">
+          <ButtonSlide variant="white-tiffanyBlue" as={Link} to="/contact">
             Book An Appointment
           </ButtonSlide>
         </div>

@@ -15,12 +15,9 @@ import services from "../data/services";
 
 import serviceBanner from "../images/service-banner.jpg";
 
-import {
-  isValidName,
-  isValidEmail,
-  isValidService,
-  isValidDate,
-} from "../Functions";
+import { toast } from "react-toastify";
+
+import { isAlphabet, isEmailFormat, isRequired } from "../validations";
 
 const Services = () => {
   const responsive = {
@@ -49,18 +46,32 @@ const Services = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validate = () => {
+    const { name, email, service, date } = formData;
+
+    try {
+      isRequired(name, "Name");
+      isAlphabet(name, "Name");
+
+      isRequired(email, "Email");
+      isEmailFormat(email, "Email");
+
+      isRequired(service, "Service");
+
+      isRequired(date, "Date");
+
+      toast.success("Success");
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+    }
+
+    toast.success();
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      isValidName(formData.name);
-      isValidEmail(formData.email);
-      isValidService(formData.service);
-      isValidDate(formData.date);
-      alert("Success");
-    } catch (error) {
-      alert(error);
-    }
+    validate();
   };
 
   return (

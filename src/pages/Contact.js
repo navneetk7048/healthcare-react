@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
@@ -13,11 +14,11 @@ import { scrollToTop } from "../Functions";
 import contactBanner from "../images/location-banner.jpg";
 
 import {
-  isValidName,
+  isAlphabet,
+  isEmailFormat,
+  isRequired,
   isValidPhone,
-  isValidEmail,
-  isValidMessage,
-} from "../Functions";
+} from "../validations";
 
 const Contact = () => {
   const [contactData, setContactData] = useState({
@@ -31,20 +32,31 @@ const Contact = () => {
     setContactData({ ...contactData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const validate = () => {
     const { name, phone, email, message } = contactData;
 
     try {
-      isValidName(name);
-      isValidPhone(phone);
-      isValidEmail(email);
-      isValidMessage(message);
-      alert("Success");
+      isRequired(name, "Name");
+      isAlphabet(name, "Name");
+
+      isRequired(phone, "Phone number");
+      isValidPhone(phone, "Phone number");
+
+      isRequired(email, "Email");
+      isEmailFormat(email, "Email");
+
+      isRequired(message, "Message");
+
+      toast.success("Success");
     } catch (error) {
-      alert(error);
+      toast.warning(error.toString().replace("Error: ", ""));
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    validate();
   };
 
   return (

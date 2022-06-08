@@ -1,18 +1,25 @@
+// Packages
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
-import "react-toastify/dist/ReactToastify.css";
 
+// Components
 import { ButtonSlide } from "../components/Button";
 import ExpertList from "../components/ExpertList";
 
+// Data
 import doctors from "../data/doctors";
 
+// Images
 import hero1 from "../images/hero-img1.jpg";
 import hero2 from "../images/hero-img2.jpg";
+import blog1 from "../images/blog-1.jpg";
+import blog2 from "../images/blog-2.jpg";
+import blog3 from "../images/blog-3.jpg";
 
+// Icons
 import hostpitalBed from "../icons/hospital-bed.png";
 import idCard from "../icons/id-card.png";
 import doctor from "../icons/doctor.png";
@@ -24,16 +31,8 @@ import heartbeat from "../icons/heartbeat.png";
 import dentalCare from "../icons/dental-care.png";
 import bone from "../icons/bone.png";
 import videoIcon from "../images/video-icon.png";
-import blog1 from "../images/blog-1.jpg";
-import blog2 from "../images/blog-2.jpg";
-import blog3 from "../images/blog-3.jpg";
-
-import {
-  isValidName,
-  isValidEmail,
-  isValidDate,
-  isValidService,
-} from "../Functions";
+import { toast } from "react-toastify";
+import { isAlphabet, isEmailFormat, isRequired } from "../validations";
 
 const Home = () => {
   const [click, setClick] = useState(false);
@@ -64,18 +63,32 @@ const Home = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validate = () => {
+    const { name, email, service, date } = formData;
+
+    try {
+      isRequired(name, "Name");
+      isAlphabet(name, "Name");
+
+      isRequired(email, "Email");
+      isEmailFormat(email, "Email");
+
+      isRequired(service, "Service");
+
+      isRequired(date, "Date");
+
+      toast.success("Success");
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+    }
+
+    toast.success();
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      isValidName(formData.name);
-      isValidEmail(formData.email);
-      isValidService(formData.service);
-      isValidDate(formData.date);
-      alert("Success");
-    } catch (error) {
-      alert(error);
-    }
+    validate();
   };
 
   return (

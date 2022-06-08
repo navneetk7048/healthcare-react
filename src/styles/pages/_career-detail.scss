@@ -31,6 +31,10 @@
       gap: 1rem;
       padding: 3rem;
 
+      input {
+        color: $clr-police-blue;
+      }
+
       .career-file-inputs {
         @include flex;
         gap: 1rem;

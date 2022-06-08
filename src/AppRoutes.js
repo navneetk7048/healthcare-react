@@ -16,6 +16,7 @@ import DoctorProfile from "./pages/DoctorProfile";
 import Testimonials from "./pages/Testimonials";
 import BlogDetail from "./pages/BlogDetail";
 import CareerDetail from "./pages/CareerDetail";
+import PatientInfoDetail from "./pages/PatientInfoDetail";
 import PageNotFound from "./pages/PageNotFound";
 
 const AppRoutes = () => (
@@ -41,6 +42,7 @@ const AppRoutes = () => (
     <Route path="/blog/:id" element={<BlogDetail />} />
     <Route path="/career/:id" element={<CareerDetail />} />
     <Route path="/our-doctors/:id" element={<DoctorProfile />} />
+    <Route path="/patient-info/:id" element={<PatientInfoDetail />} />
 
     {/* Error Page */}
     <Route path="*" element={<PageNotFound />} />

@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
-import { isValidPhone, isValidAccount, isValidAmount } from "../Functions";
 import careerBanner from "../images/career-banner.jpg";
+
+import {
+  isRequired,
+  isNumber,
+  isValidAccount,
+  isValidPhone,
+} from "../validations";
 
 const OnlineBillPay = () => {
   const [paymentData, setPaymentData] = useState({
@@ -15,18 +22,29 @@ const OnlineBillPay = () => {
     setPaymentData({ ...paymentData, [e.target.name]: e.target.value });
   };
 
+  const validate = () => {
+    const { phone, account, amount } = paymentData;
+
+    try {
+      isRequired(phone, "Phone number");
+      isValidPhone(phone, "Phone number");
+
+      isRequired(account, "Account number");
+      isValidAccount(account, "Account number");
+
+      isRequired(amount, "Amount");
+      isNumber(amount, "Amount");
+
+      toast.success("Success");
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      isValidPhone(paymentData.phone);
-      isValidAccount(paymentData.account);
-      isValidAmount(paymentData.amount);
-
-      alert("Success");
-    } catch (error) {
-      alert(error);
-    }
+    validate();
   };
 
   return (
