@@ -1,6 +1,9 @@
 // Packages
 import { Link, useParams } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
+import Avatar from "react-avatar";
+import moment from "moment";
+import { v4 as uuid } from "uuid";
 
 // Components
 import { ButtonSlide, ButtonSpecial } from "../components/Button";
@@ -23,6 +26,8 @@ import { toast } from "react-toastify";
 const BlogDetail = () => {
   const { id } = useParams();
 
+  const [allComments, setComments] = useState(comments);
+
   let blog = {};
 
   if (id === "blog-detail") {
@@ -35,9 +40,11 @@ const BlogDetail = () => {
   }
 
   const [commentData, setCommentData] = useState({
+    id: uuid(),
     name: "",
     email: "",
-    message: "",
+    comment: "",
+    date: new Date(),
   });
 
   const handleChange = (e) => {
@@ -45,27 +52,39 @@ const BlogDetail = () => {
   };
 
   const validate = () => {
-    const { name, email, message } = commentData;
+    const { name, email, comment } = commentData;
 
-    try {
-      isRequired(name, "Name");
-      isAlphabet(name, "Name");
+    isRequired(name, "Name");
+    isAlphabet(name, "Name");
 
-      isRequired(email, "Email");
-      isEmailFormat(email, "Email");
+    isRequired(email, "Email");
+    isEmailFormat(email, "Email");
 
-      isRequired(message, "Message");
-    } catch (error) {
-      toast.warning(error.toString().replace("Error: ", ""));
-    }
+    isRequired(comment, "Comment");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    validate();
+    try {
+      validate();
 
-    toast.success("Success");
+      setCommentData({ ...commentData, date: new Date() });
+
+      setComments([...allComments, commentData]);
+
+      setCommentData({
+        id: uuid(),
+        name: "",
+        email: "",
+        comment: "",
+        date: new Date(),
+      });
+
+      toast.success("Success");
+    } catch (error) {
+      toast.error(error);
+    }
   };
 
   return blog ? (
@@ -215,15 +234,16 @@ const BlogDetail = () => {
         <div className="container">
           <h2>{comments.length} Comments</h2>
           <div className="blog-comments-list">
-            {comments.map(({ name, profile, date, time, text }) => (
-              <div className="blog-comments-item">
-                <img src={profile} alt="" />
+            {allComments.map(({ name, date, comment }) => (
+              <div className="blog-comments-item" key={id}>
+                <Avatar name={name} round size="50" />
                 <div className="blog-comments-text">
                   <p className="name">{name}</p>
                   <p>
-                    {date} @ {time} / <Link to="/blog/blog-detail">Reply</Link>
+                    {moment(date).format("MMM DD, YYYY @ HH:mm")}/{" "}
+                    <span onClick={scrollToTop}>Reply</span>
                   </p>
-                  <p>{text}</p>
+                  <p>{comment}</p>
                 </div>
               </div>
             ))}
@@ -248,10 +268,10 @@ const BlogDetail = () => {
               value={commentData.email}
             />
             <textarea
-              name="message"
+              name="comment"
               placeholder="Your Message"
               onChange={handleChange}
-              value={commentData.message}
+              value={commentData.comment}
             />
             <ButtonSlide variant="tartOrange-policeBlue">
               Submit Now
@@ -343,5 +363,7 @@ const BlogDetail = () => {
     <PageNotFound />
   );
 };
+
+console.log(comments);
 
 export default BlogDetail;

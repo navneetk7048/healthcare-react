@@ -76,6 +76,8 @@ const Home = () => {
       isRequired(service, "Service");
 
       isRequired(date, "Date");
+
+      toast.success("Success");
     } catch (error) {
       toast.warning(error.toString().replace("Error: ", ""));
     }
@@ -85,8 +87,6 @@ const Home = () => {
     e.preventDefault();
 
     validate();
-
-    toast.success("Success");
   };
 
   return (

@@ -1,3 +1,5 @@
+// Packages
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   FaPhoneAlt,
@@ -9,17 +11,73 @@ import {
   FaAngleDoubleRight,
 } from "react-icons/fa";
 
+// Components
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
 import PageNotFound from "./PageNotFound";
+
+// Data
 import doctors from "../data/doctors";
+
+// Functions
 import { scrollToTop } from "../Functions";
+import {
+  isAlphabet,
+  isEmailFormat,
+  isRequired,
+  isValidPhone,
+} from "../validations";
+
+// Images
 import drBanner from "../images/dr-banner.jpg";
+import { toast } from "react-toastify";
 
 const DoctorProfile = () => {
   const { id } = useParams();
 
   const doctor = doctors.find((doctor) => String(doctor.id) === id);
+
+  const [contactData, setContactData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    contact: "",
+    description: "",
+  });
+
+  const handleChange = (e) => {
+    setContactData({ ...contactData, [e.target.name]: e.target.value });
+  };
+
+  const validate = (e) => {
+    const { fname, lname, email, contact, description } = contactData;
+
+    try {
+      isRequired(fname, "First Name");
+      isAlphabet(fname, "First Name");
+
+      isRequired(lname, "Last Name");
+      isAlphabet(lname, "Last Name");
+
+      isRequired(email, "Email");
+      isEmailFormat(email, "Email");
+
+      isRequired(contact, "Contact number");
+      isValidPhone(contact, "Contact number");
+
+      isRequired(description, "Case Description");
+
+      toast.success("Success");
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    validate();
+  };
 
   return doctor ? (
     <div className="doctor-profile">
@@ -105,44 +163,46 @@ const DoctorProfile = () => {
           </div>
           <div className="doctor-profile-form">
             <h2>Contact Me</h2>
-            <div className="doctor-profile-form-inputs">
+            <form
+              className="doctor-profile-form-inputs"
+              onSubmit={handleSubmit}
+              noValidate
+              autoComplete="off"
+            >
               <input
-                type="text"
-                name="doctor-profile-first-name"
-                id="doctor-profile-first-name"
-                required
+                name="fname"
                 placeholder="First Name"
+                onChange={handleChange}
+                value={contactData.fname}
               />
               <input
-                type="text"
-                name="doctor-profile-last-name"
-                id="doctor-profile-last-name"
-                required
+                name="lname"
                 placeholder="Last Name"
+                onChange={handleChange}
+                value={contactData.lname}
               />
               <input
-                type="email"
-                name="doctor-profile-email"
-                id="doctor-profile-email"
-                required
+                name="email"
                 placeholder="Email"
+                onChange={handleChange}
+                value={contactData.email}
               />
               <input
-                type="text"
-                name="doctor-profile-contact"
-                id="doctor-profile-contact"
-                required
+                name="contact"
                 placeholder="Contact"
+                onChange={handleChange}
+                value={contactData.contact}
               />
               <textarea
-                name="doctor-profile-case-description"
-                id="doctor-profile-case-description"
+                name="description"
                 placeholder="Case Description"
+                onChange={handleChange}
+                value={contactData.description}
               />
               <ButtonSlide variant="tartOrange-policeBlue">
                 Submit Now
               </ButtonSlide>
-            </div>
+            </form>
           </div>
         </div>
         <div className="doctor-profile-links">

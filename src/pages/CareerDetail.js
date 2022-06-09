@@ -52,6 +52,8 @@ const CareerDetail = () => {
       isRequired(resume, "Resume");
 
       isRequired(cv, "Cover letter");
+
+      toast.success("Success");
     } catch (error) {
       toast.warning(error.toString().replace("Error: ", ""));
     }
@@ -61,8 +63,6 @@ const CareerDetail = () => {
     e.preventDefault();
 
     validate();
-
-    toast.success("Success");
   };
 
   return position ? (

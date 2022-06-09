@@ -71,7 +71,6 @@
           background-color: $clr-white;
           box-shadow: 0 0 10px 10px rgba($clr-black, 0.1);
           padding: 1rem;
-          gap: 1rem;
           border-radius: $rounded;
 
           img {
@@ -83,8 +82,9 @@
               color: $clr-tiffany-blue;
             }
 
-            a {
+            span {
               color: $clr-tart-orange;
+              cursor: pointer;
             }
           }
         }

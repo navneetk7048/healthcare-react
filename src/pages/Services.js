@@ -59,6 +59,8 @@ const Services = () => {
       isRequired(service, "Service");
 
       isRequired(date, "Date");
+
+      toast.success("Success");
     } catch (error) {
       toast.warning(error.toString().replace("Error: ", ""));
     }
@@ -68,8 +70,6 @@ const Services = () => {
     e.preventDefault();
 
     validate();
-
-    toast.success("Success");
   };
 
   return (

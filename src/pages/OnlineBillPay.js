@@ -34,6 +34,8 @@ const OnlineBillPay = () => {
 
       isRequired(amount, "Amount");
       isNumber(amount, "Amount");
+
+      toast.success("Success");
     } catch (error) {
       toast.warning(error.toString().replace("Error: ", ""));
     }
@@ -43,8 +45,6 @@ const OnlineBillPay = () => {
     e.preventDefault();
 
     validate();
-
-    toast.success("Success");
   };
 
   return (

@@ -25,26 +25,6 @@
           width: 100%;
           position: relative;
 
-          &-items {
-            width: 100%;
-            position: absolute;
-            background-color: $clr-white;
-            border: 1px solid $clr-pastel-blue;
-            @include flex(column);
-            z-index: 1;
-            box-shadow: 0.25rem 0.25rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-
-            a {
-              padding: 0.25rem;
-              margin: 0.25rem;
-              cursor: pointer;
-
-              &:hover {
-                background-color: $clr-pastel-blue;
-              }
-            }
-          }
-
           input {
             width: 100%;
             padding: 0.25rem 0.5rem;
@@ -55,6 +35,30 @@
 
             &:focus {
               border-color: $clr-tiffany-blue;
+            }
+
+            &:not(:focus) + .search-result-items {
+              display: none;
+            }
+          }
+
+          .search-result-items {
+            width: 100%;
+            position: absolute;
+            background-color: $clr-white;
+            border: 1px solid $clr-pastel-blue;
+            @include flex(column, $gap: 0.25rem);
+            padding: 0.25rem;
+            z-index: 1;
+            box-shadow: 0.25rem 0.25rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+
+            a {
+              padding: 0.25rem;
+              cursor: pointer;
+
+              &:hover {
+                background-color: $clr-pastel-blue;
+              }
             }
           }
         }
