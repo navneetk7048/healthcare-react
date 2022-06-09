@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
 
 // Components
-import { ButtonSpecial } from "../components/Button";
+import { ButtonSlide, ButtonSpecial } from "../components/Button";
 
 // Data
 import comments from "../data/comments";
@@ -11,11 +11,14 @@ import posts from "../data/posts";
 
 // Functions
 import { scrollToTop } from "../Functions";
+import { isAlphabet, isEmailFormat, isRequired } from "../validations";
 
 // Images
 import serviceDetailImg from "../images/blog-detail-img.jpg";
 import blogs from "../data/blogs";
 import PageNotFound from "./PageNotFound";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -30,6 +33,40 @@ const BlogDetail = () => {
   } else {
     blog = blogs.find((blog) => String(blog.id) === id);
   }
+
+  const [commentData, setCommentData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setCommentData({ ...commentData, [e.target.name]: e.target.value });
+  };
+
+  const validate = () => {
+    const { name, email, message } = commentData;
+
+    try {
+      isRequired(name, "Name");
+      isAlphabet(name, "Name");
+
+      isRequired(email, "Email");
+      isEmailFormat(email, "Email");
+
+      isRequired(message, "Message");
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    validate();
+
+    toast.success("Success");
+  };
 
   return blog ? (
     <div className="blog-detail">
@@ -191,25 +228,35 @@ const BlogDetail = () => {
               </div>
             ))}
           </div>
-          <div className="blog-comments-form">
+          <form
+            className="blog-comments-form"
+            noValidate
+            autoComplete="off"
+            onSubmit={handleSubmit}
+          >
             <h2>Add Comment</h2>
             <input
-              variant="text"
-              name="comments-name"
-              id="comments-name"
+              name="name"
               placeholder="Your Name"
+              onChange={handleChange}
+              value={commentData.name}
             />
             <input
-              variant="email"
-              name="comments-email"
-              id="comments-email"
+              name="email"
               placeholder="Your Email"
+              onChange={handleChange}
+              value={commentData.email}
             />
-            <textarea placeholder="Your Message" />
-            <ButtonSpecial variant="tartOrange-policeBlue">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              onChange={handleChange}
+              value={commentData.message}
+            />
+            <ButtonSlide variant="tartOrange-policeBlue">
               Submit Now
-            </ButtonSpecial>
-          </div>
+            </ButtonSlide>
+          </form>
         </div>
       </div>
       <div className="blog-suggestions container">

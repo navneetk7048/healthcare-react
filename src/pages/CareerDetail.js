@@ -52,8 +52,6 @@ const CareerDetail = () => {
       isRequired(resume, "Resume");
 
       isRequired(cv, "Cover letter");
-
-      toast.success("Success");
     } catch (error) {
       toast.warning(error.toString().replace("Error: ", ""));
     }
@@ -63,6 +61,8 @@ const CareerDetail = () => {
     e.preventDefault();
 
     validate();
+
+    toast.success("Success");
   };
 
   return position ? (
@@ -156,13 +156,29 @@ const CareerDetail = () => {
           >
             <h2>Apply to Job</h2>
             <label>First Name*</label>
-            <input name="fname" onChange={handleChange} />
+            <input
+              name="fname"
+              onChange={handleChange}
+              value={applyData.fname}
+            />
             <label>Last Name*</label>
-            <input name="lname" onChange={handleChange} />
+            <input
+              name="lname"
+              onChange={handleChange}
+              value={applyData.lname}
+            />
             <label>Email*</label>
-            <input name="email" onChange={handleChange} />
+            <input
+              name="email"
+              onChange={handleChange}
+              value={applyData.email}
+            />
             <label>Contact Number*</label>
-            <input name="phone" onChange={handleChange} />
+            <input
+              name="phone"
+              onChange={handleChange}
+              value={applyData.phone}
+            />
             <div className="career-file-inputs">
               <div className="career-file-input">
                 <p>Resume</p>
@@ -173,6 +189,7 @@ const CareerDetail = () => {
                     name="resume"
                     id="resume"
                     onChange={handleChange}
+                    value={applyData.resume}
                   />
                 </label>
               </div>
@@ -185,6 +202,7 @@ const CareerDetail = () => {
                     name="cv"
                     id="cv"
                     onChange={handleChange}
+                    value={applyData.cv}
                   />
                 </label>
               </div>

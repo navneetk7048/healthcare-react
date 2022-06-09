@@ -46,8 +46,6 @@ const Contact = () => {
       isEmailFormat(email, "Email");
 
       isRequired(message, "Message");
-
-      toast.success("Success");
     } catch (error) {
       toast.warning(error.toString().replace("Error: ", ""));
     }
@@ -57,6 +55,8 @@ const Contact = () => {
     e.preventDefault();
 
     validate();
+
+    toast.success("Success");
   };
 
   return (
