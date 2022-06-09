@@ -6,7 +6,59 @@
 
   .container {
     margin-bottom: 0;
-
     @include flex(column, $cross: center);
+
+    .search-box {
+      background-color: $clr-white;
+      padding: 1rem;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      > * {
+        padding: 1rem;
+      }
+
+      .input {
+        @include flex;
+
+        .search-result {
+          width: 100%;
+          position: relative;
+
+          &-items {
+            width: 100%;
+            position: absolute;
+            background-color: $clr-white;
+            border: 1px solid $clr-pastel-blue;
+            @include flex(column);
+            z-index: 1;
+            box-shadow: 0.25rem 0.25rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+
+            a {
+              padding: 0.25rem;
+              margin: 0.25rem;
+              cursor: pointer;
+
+              &:hover {
+                background-color: $clr-pastel-blue;
+              }
+            }
+          }
+
+          input {
+            width: 100%;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid;
+            border-radius: 0.25rem;
+            transition: border 0.3s ease-out;
+            height: 100%;
+
+            &:focus {
+              border-color: $clr-tiffany-blue;
+            }
+          }
+        }
+      }
+    }
   }
 }

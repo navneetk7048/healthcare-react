@@ -8,7 +8,7 @@ const isNumber = (value, name) => {
 };
 
 const isAlphabet = (value, name) => {
-  if (!value.match(/^[a-zA-Z]+$/))
+  if (!value.match(/^[a-zA-Z ]+$/))
     throw new Error(`${name} should contain only alphabets.`);
 };
 
