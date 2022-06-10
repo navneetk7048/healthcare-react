@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+
+.comment-list {
+  .blog-comments-list {
+    @include flex(column);
+    gap: 1.5rem;
+
+    .blog-comments-item {
+      @include flex($cross: flex-start);
+      background-color: $clr-white;
+      box-shadow: 0 0 10px 10px rgba($clr-black, 0.1);
+      padding: 1rem;
+      border-radius: $rounded;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .blog-comments-text {
+        .name {
+          color: $clr-tiffany-blue;
+        }
+
+        span {
+          color: $clr-tart-orange;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,32 +1,29 @@
 // Packages
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
-import Avatar from "react-avatar";
-import moment from "moment";
-import { v4 as uuid } from "uuid";
 
 // Components
-import { ButtonSlide, ButtonSpecial } from "../components/Button";
+import { ButtonSpecial } from "../components/Button";
+import CommentForm from "../components/CommentForm";
+import CommentList from "../components/CommentList";
 
 // Data
-import comments from "../data/comments";
+import commentsData from "../data/comments";
 import posts from "../data/posts";
 
 // Functions
 import { scrollToTop } from "../Functions";
-import { isAlphabet, isEmailFormat, isRequired } from "../validations";
 
 // Images
 import serviceDetailImg from "../images/blog-detail-img.jpg";
 import blogs from "../data/blogs";
 import PageNotFound from "./PageNotFound";
-import { useState } from "react";
-import { toast } from "react-toastify";
 
 const BlogDetail = () => {
   const { id } = useParams();
 
-  const [allComments, setComments] = useState(comments);
+  const [comments, setComments] = useState(commentsData);
 
   let blog = {};
 
@@ -38,54 +35,6 @@ const BlogDetail = () => {
   } else {
     blog = blogs.find((blog) => String(blog.id) === id);
   }
-
-  const [commentData, setCommentData] = useState({
-    id: uuid(),
-    name: "",
-    email: "",
-    comment: "",
-    date: new Date(),
-  });
-
-  const handleChange = (e) => {
-    setCommentData({ ...commentData, [e.target.name]: e.target.value });
-  };
-
-  const validate = () => {
-    const { name, email, comment } = commentData;
-
-    isRequired(name, "Name");
-    isAlphabet(name, "Name");
-
-    isRequired(email, "Email");
-    isEmailFormat(email, "Email");
-
-    isRequired(comment, "Comment");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    try {
-      validate();
-
-      setCommentData({ ...commentData, date: new Date() });
-
-      setComments([...allComments, commentData]);
-
-      setCommentData({
-        id: uuid(),
-        name: "",
-        email: "",
-        comment: "",
-        date: new Date(),
-      });
-
-      toast.success("Success");
-    } catch (error) {
-      toast.error(error);
-    }
-  };
 
   return blog ? (
     <div className="blog-detail">
@@ -232,51 +181,8 @@ const BlogDetail = () => {
       </div>
       <div className="blog-comments">
         <div className="container">
-          <h2>{comments.length} Comments</h2>
-          <div className="blog-comments-list">
-            {allComments.map(({ name, date, comment }) => (
-              <div className="blog-comments-item" key={id}>
-                <Avatar name={name} round size="50" />
-                <div className="blog-comments-text">
-                  <p className="name">{name}</p>
-                  <p>
-                    {moment(date).format("MMM DD, YYYY @ HH:mm")}/{" "}
-                    <span onClick={scrollToTop}>Reply</span>
-                  </p>
-                  <p>{comment}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <form
-            className="blog-comments-form"
-            noValidate
-            autoComplete="off"
-            onSubmit={handleSubmit}
-          >
-            <h2>Add Comment</h2>
-            <input
-              name="name"
-              placeholder="Your Name"
-              onChange={handleChange}
-              value={commentData.name}
-            />
-            <input
-              name="email"
-              placeholder="Your Email"
-              onChange={handleChange}
-              value={commentData.email}
-            />
-            <textarea
-              name="comment"
-              placeholder="Your Message"
-              onChange={handleChange}
-              value={commentData.comment}
-            />
-            <ButtonSlide variant="tartOrange-policeBlue">
-              Submit Now
-            </ButtonSlide>
-          </form>
+          <CommentList comments={comments} />
+          <CommentForm comments={comments} setComments={setComments} />
         </div>
       </div>
       <div className="blog-suggestions container">
@@ -363,7 +269,5 @@ const BlogDetail = () => {
     <PageNotFound />
   );
 };
-
-console.log(comments);
 
 export default BlogDetail;
