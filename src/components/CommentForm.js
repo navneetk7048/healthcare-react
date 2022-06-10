@@ -16,7 +16,7 @@ const CommentForm = ({ comments, setComments }) => {
     name: "",
     email: "",
     comment: "",
-    date: "",
+    date: moment().format("MMM DD, YYYY @ HH:mm"),
   });
 
   const handleChange = (e) => {
@@ -26,28 +26,26 @@ const CommentForm = ({ comments, setComments }) => {
   const validate = () => {
     const { name, email, comment } = commentData;
 
-    isRequired(name, "Name");
-    isAlphabet(name, "Name");
+    try {
+      isRequired(name, "Name");
+      isAlphabet(name, "Name");
 
-    isRequired(email, "Email");
-    isEmailFormat(email, "Email");
+      isRequired(email, "Email");
+      isEmailFormat(email, "Email");
 
-    isRequired(comment, "Comment");
+      isRequired(comment, "Comment");
+
+      return true;
+    } catch (error) {
+      toast.warning(error.toString().replace("Error: ", ""));
+      return false;
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      validate();
-
-      let newDate = moment(Date.now()).format("MMM DD, YYYY @ HH:mm");
-
-      setCommentData({
-        ...commentData,
-        date: newDate,
-      });
-
+    if (validate()) {
       setComments([...comments, commentData]);
 
       setCommentData({
@@ -55,12 +53,8 @@ const CommentForm = ({ comments, setComments }) => {
         name: "",
         email: "",
         comment: "",
-        date: "",
+        date: moment().format("MMM DD, YYYY @ HH:mm"),
       });
-
-      toast.success("Success");
-    } catch (error) {
-      toast.error(error);
     }
   };
 

@@ -7,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { toast } from "react-toastify";
+import emailjs from "emailjs-com";
 
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
@@ -47,16 +48,30 @@ const Contact = () => {
 
       isRequired(message, "Message");
 
-      toast.success("Success");
+      return true;
     } catch (error) {
       toast.warning(error.toString().replace("Error: ", ""));
+      return false;
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    validate();
+    if (validate()) {
+      emailjs
+        .send(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          contactData,
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        )
+        .then(() => {
+          toast.success("Success");
+          setContactData({ name: "", phone: "", email: "", message: "" });
+        })
+        .catch(() => toast.error("Failed"));
+    }
   };
 
   return (
@@ -79,14 +94,30 @@ const Contact = () => {
             Egestas suspendisse morbi quis pulvinar nam condimentum risus etiam
             blandit aptent curae rutrum feugiat.
           </p>
-          <input name="name" placeholder="Your Name*" onChange={handleChange} />
-          <input name="phone" placeholder="Phone*" onChange={handleChange} />
-          <input name="email" placeholder="Email*" onChange={handleChange} />
+          <input
+            name="name"
+            placeholder="Your Name*"
+            onChange={handleChange}
+            value={contactData.name}
+          />
+          <input
+            name="phone"
+            placeholder="Phone*"
+            onChange={handleChange}
+            value={contactData.phone}
+          />
+          <input
+            name="email"
+            placeholder="Email*"
+            onChange={handleChange}
+            value={contactData.email}
+          />
           <textarea
             name="message"
             rows="4"
             placeholder="How May We Help You?"
             onChange={handleChange}
+            value={contactData.message}
           />
           <ButtonSlide variant="tartOrange-policeBlue">Submit Now</ButtonSlide>
         </form>
