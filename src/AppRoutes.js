@@ -18,31 +18,111 @@ import BlogDetail from "./pages/BlogDetail";
 import CareerDetail from "./pages/CareerDetail";
 import PatientInfoDetail from "./pages/PatientInfoDetail";
 import PageNotFound from "./pages/PageNotFound";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
-const AppRoutes = () => (
+const AppRoutes = ({ isLoggedIn, setLoggedIn }) => (
   <Routes>
-    {/* Home Page */}
-    <Route path="/" element={<Home />} />
-
     {/* Navbar Pages */}
-    <Route path="/services" element={<Services />} />
-    <Route path="/our-doctors" element={<OurDoctors />} />
-    <Route path="/find-a-doctor" element={<FindADoctor />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/locations" element={<Locations />} />
-    <Route path="/blog" element={<Blog />} />
-    <Route path="/career" element={<Career />} />
-    <Route path="/online-bill-pay" element={<OnlineBillPay />} />
-    <Route path="/patient-info" element={<PatientInfo />} />
-    <Route path="/contact" element={<Contact />} />
+    <Route
+      path="/"
+      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Home />}
+    />
+    <Route
+      path="/services"
+      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Services />}
+    />
+    <Route
+      path="/our-doctors"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <OurDoctors />
+      }
+    />
+    <Route
+      path="/find-a-doctor"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <FindADoctor />
+      }
+    />
+    <Route
+      path="/about"
+      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <About />}
+    />
+    <Route
+      path="/locations"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Locations />
+      }
+    />
+    <Route
+      path="/blog"
+      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Blog />}
+    />
+    <Route
+      path="/career"
+      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Career />}
+    />
+    <Route
+      path="/online-bill-pay"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <OnlineBillPay />
+      }
+    />
+    <Route
+      path="/patient-info"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <PatientInfo />
+      }
+    />
+    <Route
+      path="/contact"
+      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Contact />}
+    />
 
     {/* Other Pages */}
-    <Route path="/services/:id" element={<ServiceDetail />} />
-    <Route path="/testimonials" element={<Testimonials />} />
-    <Route path="/blog/:id" element={<BlogDetail />} />
-    <Route path="/career/:id" element={<CareerDetail />} />
-    <Route path="/our-doctors/:id" element={<DoctorProfile />} />
-    <Route path="/patient-info/:id" element={<PatientInfoDetail />} />
+    <Route
+      path="/services/:id"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <ServiceDetail />
+      }
+    />
+    <Route
+      path="/testimonials"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Testimonials />
+      }
+    />
+    <Route
+      path="/blog/:id"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <BlogDetail />
+      }
+    />
+    <Route
+      path="/career/:id"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <CareerDetail />
+      }
+    />
+    <Route
+      path="/our-doctors/:id"
+      element={
+        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <DoctorProfile />
+      }
+    />
+    <Route
+      path="/patient-info/:id"
+      element={
+        !isLoggedIn ? (
+          <Login setLoggedIn={setLoggedIn} />
+        ) : (
+          <PatientInfoDetail />
+        )
+      }
+    />
+
+    {/* Registration */}
+    <Route path="/register" element={<Register />} />
 
     {/* Error Page */}
     <Route path="*" element={<PageNotFound />} />

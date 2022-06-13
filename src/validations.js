@@ -32,5 +32,20 @@ const isValidAccount = (value, name) => {
     throw new Error(`${name} length should be in range 11 to 16.`);
 };
 
+const isValidPassword = (value, name) => {
+  if (value.length < 8) {
+    throw new Error(`${name} should have atleast 8 characters.`);
+  }
+  if (!value.match(/[a-zA-Z]/)) {
+    throw new Error(`${name} should contain alphabets.`);
+  }
+  if (!value.match(/[0-9]/)) {
+    throw new Error(`${name} should contain numbers.`);
+  }
+  if (!value.match(/\S/)) {
+    throw new Error(`${name} should contain special characters.`);
+  }
+};
+
 export { isRequired, isNumber, isAlphabet, isEmailFormat };
-export { isValidPhone, isValidAccount };
+export { isValidPhone, isValidAccount, isValidPassword };

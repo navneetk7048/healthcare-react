@@ -27,7 +27,7 @@
       }
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 72.5em) {
       background-color: transparent;
       width: 100%;
       @include flex(row, space-between, center);
@@ -68,14 +68,36 @@
       justify-content: end;
     }
 
-    @media (max-width: 1000px) {
+    > div {
+      @include flex(row, center, center);
+      padding-inline: 1rem;
+
+      .logout {
+        @include flex(row, center, center);
+
+        padding-inline: 1rem;
+
+        button {
+          margin: 0;
+        }
+      }
+
+      @media (max-width: 72.5em) {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    @media (max-width: 72.5em) {
       position: absolute;
       top: 3.5rem;
       z-index: 10000;
       background-color: inherit;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 72.5em) {
+      gap: 0;
+
       &.false {
         display: none;
       }
@@ -95,7 +117,7 @@
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 72.5em) {
     display: flex;
   }
 }

@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaHome, FaPhoneAlt, FaBars } from "react-icons/fa";
 import logo from "../images/logo.png";
+import Button from "./Button";
 
-const Navbar = () => {
+const Navbar = ({ setLoggedIn }) => {
   const [active, setActive] = useState(false);
 
   const toggle = () => setActive(!active);
@@ -70,36 +71,41 @@ const Navbar = () => {
           </li>
         </ul>
         <div>
-          <ul>
-            <li className="big-screen-only">
-              <Link to="/">
-                <FaHome />
-              </Link>
-            </li>
-            <li className="big-screen-only">|</li>
-            <li>
-              <Link onClick={disable} to="/online-bill-pay">
-                Online Bill Pay
-              </Link>
-            </li>
-            <li>
-              <Link onClick={disable} to="/patient-info">
-                Patient Info
-              </Link>
-            </li>
-            <li>
-              <Link onClick={disable} to="/contact">
-                Contact
-              </Link>
-            </li>
-          </ul>
-          <ul className="phone">
-            <li className="big-screen-only">
-              <a href="tel:5612231234">
-                <FaPhoneAlt /> (561) 223-1234
-              </a>
-            </li>
-          </ul>
+          <div>
+            <ul>
+              <li className="big-screen-only">
+                <Link to="/">
+                  <FaHome />
+                </Link>
+              </li>
+              <li className="big-screen-only">|</li>
+              <li>
+                <Link onClick={disable} to="/online-bill-pay">
+                  Online Bill Pay
+                </Link>
+              </li>
+              <li>
+                <Link onClick={disable} to="/patient-info">
+                  Patient Info
+                </Link>
+              </li>
+              <li>
+                <Link onClick={disable} to="/contact">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+            <ul className="phone">
+              <li className="big-screen-only">
+                <a href="tel:5612231234">
+                  <FaPhoneAlt /> (561) 223-1234
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="logout">
+            <Button onClick={() => setLoggedIn(false)}>Logout</Button>
+          </div>
         </div>
       </nav>
     </div>
