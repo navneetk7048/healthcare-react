@@ -80,41 +80,42 @@ const Register = () => {
   return (
     <div className="register">
       <form
-        className="register-form"
+        className="register-form container"
         onSubmit={handleSubmit}
         noValidate
         autoComplete="off"
       >
         <img src={logo} alt="" />
-        <label>Name</label>
-        <input
-          name="name"
-          value={registerData.name}
-          onChange={handleChange}
-          placeholder={"Enter Name"}
-        />
-        <label>Email</label>
-        <input
-          name="email"
-          value={registerData.email}
-          onChange={handleChange}
-          placeholder={"Enter Email"}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={registerData.password}
-          onChange={handleChange}
-          placeholder={"Enter Password"}
-        />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "2rem",
-          }}
-        >
+        <div className="separator" />
+        <div className="register-input">
+          <label>Name</label>
+          <input
+            name="name"
+            value={registerData.name}
+            onChange={handleChange}
+            placeholder={"Enter Name"}
+          />
+        </div>
+        <div className="register-input">
+          <label>Email</label>
+          <input
+            name="email"
+            value={registerData.email}
+            onChange={handleChange}
+            placeholder={"Enter Email"}
+          />
+        </div>
+        <div className="register-input">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={registerData.password}
+            onChange={handleChange}
+            placeholder={"Enter Password"}
+          />
+        </div>
+        <div className="register-buttons">
           <ButtonSlide variant="tartOrange-policeBlue">Sign Up</ButtonSlide>
           <ButtonSlide variant="white-tartOrange" as={Link} to="/">
             Login

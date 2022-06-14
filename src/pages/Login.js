@@ -50,36 +50,35 @@ const Login = ({ setLoggedIn }) => {
   };
 
   return (
-    <div className="login">
+    <div className="login ">
       <form
-        className="login-form"
+        className="login-form container"
         onSubmit={handleSubmit}
         noValidate
         autoComplete="off"
       >
         <img src={logo} alt="" />
-        <label>Email</label>
-        <input
-          name="email"
-          value={loginData.email}
-          onChange={handleChange}
-          placeholder={"Enter Email"}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={loginData.password}
-          onChange={handleChange}
-          placeholder={"Enter Password"}
-        />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "2rem",
-          }}
-        >
+        <div className="separator" />
+        <div className="login-input">
+          <label>Email</label>
+          <input
+            name="email"
+            value={loginData.email}
+            onChange={handleChange}
+            placeholder={"Enter Email"}
+          />
+        </div>
+        <div className="login-input">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={loginData.password}
+            onChange={handleChange}
+            placeholder={"Enter Password"}
+          />
+        </div>
+        <div className="login-buttons">
           <ButtonSlide variant="tartOrange-policeBlue">Login</ButtonSlide>
           <ButtonSlide variant="white-tartOrange" as={Link} to="/register">
             Sign Up
