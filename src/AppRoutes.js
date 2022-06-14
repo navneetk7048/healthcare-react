@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Services from "./pages/Services";
@@ -31,94 +31,70 @@ const AppRoutes = ({ isLoggedIn, setLoggedIn }) => (
     />
     <Route
       path="/services"
-      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Services />}
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <Services />}
     />
     <Route
       path="/our-doctors"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <OurDoctors />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <OurDoctors />}
     />
     <Route
       path="/find-a-doctor"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <FindADoctor />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <FindADoctor />}
     />
     <Route
       path="/about"
-      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <About />}
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <About />}
     />
     <Route
       path="/locations"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Locations />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <Locations />}
     />
     <Route
       path="/blog"
-      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Blog />}
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <Blog />}
     />
     <Route
       path="/career"
-      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Career />}
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <Career />}
     />
     <Route
       path="/online-bill-pay"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <OnlineBillPay />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <OnlineBillPay />}
     />
     <Route
       path="/patient-info"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <PatientInfo />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <PatientInfo />}
     />
     <Route
       path="/contact"
-      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Contact />}
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <Contact />}
     />
 
     {/* Other Pages */}
     <Route
       path="/services/:id"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <ServiceDetail />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <ServiceDetail />}
     />
     <Route
       path="/testimonials"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Testimonials />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <Testimonials />}
     />
     <Route
       path="/blog/:id"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <BlogDetail />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <BlogDetail />}
     />
     <Route
       path="/career/:id"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <CareerDetail />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <CareerDetail />}
     />
     <Route
       path="/our-doctors/:id"
-      element={
-        !isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <DoctorProfile />
-      }
+      element={!isLoggedIn ? <Navigate to="/" replace /> : <DoctorProfile />}
     />
     <Route
       path="/patient-info/:id"
       element={
-        !isLoggedIn ? (
-          <Login setLoggedIn={setLoggedIn} />
-        ) : (
-          <PatientInfoDetail />
-        )
+        !isLoggedIn ? <Navigate to="/" replace /> : <PatientInfoDetail />
       }
     />
     <Route
