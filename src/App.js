@@ -10,7 +10,9 @@ import ScrollButton from "./components/ScrollButton";
 import AppRoutes from "./AppRoutes";
 
 const App = () => {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(
+    localStorage.getItem("currentUser") ? true : false
+  );
 
   return (
     <Router>

@@ -20,6 +20,7 @@ import PatientInfoDetail from "./pages/PatientInfoDetail";
 import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 
 const AppRoutes = ({ isLoggedIn, setLoggedIn }) => (
   <Routes>
@@ -119,6 +120,10 @@ const AppRoutes = ({ isLoggedIn, setLoggedIn }) => (
           <PatientInfoDetail />
         )
       }
+    />
+    <Route
+      path="/profile"
+      element={!isLoggedIn ? <Login setLoggedIn={setLoggedIn} /> : <Profile />}
     />
 
     {/* Registration */}

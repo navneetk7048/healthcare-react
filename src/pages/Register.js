@@ -59,8 +59,21 @@ const Register = () => {
     e.preventDefault();
 
     if (validate()) {
-      setUsers([...users, registerData]);
-      toast.success("Successfully registered!");
+      const existingUser = users.find((u) => u.email === registerData.email);
+
+      if (existingUser) {
+        toast.warning("User already exists with given email.");
+      } else {
+        setUsers([...users, registerData]);
+        toast.success("Successfully registered!");
+
+        setRegisterData({
+          id: uuid(),
+          name: "",
+          email: "",
+          password: "",
+        });
+      }
     }
   };
 

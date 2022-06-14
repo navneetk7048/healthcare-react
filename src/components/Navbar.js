@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaHome, FaPhoneAlt, FaBars } from "react-icons/fa";
+import { FaHome, FaPhoneAlt, FaBars, FaUserCircle } from "react-icons/fa";
 import logo from "../images/logo.png";
 import Button from "./Button";
 
@@ -9,6 +9,8 @@ const Navbar = ({ setLoggedIn }) => {
 
   const toggle = () => setActive(!active);
   const disable = () => setActive(false);
+
+  const user = JSON.parse(localStorage.getItem("currentUser"));
 
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -104,7 +106,17 @@ const Navbar = ({ setLoggedIn }) => {
             </ul>
           </div>
           <div className="logout">
-            <Button onClick={() => setLoggedIn(false)}>Logout</Button>
+            <Link to="/profile">
+              <FaUserCircle /> {user.name.split(" ")[0]}
+            </Link>
+            <Button
+              onClick={() => {
+                localStorage.removeItem("currentUser");
+                setLoggedIn(false);
+              }}
+            >
+              Logout
+            </Button>
           </div>
         </div>
       </nav>

@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.profile {
+  background-color: $clr-pastel-blue;
+  padding: 1rem;
+
+  .container {
+    min-height: 60vh;
+    @include flex(column);
+    background-color: $clr-white;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: $rounded;
+    padding: 1rem;
+  }
+}

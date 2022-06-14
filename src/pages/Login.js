@@ -7,11 +7,9 @@ import { ButtonSlide } from "../components/Button";
 import { isEmailFormat, isRequired } from "../validations";
 
 import logo from "../images/logo.png";
-import { useEffect } from "react";
 
 const Login = ({ setLoggedIn }) => {
   const [loginData, setLoginData] = useState({ email: "", password: "" });
-  const [user, setUser] = useState({});
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -39,21 +37,17 @@ const Login = ({ setLoggedIn }) => {
 
     if (validate()) {
       const newUser = users.find(
-        (user) =>
-          user.email === loginData.email && user.password === loginData.password
+        (u) => u.email === loginData.email && u.password === loginData.password
       );
 
       if (newUser) {
-        setUser(newUser);
+        localStorage.setItem("currentUser", JSON.stringify(newUser));
         setLoggedIn(true);
-        toast.success("Success");
       } else {
         toast.warning("Invalid email or password");
       }
     }
   };
-
-  useEffect(() => {}, [user]);
 
   return (
     <div className="login">
