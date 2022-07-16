@@ -1,3 +1,2 @@
 # Health-Care Website in React
-
-## Websited hosted at https://healthcare-navneet.netlify.app
+A basic healthcare application frontend inspired from a healthcare website template.
