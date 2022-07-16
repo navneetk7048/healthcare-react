@@ -1,5 +1,4 @@
-import { FaQuoteLeft, FaLink } from "react-icons/fa";
-
+import { FaLink, FaQuoteLeft } from "react-icons/fa";
 import innerBlog1 from "../images/inner-blog-1.jpg";
 import innerBlog2 from "../images/inner-blog-2.jpg";
 import innerBlog3 from "../images/inner-blog-3.jpg";

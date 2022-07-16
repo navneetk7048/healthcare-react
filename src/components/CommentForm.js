@@ -1,13 +1,8 @@
-// Packages
-import { useState } from "react";
-import { v4 as uuid } from "uuid";
 import moment from "moment";
+import { useState } from "react";
 import { toast } from "react-toastify";
-
-// Components
+import { v4 as uuid } from "uuid";
 import { ButtonSlide } from "../components/Button";
-
-// Functions
 import { isAlphabet, isEmailFormat, isRequired } from "../validations";
 
 const CommentForm = ({ comments, setComments }) => {

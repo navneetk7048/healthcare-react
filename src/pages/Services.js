@@ -1,22 +1,16 @@
-// Packages
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { FaQuoteLeft } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { FaQuoteLeft } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
 import ExpertList from "../components/ExpertList";
 import Note from "../components/Note";
-
 import doctors from "../data/doctors";
 import services from "../data/services";
-
 import serviceBanner from "../images/service-banner.jpg";
-
-import { toast } from "react-toastify";
-
 import { isAlphabet, isEmailFormat, isRequired } from "../validations";
 
 const Services = () => {

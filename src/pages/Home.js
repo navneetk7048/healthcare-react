@@ -1,37 +1,28 @@
-// Packages
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { FaQuoteLeft, FaRegTimesCircle } from "react-icons/fa";
-
-// Components
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { ButtonSlide } from "../components/Button";
 import ExpertList from "../components/ExpertList";
-
-// Data
 import doctors from "../data/doctors";
-
-// Images
-import hero1 from "../images/hero-img1.jpg";
-import hero2 from "../images/hero-img2.jpg";
+import bone from "../icons/bone.png";
+import brain from "../icons/brain.png";
+import dentalCare from "../icons/dental-care.png";
+import doctor from "../icons/doctor.png";
+import healthcare from "../icons/healthcare.png";
+import heartbeat from "../icons/heartbeat.png";
+import hostpitalBed from "../icons/hospital-bed.png";
+import idCard from "../icons/id-card.png";
+import stethoscope from "../icons/stethoscope.png";
+import volunteer from "../icons/volunteer.png";
 import blog1 from "../images/blog-1.jpg";
 import blog2 from "../images/blog-2.jpg";
 import blog3 from "../images/blog-3.jpg";
-
-// Icons
-import hostpitalBed from "../icons/hospital-bed.png";
-import idCard from "../icons/id-card.png";
-import doctor from "../icons/doctor.png";
-import volunteer from "../icons/volunteer.png";
-import healthcare from "../icons/healthcare.png";
-import brain from "../icons/brain.png";
-import stethoscope from "../icons/stethoscope.png";
-import heartbeat from "../icons/heartbeat.png";
-import dentalCare from "../icons/dental-care.png";
-import bone from "../icons/bone.png";
+import hero1 from "../images/hero-img1.jpg";
+import hero2 from "../images/hero-img2.jpg";
 import videoIcon from "../images/video-icon.png";
-import { toast } from "react-toastify";
 import { isAlphabet, isEmailFormat, isRequired } from "../validations";
 
 const Home = () => {

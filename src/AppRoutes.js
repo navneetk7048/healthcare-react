@@ -1,26 +1,25 @@
-import { Route, Routes, Navigate } from "react-router-dom";
-
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import OurDoctors from "./pages/OurDoctors";
-import FindADoctor from "./pages/FindADoctor";
+import { Navigate, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
-import Locations from "./pages/Locations";
 import Blog from "./pages/Blog";
-import Career from "./pages/Career";
-import OnlineBillPay from "./pages/OnlineBillPay";
-import PatientInfo from "./pages/PatientInfo";
-import Contact from "./pages/Contact";
-import ServiceDetail from "./pages/ServiceDetail";
-import DoctorProfile from "./pages/DoctorProfile";
-import Testimonials from "./pages/Testimonials";
 import BlogDetail from "./pages/BlogDetail";
+import Career from "./pages/Career";
 import CareerDetail from "./pages/CareerDetail";
-import PatientInfoDetail from "./pages/PatientInfoDetail";
-import PageNotFound from "./pages/PageNotFound";
+import Contact from "./pages/Contact";
+import DoctorProfile from "./pages/DoctorProfile";
+import FindADoctor from "./pages/FindADoctor";
+import Home from "./pages/Home";
+import Locations from "./pages/Locations";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
+import OnlineBillPay from "./pages/OnlineBillPay";
+import OurDoctors from "./pages/OurDoctors";
+import PageNotFound from "./pages/PageNotFound";
+import PatientInfo from "./pages/PatientInfo";
+import PatientInfoDetail from "./pages/PatientInfoDetail";
 import Profile from "./pages/Profile";
+import Register from "./pages/Register";
+import ServiceDetail from "./pages/ServiceDetail";
+import Services from "./pages/Services";
+import Testimonials from "./pages/Testimonials";
 
 const AppRoutes = ({ isLoggedIn, setLoggedIn }) => (
   <Routes>

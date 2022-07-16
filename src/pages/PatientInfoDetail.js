@@ -1,7 +1,6 @@
 import { FaQuoteLeft } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import patientInfo from "../data/patientInfo";
-
 import patientInfoDetailImg from "../images/blog-detail-img.jpg";
 import PageNotFound from "./PageNotFound";
 

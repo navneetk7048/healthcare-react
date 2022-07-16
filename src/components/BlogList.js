@@ -1,7 +1,7 @@
+import { scrollToTop } from "../Functions";
 import BlogItem from "./BlogItem";
 import BlogSpecialItem from "./BlogSpecialItem";
 import { ButtonSpecial } from "./Button";
-import { scrollToTop } from "../Functions";
 
 const BlogList = ({ blogs }) => {
   const blogItemList = [];

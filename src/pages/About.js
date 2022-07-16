@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
 import {
   FaBed,
-  FaIdCard,
-  FaUserMd,
   FaHandPaper,
+  FaIdCard,
   FaQuoteLeft,
+  FaUserMd,
 } from "react-icons/fa";
-
-import { ButtonSlide } from "../components/Button";
+import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
+import { ButtonSlide } from "../components/Button";
 import ExpertList from "../components/ExpertList";
 import doctors from "../data/doctors";
 import about from "../images/about-banner.jpg";

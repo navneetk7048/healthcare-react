@@ -1,7 +1,6 @@
 import { FaQuoteLeft } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import services from "../data/services";
-
 import serviceDetailImg from "../images/blog-detail-img.jpg";
 import PageNotFound from "./PageNotFound";
 

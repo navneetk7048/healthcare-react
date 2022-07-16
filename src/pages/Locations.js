@@ -1,5 +1,4 @@
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
 import locations from "../data/locations";

@@ -1,36 +1,27 @@
-// Packages
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
 import {
-  FaPhoneAlt,
+  FaAngleDoubleRight,
   FaEnvelope,
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
+  FaPhoneAlt,
   FaQuoteLeft,
-  FaAngleDoubleRight,
+  FaTwitter,
 } from "react-icons/fa";
-
-// Components
+import { Link, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
-import PageNotFound from "./PageNotFound";
-
-// Data
 import doctors from "../data/doctors";
-
-// Functions
 import { scrollToTop } from "../Functions";
+import drBanner from "../images/dr-banner.jpg";
 import {
   isAlphabet,
   isEmailFormat,
   isRequired,
   isValidPhone,
 } from "../validations";
-
-// Images
-import drBanner from "../images/dr-banner.jpg";
-import { toast } from "react-toastify";
+import PageNotFound from "./PageNotFound";
 
 const DoctorProfile = () => {
   const { id } = useParams();

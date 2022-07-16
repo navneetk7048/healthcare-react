@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { FaPaperclip } from "react-icons/fa";
-
-import Banner from "../components/Banner";
-import positions from "../data/positions";
-import { ButtonSlide } from "../components/Button";
-import careerBanner from "../images/career-banner.jpg";
-import PageNotFound from "./PageNotFound";
+import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import Banner from "../components/Banner";
+import { ButtonSlide } from "../components/Button";
+import positions from "../data/positions";
+import careerBanner from "../images/career-banner.jpg";
 import {
   isAlphabet,
   isEmailFormat,
   isRequired,
   isValidPhone,
 } from "../validations";
+import PageNotFound from "./PageNotFound";
 
 const CareerDetail = () => {
   const { id } = useParams();

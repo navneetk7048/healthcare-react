@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
 import {
-  FaMapMarkerAlt,
-  FaPhoneAlt,
   FaEnvelope,
   FaFacebookF,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import footerLogo from "../images/footer-logo.png";
 
 const Footer = () => {

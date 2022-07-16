@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaBars, FaHome, FaPhoneAlt, FaUserCircle } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import { FaHome, FaPhoneAlt, FaBars, FaUserCircle } from "react-icons/fa";
 import logo from "../images/logo.png";
 import Button from "./Button";
 

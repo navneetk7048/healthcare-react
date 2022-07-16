@@ -1,5 +1,4 @@
 import React from "react";
-
 import variables from "../styles/abstracts/_variables.scss";
 
 const PageNotFound = () => {
@@ -11,7 +10,8 @@ const PageNotFound = () => {
         alignItems: "center",
         minHeight: "70vh",
         background: variables.clrPastelBlue,
-      }}>
+      }}
+    >
       <h1>Page not found</h1>
     </div>
   );

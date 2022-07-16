@@ -1,19 +1,17 @@
+import emailjs from "emailjs-com";
 import { useState } from "react";
 import {
-  FaPhoneAlt,
   FaEnvelope,
   FaFacebookF,
+  FaPhoneAlt,
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
 import { toast } from "react-toastify";
-import emailjs from "emailjs-com";
-
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
 import { scrollToTop } from "../Functions";
 import contactBanner from "../images/location-banner.jpg";
-
 import {
   isAlphabet,
   isEmailFormat,

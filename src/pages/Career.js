@@ -1,32 +1,25 @@
-// Packages
-import { Link } from "react-router-dom";
+import { FaQuoteLeft } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { FaQuoteLeft } from "react-icons/fa";
-
-// Components
+import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
-
-// Data and Functions
 import positions from "../data/positions";
 import { scrollToTop } from "../Functions";
-
-// Images
-import careerBanner from "../images/career-banner.jpg";
+import goal from "../icons/goal.png";
+import lightHeartShape from "../icons/light-heart-shape.png";
+import mind from "../icons/mind.png";
+import money from "../icons/money.png";
+import sunUmbrella from "../icons/sun-umbrella.png";
+import theatre from "../icons/theatre.png";
 import career1 from "../images/career-1.jpg";
 import career2 from "../images/career-2.jpg";
 import career3 from "../images/career-3.jpg";
+import careerBanner from "../images/career-banner.jpg";
 import careerSlide1 from "../images/career-slide-1.jpg";
 import careerSlide2 from "../images/career-slide-2.jpg";
 import careerSlide3 from "../images/career-slide-3.jpg";
 import innerVideoIcon from "../images/inner-video-icon.png";
-import sunUmbrella from "../icons/sun-umbrella.png";
-import lightHeartShape from "../icons/light-heart-shape.png";
-import money from "../icons/money.png";
-import mind from "../icons/mind.png";
-import goal from "../icons/goal.png";
-import theatre from "../icons/theatre.png";
 
 const Career = () => {
   const responsive = {

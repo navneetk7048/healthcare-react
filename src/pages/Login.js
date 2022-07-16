@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
-
+import { toast } from "react-toastify";
 import { ButtonSlide } from "../components/Button";
-
-import { isEmailFormat, isRequired } from "../validations";
-
 import logo from "../images/logo.png";
+import { isEmailFormat, isRequired } from "../validations";
 
 const Login = ({ setLoggedIn }) => {
   const [loginData, setLoginData] = useState({ email: "", password: "" });

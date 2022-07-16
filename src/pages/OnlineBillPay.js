@@ -3,10 +3,9 @@ import { toast } from "react-toastify";
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
 import careerBanner from "../images/career-banner.jpg";
-
 import {
-  isRequired,
   isNumber,
+  isRequired,
   isValidAccount,
   isValidPhone,
 } from "../validations";

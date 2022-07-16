@@ -1,10 +1,8 @@
+import { FaAmbulance, FaRegHospital, FaUserMd } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { FaUserMd, FaAmbulance, FaRegHospital } from "react-icons/fa";
-
-import patientInfo from "../data/patientInfo";
-
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
+import patientInfo from "../data/patientInfo";
 import patientInfoBanner from "../images/patient-info-banner.jpg";
 
 const PatientInfo = () => {

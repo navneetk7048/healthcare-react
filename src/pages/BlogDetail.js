@@ -1,23 +1,14 @@
-// Packages
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
-
-// Components
+import { Link, useParams } from "react-router-dom";
 import { ButtonSpecial } from "../components/Button";
 import CommentForm from "../components/CommentForm";
 import CommentList from "../components/CommentList";
-
-// Data
+import blogs from "../data/blogs";
 import commentsData from "../data/comments";
 import posts from "../data/posts";
-
-// Functions
 import { scrollToTop } from "../Functions";
-
-// Images
 import serviceDetailImg from "../images/blog-detail-img.jpg";
-import blogs from "../data/blogs";
 import PageNotFound from "./PageNotFound";
 
 const BlogDetail = () => {

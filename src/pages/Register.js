@@ -1,19 +1,15 @@
-import { useState } from "react";
-import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { v4 as uuid } from "uuid";
-
 import { ButtonSlide } from "../components/Button";
-
+import logo from "../images/logo.png";
 import {
   isAlphabet,
   isEmailFormat,
   isRequired,
   isValidPassword,
 } from "../validations";
-
-import logo from "../images/logo.png";
-import { useEffect } from "react";
 
 const Register = () => {
   const [registerData, setRegisterData] = useState({

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import { ButtonSlide } from "./Button";
 
 const ExpertList = ({ heading, doctors }) => {

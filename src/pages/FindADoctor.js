@@ -1,21 +1,12 @@
-// Packages
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useState } from "react";
-
-// Components
 import Banner from "../components/Banner";
 import { ButtonSlide } from "../components/Button";
 import Note from "../components/Note";
-
-// Data
 import doctors from "../data/doctors";
-
-// Functions
-import { isAlphabet, isRequired } from "../validations";
-
-// Images
 import about from "../images/about-banner.jpg";
+import { isAlphabet, isRequired } from "../validations";
 
 const FindADoctor = () => {
   const [name, setName] = useState("");

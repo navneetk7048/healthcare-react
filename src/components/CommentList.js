@@ -1,5 +1,4 @@
 import Avatar from "react-avatar";
-
 import { scrollToTop } from "../Functions";
 
 const CommentList = ({ comments }) => {

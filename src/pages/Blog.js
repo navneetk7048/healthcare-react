@@ -1,16 +1,9 @@
-// Packages
 import { Link } from "react-router-dom";
-
-// Components
 import Banner from "../components/Banner";
 import BlogList from "../components/BlogList";
 import { ButtonSpecial } from "../components/Button";
-
-// Data
 import blogs from "../data/blogs";
 import posts from "../data/posts";
-
-// Images
 import blogBanner from "../images/blog-banner.jpg";
 
 const Blog = () => {
